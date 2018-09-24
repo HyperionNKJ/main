@@ -2034,6 +2034,36 @@ for <code>RemarkCommandParser</code>.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sort persons by name</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">locate a person easily</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">restaurant owner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">check the current availability of ingredients</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">manage my ingredients easily</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">restaurant owner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">see which ingredients are low in stock count</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">know which ingredients to restock promptly</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">restaurant owner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">check which dishes are not able to be cooked due to lack of ingredients</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">remove them from the daily menu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lazy restaurant owner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">save regular restocks and consumption data as the default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">do not need to key in the same entries every time</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>*</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">forgetful restaurant owner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">set reminders for the next restock</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">remember to restock</p></td>
+</tr>
 </tbody>
 </table>
 <div class="paragraph">
@@ -2047,23 +2077,69 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="paragraph">
 <p>(For all use cases below, the <strong>System</strong> is the <code>AddressBook</code> and the <strong>Actor</strong> is the <code>user</code>, unless specified otherwise)</p>
 </div>
-<h3 id="use-case-delete-person" class="discrete">Use case: Delete person</h3>
+<h3 id="use-case-add-ingredient" class="discrete">Use case: Add ingredient</h3>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User requests to list persons</p>
+<p>User requests to add a new ingredient.</p>
 </li>
 <li>
-<p>AddressBook shows a list of persons</p>
+<p>App adds the ingredient specified to the ingredient list.</p>
 </li>
 <li>
-<p>User requests to delete a specific person in the list</p>
+<p>App returns a success message confirming the new ingredient has been added.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The ingredient name entered is already in the ingredient list.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. App returns a message telling user the ingredient name already exists.</p>
 </li>
 <li>
-<p>AddressBook deletes the person</p>
+<p>2a2. User requests to add ingredient again.</p>
+<div class="paragraph">
+<p>Steps 2a1-2a2 are repeated until an ingredient name which does not exist is used.</p>
+</div>
+<div class="paragraph">
+<p>Use case resumes at step 3.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-delete-ingredient" class="discrete">Use case: Delete ingredient</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list ingredients.</p>
+</li>
+<li>
+<p>App shows a list of ingredients.</p>
+</li>
+<li>
+<p>User requests to delete a specific ingredient in the list.</p>
+</li>
+<li>
+<p>App deletes the ingredient.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2086,7 +2162,197 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. AddressBook shows an error message.</p>
+<p>3a1. App returns a message telling user the index is invalid.</p>
+</li>
+<li>
+<p>3a2. User requests to delete ingredient again.</p>
+<div class="paragraph">
+<p>Steps 3a1-3a2 are repeated until a valid index is entered.</p>
+</div>
+<div class="paragraph">
+<p>Use case resumes at step 3.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-edit-ingredient" class="discrete">Use case: Edit ingredient</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to edit a specific ingredient.</p>
+</li>
+<li>
+<p>App edits the specified ingredient with the updated values.</p>
+</li>
+<li>
+<p>App returns a success message confirming the specified ingredient has been edited.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a. The given index is invalid.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. App returns a message telling user that the index is invalid.</p>
+</li>
+<li>
+<p>1a2. User requests to edit ingredient again.</p>
+<div class="paragraph">
+<p>Steps 1a1-1a2 are repeated until a valid index is entered.</p>
+</div>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1b. None of the optional fields are specified.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1b1. App returns a message telling user at least one optional field has to be specified.</p>
+</li>
+<li>
+<p>1b2. User requests to edit ingredient again.</p>
+<div class="paragraph">
+<p>Steps 1b1-1b2 are repeated until at least one optional field is entered.</p>
+</div>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-stock-up-ingredient" class="discrete">Use case: Stock up ingredient</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to stock up a specific ingredient.</p>
+</li>
+<li>
+<p>App updates the count of the specified ingredient.</p>
+</li>
+<li>
+<p>App returns a success message confirming the specified ingredient has been stocked up.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a. The ingredient name does not exist.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. App returns a message telling user that the ingredient does not exist.</p>
+</li>
+<li>
+<p>1a2. User requests to stock up ingredient again.</p>
+<div class="paragraph">
+<p>Steps 1a1-1a2 are repeated until a valid ingredient name is entered.</p>
+</div>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-consume-ingredient" class="discrete">Use case: Consume ingredient</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to consume a specific ingredient.</p>
+</li>
+<li>
+<p>App updates the count of the specified ingredient.</p>
+</li>
+<li>
+<p>App returns a success message confirming the specified ingredient has been consumed.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a. The ingredient name does not exist.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. App returns a message telling user that the ingredient does not exist.</p>
+</li>
+<li>
+<p>1a2. User requests to consume ingredient again.</p>
+<div class="paragraph">
+<p>Steps 1a1-1a2 are repeated until a valid ingredient name is entered.</p>
+</div>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1b. The intended consumption is more than the number of units available.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1b1. App informs user that there is not enough of the ingredient.</p>
+</li>
+<li>
+<p>1b2. User requests to consume ingredient again.</p>
+<div class="paragraph">
+<p>Steps 1b1-1b2 are repeated until the number of units entered is less than the number of units available.</p>
+</div>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -2285,4 +2551,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-16 11:43:05 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-24 13:32:13 UTC</div></div></div></body></html>

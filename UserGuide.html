@@ -27,6 +27,15 @@
 <li><a href="#exiting-the-program-code-exit-code">3.12. Exiting the program : <code>exit</code></a></li>
 <li><a href="#saving-the-data">3.13. Saving the data</a></li>
 <li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.14. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#adding-an-ingredient-code-add-ingredient-code">3.15. Adding an ingredient: <code>add-ingredient</code></a></li>
+<li><a href="#listing-all-ingredients-code-list-ingredients-code">3.16. Listing all ingredients : <code>list-ingredients</code></a></li>
+<li><a href="#listing-ingredients-with-low-stock-count-code-list-ingredients-low-code">3.17. Listing ingredients with low stock count: <code>list-ingredients-low</code></a></li>
+<li><a href="#removing-an-ingredient-code-delete-ingredient-code">3.18. Removing an ingredient: <code>delete-ingredient</code></a></li>
+<li><a href="#editing-an-ingredient-code-edit-ingredient-code">3.19. Editing an ingredient: <code>edit-ingredient</code></a></li>
+<li><a href="#stocking-up-an-ingredient-code-stockup-code">3.20. Stocking up an ingredient: <code>stockup</code></a></li>
+<li><a href="#consuming-an-ingredient-code-consume-code">3.21. Consuming an ingredient: <code>consume</code></a></li>
+<li><a href="#removing-out-of-stock-dishes-from-daily-menu-code-remove-oos-dish-code">3.22. Removing out-of-stock dishes from daily menu: <code>remove-oos-dish</code></a></li>
+<li><a href="#show-history-of-stockup-or-consumption-code-history-code">3.23. Show history of stockup or consumption: <code>history</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -462,6 +471,226 @@ There is no need to save manually.</p>
 <p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="adding-an-ingredient-code-add-ingredient-code"><a class="link" href="#adding-an-ingredient-code-add-ingredient-code">3.15. Adding an ingredient: <code>add-ingredient</code></a></h3>
+<div class="paragraph">
+<p>Adds a new ingredient to the ingredient list.<br>
+Format: <code>add-ingredient n/INGREDIENT_NAME t/UNIT_TYPE p/PRICE_PER_UNIT m/MINIMUM</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>MINIMUM refers to the minimum number of units below which an ingredient will be considered low in stock count</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-ingredient n/cod fish t/kilogram p/20 m/1</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-all-ingredients-code-list-ingredients-code"><a class="link" href="#listing-all-ingredients-code-list-ingredients-code">3.16. Listing all ingredients : <code>list-ingredients</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of all ingredients in the ingredient list.<br>
+Format: <code>list-ingredients</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-ingredients-with-low-stock-count-code-list-ingredients-low-code"><a class="link" href="#listing-ingredients-with-low-stock-count-code-list-ingredients-low-code">3.17. Listing ingredients with low stock count: <code>list-ingredients-low</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of ingredients that are low in stock count.<br>
+Format: <code>list-ingredients-low</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="removing-an-ingredient-code-delete-ingredient-code"><a class="link" href="#removing-an-ingredient-code-delete-ingredient-code">3.18. Removing an ingredient: <code>delete-ingredient</code></a></h3>
+<div class="paragraph">
+<p>Deletes the specified ingredient from the ingredient list.<br>
+Format: <code>delete-ingredient INDEX</code> or <code>delete-ingredient NAME</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Deletes the ingredient at the specified <code>INDEX</code>.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the displayed ingredient list.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>Alternatively, deletes the ingredient with the specified <code>NAME</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list-ingredients</code><br>
+<code>delete-ingredient 1</code><br>
+<code>list-ingredients</code><br>
+Deletes the 1st ingredient in the ingredient list.</p>
+</li>
+<li>
+<p><code>delete-ingredient cod fish</code><br>
+<code>list-ingredients</code><br>
+Deletes the ingredient <code>cod fish</code> from the ingredient list.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-an-ingredient-code-edit-ingredient-code"><a class="link" href="#editing-an-ingredient-code-edit-ingredient-code">3.19. Editing an ingredient: <code>edit-ingredient</code></a></h3>
+<div class="paragraph">
+<p>Edits an ingredient in the ingredient list.<br>
+Format: <code>edit-ingredient INDEX [n/INGREDIENT_NAME] [t/UNIT_TYPE] [p/PRICE_PER_UNIT] [m/MINIMUM]</code> or <code>edit-ingredient NAME [n/INGREDIENT_NAME] [t/UNIT_TYPE] [p/PRICE_PER_UNIT] [m/MINIMUM]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Edits the ingredient at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed ingredient list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>At least one of the optional fields must be provided.</p>
+</li>
+<li>
+<p>Existing values will be updated to the input values.</p>
+</li>
+<li>
+<p>Alternatively, edits the ingredient with the specified <code>NAME</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>edit-ingredient 3 n/thin fries</code><br>
+Edits the name of the 3rd ingredient to be <code>thin fries</code>.</p>
+</li>
+<li>
+<p><code>edit-ingredient 4 u/1.5ml bottle p/1.20</code> <br>
+Edits the unit type and price per unit of the 4th ingredient to be <code>1.5ml bottle</code> and <code>1.20</code> respectively.</p>
+</li>
+<li>
+<p><code>edit-ingredient ketchup n/tomato ketchup</code> <br>
+Edits the name of <code>ketchup</code> to be <code>tomato ketchup</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="stocking-up-an-ingredient-code-stockup-code"><a class="link" href="#stocking-up-an-ingredient-code-stockup-code">3.20. Stocking up an ingredient: <code>stockup</code></a></h3>
+<div class="paragraph">
+<p>Increase the number of units of an ingredient or multiple ingredients.<br>
+Format: <code>stockup n/INGREDIENT_NAME&#8230;&#8203; u/NUMBER_OF_UNITS&#8230;&#8203;</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>NUMBER_OF_UNITS for an ingredient must follow the INGREDIENT_NAME for that particular ingredient.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>stockup n/cod fish u/5</code></p>
+</li>
+<li>
+<p><code>stockup n/chicken thigh u/10 n/fries u/20 n/tomato ketchup u/50</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="consuming-an-ingredient-code-consume-code"><a class="link" href="#consuming-an-ingredient-code-consume-code">3.21. Consuming an ingredient: <code>consume</code></a></h3>
+<div class="paragraph">
+<p>Decrease the number of units of an ingredient or multiple ingredients.<br>
+Format: <code>consume n/INGREDIENT_NAME&#8230;&#8203; u/NUMBER_OF_UNITS&#8230;&#8203;</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>NUMBER_OF_UNITS for an ingredient must follow the INGREDIENT_NAME for that particular ingredient.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>consume n/cod fish u/1</code></p>
+</li>
+<li>
+<p><code>consume n/chicken thigh u/2 n/fries u/1</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="removing-out-of-stock-dishes-from-daily-menu-code-remove-oos-dish-code"><a class="link" href="#removing-out-of-stock-dishes-from-daily-menu-code-remove-oos-dish-code">3.22. Removing out-of-stock dishes from daily menu: <code>remove-oos-dish</code></a></h3>
+<div class="paragraph">
+<p>Removes out-of-stock dishes that require ingredients with low stock count from the daily menu.<br>
+Format: <code>remove-oos-dish</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="show-history-of-stockup-or-consumption-code-history-code"><a class="link" href="#show-history-of-stockup-or-consumption-code-history-code">3.23. Show history of stockup or consumption: <code>history</code></a></h3>
+<div class="paragraph">
+<p>Shows the history of past ingredient stockups or past ingredient consumption.<br>
+Format: <code>history [stockup] [consumption]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>At least one of the optional fields must be provided.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -516,7 +745,40 @@ e.g.<code>select 2</code></p>
 <li>
 <p><strong>Redo</strong> : <code>redo</code></p>
 </li>
+<li>
+<p><strong>Add ingredient</strong> : <code>add-ingredient n/INGREDIENT_NAME t/UNIT_TYPE p/PRICE_PER_UNIT m/MINIMUM</code><br>
+e.g. <code>add-ingredient n/cod fish t/kilogram p/20 m/1</code></p>
+</li>
+<li>
+<p><strong>List ingredients</strong> : <code>list-ingredients</code></p>
+</li>
+<li>
+<p><strong>List ingredients with low stock count</strong> : <code>list-ingredients-low</code></p>
+</li>
+<li>
+<p><strong>Delete ingredient</strong> : <code>delete-ingredient INDEX</code> or <code>delete-ingredient NAME</code><br>
+e.g. <code>delete-ingredient 1</code> or <code>delete-ingredient cod fish</code></p>
+</li>
+<li>
+<p><strong>Edit ingredient</strong> : <code>edit-ingredient INDEX [n/INGREDIENT_NAME] [t/UNIT_TYPE] [p/PRICE_PER_UNIT] [m/MINIMUM]</code> or <code>edit-ingredient NAME [n/INGREDIENT_NAME] [t/UNIT_TYPE] [p/PRICE_PER_UNIT] [m/MINIMUM]</code><br>
+e.g. <code>edit-ingredient 3 n/thin fries</code> or <code>edit-ingredient ketchup n/tomato ketchup</code></p>
+</li>
+<li>
+<p><strong>Stock up</strong> : <code>stockup n/INGREDIENT_NAME&#8230;&#8203; u/NUMBER_OF_UNITS&#8230;&#8203;</code><br>
+e.g. <code>stockup n/cod fish u/5</code></p>
+</li>
+<li>
+<p><strong>Consume</strong> : <code>consume n/INGREDIENT_NAME&#8230;&#8203; u/NUMBER_OF_UNITS&#8230;&#8203;</code><br>
+e.g. <code>consume n/cod fish u/1</code></p>
+</li>
+<li>
+<p><strong>Remove dishes with low ingredients</strong> : <code>remove-oos-dish</code></p>
+</li>
+<li>
+<p><strong>History of stockup/consumption</strong> : <code>history [purchase] [consumption]</code><br>
+e.g. <code>history stockup</code></p>
+</li>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-16 11:43:05 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-24 13:32:13 UTC</div></div></div></body></html>
