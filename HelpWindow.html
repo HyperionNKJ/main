@@ -72,13 +72,18 @@
 <li><a href="#today-s-specials-code-today-special-code">5.42. Today&#8217;s specials : <code>today-special</code></a></li>
 <li><a href="#export-menu-code-export-menu-code">5.43. Export menu : <code>export-menu</code></a></li>
 <li><a href="#import-menu-code-import-menu-code">5.44. Import menu : <code>import-menu</code></a></li>
-<li><a href="#recording-daily-sales-volume-of-a-menu-item-code-record-sales-code">5.45. Recording daily sales volume of a menu item: <code>record-sales</code></a></li>
-<li><a href="#display-sales-report-code-display-sales-code">5.46. Display sales report: <code>display-sales</code></a></li>
-<li><a href="#deleting-a-sales-record-report-code-delete-sales-code">5.47. Deleting a sales record / report: <code>delete-sales</code></a></li>
-<li><a href="#editing-a-sales-record-code-edit-sales-code">5.48. Editing a sales record: <code>edit-sales</code></a></li>
-<li><a href="#checking-sales-history-of-a-menu-item-code-check-sales-code">5.49. Checking sales history of a menu item: <code>check-sales</code></a></li>
-<li><a href="#ranking-menu-items-according-to-profitability-code-rank-dish-code">5.50. Ranking menu items according to profitability: <code>rank-dish</code></a></li>
-<li><a href="#ranking-dates-according-to-profitability-code-rank-date-code">5.51. Ranking dates according to profitability: <code>rank-date</code></a></li>
+<li><a href="#adding-a-reservation-code-add-reservation-code">5.45. Adding a reservation: <code>add-reservation</code></a></li>
+<li><a href="#listing-all-reservations-code-list-reservations-code">5.46. Listing all reservations : <code>list-reservations</code></a></li>
+<li><a href="#editing-a-reservation-code-edit-reservation-code">5.47. Editing a reservation: <code>edit-reservation</code></a></li>
+<li><a href="#sorting-reservations-list-code-sort-reservations-code">5.48. Sorting reservations list: <code>sort-reservations</code></a></li>
+<li><a href="#deleting-a-reservation-code-delete-reservation-code">5.49. Deleting a reservation: <code>delete-reservation</code></a></li>
+<li><a href="#recording-daily-sales-volume-of-a-menu-item-code-record-sales-code">5.50. Recording daily sales volume of a menu item: <code>record-sales</code></a></li>
+<li><a href="#display-sales-report-code-display-sales-code">5.51. Display sales report: <code>display-sales</code></a></li>
+<li><a href="#deleting-a-sales-record-report-code-delete-sales-code">5.52. Deleting a sales record / report: <code>delete-sales</code></a></li>
+<li><a href="#editing-a-sales-record-code-edit-sales-code">5.53. Editing a sales record: <code>edit-sales</code></a></li>
+<li><a href="#checking-sales-history-of-a-menu-item-code-check-sales-code">5.54. Checking sales history of a menu item: <code>check-sales</code></a></li>
+<li><a href="#ranking-menu-items-according-to-profitability-code-rank-dish-code">5.55. Ranking menu items according to profitability: <code>rank-dish</code></a></li>
+<li><a href="#ranking-dates-according-to-profitability-code-rank-date-code">5.56. Ranking dates according to profitability: <code>rank-date</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">6. FAQ</a></li>
@@ -1395,13 +1400,136 @@ Format: <code>import-menu fp/FILEPATH fn/FILENAME</code></p>
 <ul>
 <li>
 <p><code>import-menu f/test/ n/menu.txt</code><br>
-Import the menu.txt from test folder to replace current menu.</p>
+Import the menu.txt from test folder to replace current menu.
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; d8104eeac35a224217ba9b7331cb65179fd57082</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="recording-daily-sales-volume-of-a-menu-item-code-record-sales-code"><a class="link" href="#recording-daily-sales-volume-of-a-menu-item-code-record-sales-code">5.45. Recording daily sales volume of a menu item: <code>record-sales</code></a></h3>
+<h3 id="adding-a-reservation-code-add-reservation-code"><a class="link" href="#adding-a-reservation-code-add-reservation-code">5.45. Adding a reservation: <code>add-reservation</code></a></h3>
+<div class="paragraph">
+<p>Adds a new reservation to the reservations list.<br>
+Format: <code>add-reservation n/NAME p/PAX d/DATE t/TIME</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Date is entered in DDMMYYYY format.</p>
+</li>
+<li>
+<p>Time is entered in Military Time.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-reservation n/TAN p/4 d/21072018 t/1300</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-all-reservations-code-list-reservations-code"><a class="link" href="#listing-all-reservations-code-list-reservations-code">5.46. Listing all reservations : <code>list-reservations</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of all reservations in the reservations list.<br>
+Format: <code>list-reservations</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-a-reservation-code-edit-reservation-code"><a class="link" href="#editing-a-reservation-code-edit-reservation-code">5.47. Editing a reservation: <code>edit-reservation</code></a></h3>
+<div class="paragraph">
+<p>Edits an reservation in the reservation list.<br>
+Format: <code>edit-reservation INDEX [n/NAME] [p/PAX] [d/DATE] [t/TIME]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Edits the reservation at the specified <code>INDEX</code>. The index refers to the index number shown in the
+displayed reservations list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>At least one of the optional fields must be provided.</p>
+</li>
+<li>
+<p>Existing values will be updated to the input values.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>edit-reservation 2 t/1700</code><br>
+Edits the time of the 2nd reservation in the list to <code>1700</code> hrs.</p>
+</li>
+<li>
+<p><code>edit-reservation 6 n/ONG p/4</code> <br>
+Edits the name and pax of the 6th reservation to <code>ONG</code> and <code>4</code> respectively.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sorting-reservations-list-code-sort-reservations-code"><a class="link" href="#sorting-reservations-list-code-sort-reservations-code">5.48. Sorting reservations list: <code>sort-reservations</code></a></h3>
+<div class="paragraph">
+<p>Sorts the reservations list by Date/Time.<br>
+Format: <code>sort-reservations</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-reservation-code-delete-reservation-code"><a class="link" href="#deleting-a-reservation-code-delete-reservation-code">5.49. Deleting a reservation: <code>delete-reservation</code></a></h3>
+<div class="paragraph">
+<p>Deletes the specified reservation from the reservations list.<br>
+Format: <code>delete-reservation INDEX</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Deletes the reservation at the specified <code>INDEX</code>.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the displayed reservations list.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list-reservations</code><br>
+<code>delete-reservations 2</code><br>
+<code>list-ingredients</code><br>
+Deletes the 2nd reservation in the reservations list.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="recording-daily-sales-volume-of-a-menu-item-code-record-sales-code"><a class="link" href="#recording-daily-sales-volume-of-a-menu-item-code-record-sales-code">5.50. Recording daily sales volume of a menu item: <code>record-sales</code></a></h3>
 <div class="paragraph">
 <p>Records the quantity of a menu item sold within the specified day into the day&#8217;s sales report.<br>
 Format: <code>record-sales d/DATE n/ITEM_NAME q/QUANTITY SOLD p/ITEM_PRICE</code></p>
@@ -1438,7 +1566,7 @@ Format: <code>record-sales d/DATE n/ITEM_NAME q/QUANTITY SOLD p/ITEM_PRICE</code
 </div>
 </div>
 <div class="sect2">
-<h3 id="display-sales-report-code-display-sales-code"><a class="link" href="#display-sales-report-code-display-sales-code">5.46. Display sales report: <code>display-sales</code></a></h3>
+<h3 id="display-sales-report-code-display-sales-code"><a class="link" href="#display-sales-report-code-display-sales-code">5.51. Display sales report: <code>display-sales</code></a></h3>
 <div class="paragraph">
 <p>Displays the sales report for all days.<br>
 Format: <code>display-sales</code><br>
@@ -1474,7 +1602,7 @@ Displays the sales report dated 25-09-2018.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-sales-record-report-code-delete-sales-code"><a class="link" href="#deleting-a-sales-record-report-code-delete-sales-code">5.47. Deleting a sales record / report: <code>delete-sales</code></a></h3>
+<h3 id="deleting-a-sales-record-report-code-delete-sales-code"><a class="link" href="#deleting-a-sales-record-report-code-delete-sales-code">5.52. Deleting a sales record / report: <code>delete-sales</code></a></h3>
 <div class="paragraph">
 <p>Deletes a menu item&#8217;s sales record in the sales report for the specified day.<br>
 Format: <code>delete-sales DATE ITEM_NAME</code> / <code>delete-sales DATE ITEM_INDEX</code><br>
@@ -1529,7 +1657,7 @@ Deletes the entire sales report dated 23-06-2018.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-sales-record-code-edit-sales-code"><a class="link" href="#editing-a-sales-record-code-edit-sales-code">5.48. Editing a sales record: <code>edit-sales</code></a></h3>
+<h3 id="editing-a-sales-record-code-edit-sales-code"><a class="link" href="#editing-a-sales-record-code-edit-sales-code">5.53. Editing a sales record: <code>edit-sales</code></a></h3>
 <div class="paragraph">
 <p>Edit a menu item&#8217;s sales record in the sales report for the specified day.<br>
 Format: <code>edit-sales DATE NAME [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE]</code> / <code>edit-sales DATE INDEX [n/ITEM_NAME]
@@ -1577,7 +1705,7 @@ In the sales report dated 01-01-2018, edits the menu item&#8217;s name of the 3r
 </div>
 </div>
 <div class="sect2">
-<h3 id="checking-sales-history-of-a-menu-item-code-check-sales-code"><a class="link" href="#checking-sales-history-of-a-menu-item-code-check-sales-code">5.49. Checking sales history of a menu item: <code>check-sales</code></a></h3>
+<h3 id="checking-sales-history-of-a-menu-item-code-check-sales-code"><a class="link" href="#checking-sales-history-of-a-menu-item-code-check-sales-code">5.54. Checking sales history of a menu item: <code>check-sales</code></a></h3>
 <div class="paragraph">
 <p>Displays the sales history of a menu item and the total revenue it has accumulated.<br>
 Format: <code>check-sales ITEM_NAME</code><br></p>
@@ -1594,14 +1722,14 @@ Format: <code>check-sales ITEM_NAME</code><br></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="ranking-menu-items-according-to-profitability-code-rank-dish-code"><a class="link" href="#ranking-menu-items-according-to-profitability-code-rank-dish-code">5.50. Ranking menu items according to profitability: <code>rank-dish</code></a></h3>
+<h3 id="ranking-menu-items-according-to-profitability-code-rank-dish-code"><a class="link" href="#ranking-menu-items-according-to-profitability-code-rank-dish-code">5.55. Ranking menu items according to profitability: <code>rank-dish</code></a></h3>
 <div class="paragraph">
 <p>Ranks the menu items based on their total revenue accumulated in past sales records in descending order.<br>
 Format: <code>rank-dish</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="ranking-dates-according-to-profitability-code-rank-date-code"><a class="link" href="#ranking-dates-according-to-profitability-code-rank-date-code">5.51. Ranking dates according to profitability: <code>rank-date</code></a></h3>
+<h3 id="ranking-dates-according-to-profitability-code-rank-date-code"><a class="link" href="#ranking-dates-according-to-profitability-code-rank-date-code">5.56. Ranking dates according to profitability: <code>rank-date</code></a></h3>
 <div class="paragraph">
 <p>Ranks the dates based on their revenue accumulated in past sales records in descending order.<br>
 Format: <code>rank-date</code></p>
@@ -1771,6 +1899,24 @@ e.g. <code>export-menu fp/backup/ fn/menu.txt</code></p>
 e.g. <code>import-menu fp/backup/ fn/menu.txt</code></p>
 </li>
 <li>
+<p><strong>Add a reservation</strong> : <code>add-reservation n/NAME p/PAX d/DATE t/TIME</code><br>
+e.g. <code>add-reservation n/TAN p/4 d/21072018 t/1300</code></p>
+</li>
+<li>
+<p><strong>List reservations</strong> : <code>list-reservations</code></p>
+</li>
+<li>
+<p><strong>Edit reservation</strong> : <code>edit-reservation INDEX [n/NAME] [p/PAX] [d/DATE] [t/TIME]</code><br>
+e.g. <code>edit-reservation 2 t/1700</code></p>
+</li>
+<li>
+<p><strong>Sort reservations</strong> : <code>sort-reservations</code></p>
+</li>
+<li>
+<p><strong>Delete a reservation</strong> : <code>delete-reservation INDEX</code><br>
+e.g. <code>delete-reservations 2</code></p>
+</li>
+<li>
 <p><strong>Record sales volume of menu item</strong> : <code>record-sales d/DATE n/ITEM_NAME q/QUANTITY SOLD p/ITEM_PRICE</code><br>
 e.g. <code>record-sales d/25-09-2018 n/Fried Rice q/35 p/5.50</code></p>
 </li>
@@ -1804,4 +1950,4 @@ e.g. <code>check-sales Fried Rice</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-27 11:56:25 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-28 06:18:39 UTC</div></div></div></body></html>
