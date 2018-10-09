@@ -43,10 +43,10 @@
 <li><a href="#saving-the-data">5.13. Saving the data</a></li>
 <li><a href="#logging-in-code-login-code">5.14. Logging in: <code>login</code></a></li>
 <li><a href="#logging-out-code-logout-code">5.15. Logging out: <code>logout</code></a></li>
-<li><a href="#creating-user-account-code-create-account-code">5.16. Creating user account: <code>create-account</code></a></li>
-<li><a href="#editing-user-account-code-edit-account-code">5.17. Editing user account: <code>edit-account</code></a></li>
-<li><a href="#deleting-user-account-code-delete-account-code">5.18. Deleting user account: <code>delete-account</code></a></li>
-<li><a href="#list-all-user-accounts-code-list-account-code">5.19. List all user accounts: <code>list-account</code></a></li>
+<li><a href="#creating-user-account-code-create-acc-code">5.16. Creating user account: <code>create-acc</code></a></li>
+<li><a href="#editing-user-account-code-edit-acc-code">5.17. Editing user account: <code>edit-acc</code></a></li>
+<li><a href="#deleting-user-account-code-delete-acc-code">5.18. Deleting user account: <code>delete-acc</code></a></li>
+<li><a href="#list-all-user-accounts-code-list-acc-code">5.19. List all user accounts: <code>list-acc</code></a></li>
 <li><a href="#creating-user-role-code-create-role-code">5.20. Creating user role: <code>create-role</code></a></li>
 <li><a href="#editing-user-role-code-edit-role-code">5.21. Editing user role: <code>edit-role</code></a></li>
 <li><a href="#deleting-user-role-code-delete-role-code">5.22. Deleting user role: <code>delete-role</code></a></li>
@@ -115,7 +115,7 @@ from a single location&#8201;&#8212;&#8201;menu, inventory, sales and bookings m
 <p>Ensure you have Java version <code>9</code> or later installed in your Computer.</p>
 </li>
 <li>
-<p>Download the latest <code>menus.jar</code> <a href="https://github.com/CS2103-AY1819S1-F10-4/main/tree/master/releases">here</a>.</p>
+<p>Download the latest <code>menus.jar</code> <a href="https://github.com/CS2103-AY1819S1-F10-4/main/releases">here</a>.</p>
 </li>
 <li>
 <p>Copy the file to the folder you want to use as the home folder.</p>
@@ -641,10 +641,10 @@ Format: <code>logout</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="creating-user-account-code-create-account-code"><a class="link" href="#creating-user-account-code-create-account-code">5.16. Creating user account: <code>create-account</code></a></h3>
+<h3 id="creating-user-account-code-create-acc-code"><a class="link" href="#creating-user-account-code-create-acc-code">5.16. Creating user account: <code>create-acc</code></a></h3>
 <div class="paragraph">
 <p>Creates a new user account with a given role.<br>
-Format: <code>create-account id/USERNAME pw/PASSWORD r/ROLE_ID</code></p>
+Format: <code>create-acc id/USERNAME pw/PASSWORD r/ROLE_ID</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -652,16 +652,16 @@ Format: <code>create-account id/USERNAME pw/PASSWORD r/ROLE_ID</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>create-account id/azhikai pw/p@55w0rd r/0</code></p>
+<p><code>create-acc id/azhikai pw/p@55w0rd r/0</code></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-user-account-code-edit-account-code"><a class="link" href="#editing-user-account-code-edit-account-code">5.17. Editing user account: <code>edit-account</code></a></h3>
+<h3 id="editing-user-account-code-edit-acc-code"><a class="link" href="#editing-user-account-code-edit-acc-code">5.17. Editing user account: <code>edit-acc</code></a></h3>
 <div class="paragraph">
 <p>Edits an existing user account.<br>
-Format: <code>edit-account id/USERNAME [nid/NEW_USERNAME] [pw/NEW_PASSWORD] [r/NEW_ROLE_ID]</code></p>
+Format: <code>edit-acc id/USERNAME [nid/NEW_USERNAME] [pw/NEW_PASSWORD] [r/NEW_ROLE_ID]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -680,7 +680,7 @@ Format: <code>edit-account id/USERNAME [nid/NEW_USERNAME] [pw/NEW_PASSWORD] [r/N
 <div class="ulist">
 <ul>
 <li>
-<p><code>edit-account id/azhikai</code></p>
+<p><code>edit-acc id/azhikai</code></p>
 <div class="ulist">
 <ul>
 <li>
@@ -690,22 +690,22 @@ Format: <code>edit-account id/USERNAME [nid/NEW_USERNAME] [pw/NEW_PASSWORD] [r/N
 </div>
 </li>
 <li>
-<p><code>edit-account id/azhikai nid/angzhikai</code></p>
+<p><code>edit-acc id/azhikai nid/angzhikai</code></p>
 </li>
 <li>
-<p><code>edit-account id/azhikai nid/angzhikai pw/n3wp@55w0rd</code></p>
+<p><code>edit-acc id/azhikai nid/angzhikai pw/n3wp@55w0rd</code></p>
 </li>
 <li>
-<p><code>edit-account id/azhikai r/1</code></p>
+<p><code>edit-acc id/azhikai r/1</code></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-user-account-code-delete-account-code"><a class="link" href="#deleting-user-account-code-delete-account-code">5.18. Deleting user account: <code>delete-account</code></a></h3>
+<h3 id="deleting-user-account-code-delete-acc-code"><a class="link" href="#deleting-user-account-code-delete-acc-code">5.18. Deleting user account: <code>delete-acc</code></a></h3>
 <div class="paragraph">
 <p>Deletes an existing user account.<br>
-Format: `delete-account id/USERNAME `</p>
+Format: `delete-acc id/USERNAME `</p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -713,16 +713,16 @@ Format: `delete-account id/USERNAME `</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>delete-account id/azhikai</code></p>
+<p><code>delete-acc id/azhikai</code></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="list-all-user-accounts-code-list-account-code"><a class="link" href="#list-all-user-accounts-code-list-account-code">5.19. List all user accounts: <code>list-account</code></a></h3>
+<h3 id="list-all-user-accounts-code-list-acc-code"><a class="link" href="#list-all-user-accounts-code-list-acc-code">5.19. List all user accounts: <code>list-acc</code></a></h3>
 <div class="paragraph">
 <p>List all existing user accounts.<br>
-Format: <code>list-account</code></p>
+Format: <code>list-acc</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -779,12 +779,6 @@ Format: <code>edit-role id/ROLE_ID [nid/NEW_ROLE_ID] [n/ROLE_NAME]</code></p>
 </li>
 <li>
 <p><code>edit-role id/0 nid/2 n/Supervisor</code></p>
-</li>
-<li>
-<p><code>edit-account id/0 nid/1</code></p>
-</li>
-<li>
-<p><code>edit-account id/0 n/Owner</code></p>
 </li>
 </ul>
 </div>
@@ -1796,16 +1790,16 @@ e.g.<code>select 2</code></p>
 <p><strong>Logging out</strong>: <code>logout</code></p>
 </li>
 <li>
-<p><strong>Creating user account</strong>: <code>create-account id/USERNAME pw/PASSWORD r/ROLE_ID</code></p>
+<p><strong>Creating user account</strong>: <code>create-acc id/USERNAME pw/PASSWORD r/ROLE_ID</code></p>
 </li>
 <li>
-<p><strong>Editing user account</strong>: <code>edit-account id/USERNAME [nid/NEW_USERNAME] [pw/NEW_PASSWORD] [r/NEW_ROLE_ID]</code></p>
+<p><strong>Editing user account</strong>: <code>edit-acc id/USERNAME [nid/NEW_USERNAME] [pw/NEW_PASSWORD] [r/NEW_ROLE_ID]</code></p>
 </li>
 <li>
-<p><strong>Deleting user account</strong>: <code>delete-account id/USERNAME</code></p>
+<p><strong>Deleting user account</strong>: <code>delete-acc id/USERNAME</code></p>
 </li>
 <li>
-<p><strong>Listing user accounts</strong>: <code>list-account</code></p>
+<p><strong>Listing user accounts</strong>: <code>list-acc</code></p>
 </li>
 <li>
 <p><strong>Creating user role</strong>: <code>create-role id/ROLE_ID n/ROLE_NAME</code></p>
@@ -1949,4 +1943,4 @@ e.g. <code>check-sales Fried Rice</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-09 11:56:45 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-09 12:20:49 UTC</div></div></div></body></html>
