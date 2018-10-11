@@ -2511,14 +2511,14 @@ The use case for creating account role is the same.
 </li>
 </ul>
 </div>
-<h3 id="use-case-uc501-record-sales-volume-of-menu-item-within-a-day" class="discrete">Use case: UC501 - Record sales volume of menu item within a day</h3>
+<h3 id="use-case-uc501-record-sales-volume-of-menu-item" class="discrete">Use case: UC501 - Record sales volume of menu item</h3>
 <div class="paragraph">
 <p><strong>Guarantees</strong>:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>A new sales record of a menu item will be appended.</p>
+<p>A new sales record of a menu item will be appended to the sales book.</p>
 </li>
 </ul>
 </div>
@@ -2528,10 +2528,10 @@ The use case for creating account role is the same.
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User requests to record sales volume of a menu item within a specified day.</p>
+<p>User requests to record sales volume of a menu item for a specified day.</p>
 </li>
 <li>
-<p>App appends the record at the end of the day&#8217;s sales report.</p>
+<p>App appends the record at the end of sales book.</p>
 </li>
 <li>
 <p>App returns a success message confirming that the record is successful.</p>
@@ -2566,29 +2566,16 @@ The use case for creating account role is the same.
 </div>
 </li>
 <li>
-<p>2a. Sales report does not exist for the specified day.</p>
+<p>2a. Sales record of the menu item with the same date already exists in the sales book.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>2a1. App automatically creates a sales report for the day.</p>
+<p>2a1. App returns a message telling user that the menu item&#8217;s record already exists.</p>
+</li>
+<li>
+<p>2a2. User requests to record sales volume again.</p>
 <div class="paragraph">
-<p>Use case resumes at step 2.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>2b. Sales record of the menu item already exist in the day&#8217;s sales report.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>2b1. App returns a message telling user that the menu item&#8217;s record already exists.</p>
-</li>
-<li>
-<p>2b2. User requests to record sales volume again.</p>
-<div class="paragraph">
-<p>Steps 2b1-2b2 are repeated until a record with unique item name is entered.</p>
+<p>Steps 2a1-2a2 are repeated until a record with unique item name is entered.</p>
 </div>
 <div class="paragraph">
 <p>Use case resumes at step 3.</p>
@@ -2599,7 +2586,7 @@ The use case for creating account role is the same.
 </li>
 </ul>
 </div>
-<h3 id="use-case-uc502-editing-sales-record-in-a-sales-report-for-a-day" class="discrete">Use case: UC502 - Editing sales record in a sales report for a day</h3>
+<h3 id="use-case-uc502-editing-sales-record" class="discrete">Use case: UC502 - Editing sales record</h3>
 <div class="paragraph">
 <p><strong>Guarantees</strong>:</p>
 </div>
@@ -2616,7 +2603,7 @@ The use case for creating account role is the same.
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User requests to edit a sales record in the sales report for a specified day.</p>
+<p>User requests to edit a sales record in the sales book.</p>
 </li>
 <li>
 <p>App updates the sales record to that given by the user.</p>
@@ -2654,16 +2641,16 @@ The use case for creating account role is the same.
 </div>
 </li>
 <li>
-<p>1b. The given index/name is invalid.</p>
+<p>1b. The given index or name or date is invalid.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1b1. App returns a message telling user that the index/name is invalid.</p>
+<p>1b1. App returns a message telling user that the index or name or date is invalid.</p>
 </li>
 <li>
 <p>1b2. User requests to edit sales record again.</p>
 <div class="paragraph">
-<p>Steps 1b1-1b2 are repeated until a valid index/name is entered.</p>
+<p>Steps 1b1-1b2 are repeated until a valid index/ name and date is entered.</p>
 </div>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
@@ -2697,20 +2684,14 @@ The use case for creating account role is the same.
 </li>
 </ul>
 </div>
-<h3 id="use-case-uc503-deleting-sales-record-in-a-sales-report-for-a-day" class="discrete">Use case: UC503 - Deleting sales record in a sales report for a day</h3>
+<h3 id="use-case-uc503-deleting-sales-record" class="discrete">Use case: UC503 - Deleting sales record</h3>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User requests to display the sales report of a specified day.</p>
-</li>
-<li>
-<p>App shows the sales report.</p>
-</li>
-<li>
-<p>User requests to delete a sales record in that sales report.</p>
+<p>User requests to delete a sales record in the sales book.</p>
 </li>
 <li>
 <p>App deletes the sales record.</p>
@@ -2729,47 +2710,38 @@ The use case for creating account role is the same.
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a. The sales report does not exist in the specified day since no record has been entered.</p>
-</li>
-<li>
-<p>1b. App tells user that sales report does not exist.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-<li>
-<p>3a. Invalid command format entered by the user.</p>
+<p>1a. Invalid command format entered by the user.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. App returns a message telling user that the command format is invalid.</p>
+<p>1a1. App returns a message telling user that the command format is invalid.</p>
 </li>
 <li>
-<p>3a2. User requests to delete sales record again.</p>
+<p>1a2. User requests to delete sales record again.</p>
 <div class="paragraph">
-<p>Steps 3a1-3a2 are repeated until a valid command format is entered.</p>
+<p>Steps 1a1-1a2 are repeated until a valid command format is entered.</p>
 </div>
 <div class="paragraph">
-<p>Use case resumes at step 4.</p>
+<p>Use case resumes at step 2.</p>
 </div>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>3b. The given index/name is invalid.</p>
+<p>1b. The given index or name or date is invalid.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3b1. App returns a message telling user the index/name is invalid.</p>
+<p>1b1. App returns a message telling user the index or name or date is invalid.</p>
 </li>
 <li>
-<p>3b2. User requests to delete sales record again.</p>
+<p>1b2. User requests to delete sales record again.</p>
 <div class="paragraph">
-<p>Steps 3b1-3b2 are repeated until a valid index/name is entered.</p>
+<p>Steps 1b1-1b2 are repeated until a valid index/name and date is entered.</p>
 </div>
 <div class="paragraph">
-<p>Use case resumes at step 4.</p>
+<p>Use case resumes at step 2.</p>
 </div>
 </li>
 </ul>
@@ -2850,11 +2822,11 @@ records.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a. User has never entered a sales record. No sales record exists.</p>
+<p>1a. User has never entered a sales record. Sales book is empty.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a1. App returns a message telling user that there is no sales record.</p>
+<p>1a1. App returns a message telling user that sales book is empty.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2982,4 +2954,4 @@ Expected: The most recent window size and location is retained.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-11 09:19:59 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-11 12:38:04 UTC</div></div></div></body></html>

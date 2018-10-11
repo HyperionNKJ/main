@@ -79,7 +79,7 @@
 <li><a href="#deleting-a-reservation-code-delete-reservation-code">5.49. Deleting a reservation: <code>delete-reservation</code></a></li>
 <li><a href="#recording-daily-sales-volume-of-a-menu-item-code-record-sales-code">5.50. Recording daily sales volume of a menu item: <code>record-sales</code></a></li>
 <li><a href="#display-sales-report-code-display-sales-code">5.51. Display sales report: <code>display-sales</code></a></li>
-<li><a href="#deleting-a-sales-record-report-code-delete-sales-code">5.52. Deleting a sales record / report: <code>delete-sales</code></a></li>
+<li><a href="#deleting-a-sales-record-code-delete-sales-code">5.52. Deleting a sales record: <code>delete-sales</code></a></li>
 <li><a href="#editing-a-sales-record-code-edit-sales-code">5.53. Editing a sales record: <code>edit-sales</code></a></li>
 <li><a href="#checking-sales-history-of-a-menu-item-code-check-sales-code">5.54. Checking sales history of a menu item: <code>check-sales</code></a></li>
 <li><a href="#ranking-menu-items-according-to-profitability-code-rank-dish-code">5.55. Ranking menu items according to profitability: <code>rank-dish</code></a></li>
@@ -1524,7 +1524,7 @@ Deletes the 2nd reservation in the reservations list.</p>
 <div class="sect2">
 <h3 id="recording-daily-sales-volume-of-a-menu-item-code-record-sales-code"><a class="link" href="#recording-daily-sales-volume-of-a-menu-item-code-record-sales-code">5.50. Recording daily sales volume of a menu item: <code>record-sales</code></a></h3>
 <div class="paragraph">
-<p>Records the quantity of a menu item sold within the specified day into the day&#8217;s sales report.<br>
+<p>Records the quantity of a menu item sold within the specified day into the sales book.<br>
 Format: <code>record-sales d/DATE n/ITEM_NAME q/QUANTITY SOLD p/ITEM_PRICE</code></p>
 </div>
 <div class="sidebarblock">
@@ -1532,16 +1532,10 @@ Format: <code>record-sales d/DATE n/ITEM_NAME q/QUANTITY SOLD p/ITEM_PRICE</code
 <div class="ulist">
 <ul>
 <li>
-<p>Appends the above record onto the sales report for the day.</p>
+<p>DATE must be written in the DD-MM-YYYY format.</p>
 </li>
 <li>
-<p>A sales report will automatically be created if the day does not have one.</p>
-</li>
-<li>
-<p>DATE must be written in the DD/MM/YYYY format.</p>
-</li>
-<li>
-<p>ITEM_NAME must be unique in the sales report for the selected day.</p>
+<p>Both DATE and ITEM_NAME cannot be same as another record in the sales book.</p>
 </li>
 </ul>
 </div>
@@ -1572,7 +1566,7 @@ Format: <code>display-sales DATE</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>DATE must be written in the DD/MM/YYYY format.</p>
+<p>DATE must be written in the DD-MM-YYYY format.</p>
 </li>
 </ul>
 </div>
@@ -1595,13 +1589,10 @@ Displays the sales report dated 25-09-2018.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-sales-record-report-code-delete-sales-code"><a class="link" href="#deleting-a-sales-record-report-code-delete-sales-code">5.52. Deleting a sales record / report: <code>delete-sales</code></a></h3>
+<h3 id="deleting-a-sales-record-code-delete-sales-code"><a class="link" href="#deleting-a-sales-record-code-delete-sales-code">5.52. Deleting a sales record: <code>delete-sales</code></a></h3>
 <div class="paragraph">
-<p>Deletes a menu item&#8217;s sales record in the sales report for the specified day.<br>
-Format: <code>delete-sales DATE ITEM_NAME</code> / <code>delete-sales DATE ITEM_INDEX</code><br>
-OR<br>
-Deletes the entire sales report for the specified day.<br>
-Format: <code>delete-sales DATE</code></p>
+<p>Deletes the sales record with the specified date and item name.<br>
+Format: <code>delete-sales DATE ITEM_NAME</code> / <code>delete-sales ITEM_INDEX</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -1611,16 +1602,13 @@ Format: <code>delete-sales DATE</code></p>
 <p>Deletes the record at the specified <code>ITEM_INDEX</code>.</p>
 </li>
 <li>
-<p>The item index refers to the index number shown in the sales report for the specified day.</p>
+<p>The item index refers to the index number shown in the sales book.</p>
 </li>
 <li>
 <p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
-<p>Alternatively, deletes the sales record with the specified <code>ITEM_NAME</code>.</p>
-</li>
-<li>
-<p>Alternatively, deletes the entire sales report for the specified day by omitting the record identifier.</p>
+<p>Alternatively, deletes the sales record with the specified <code>DATE</code> and <code>ITEM_NAME</code>.</p>
 </li>
 </ul>
 </div>
@@ -1633,18 +1621,14 @@ Format: <code>delete-sales DATE</code></p>
 <ul>
 <li>
 <p><code>display-sales</code><br>
-<code>delete-sales 25-09-2018 2</code><br>
+<code>delete-sales 2</code><br>
 <code>display-sales</code><br>
-Deletes the 2nd record from the sales report dated 25-09-2018.</p>
+Deletes the 2nd record from the sales book.</p>
 </li>
 <li>
 <p><code>delete-sales 10-02-2018 Fried Rice</code><br>
 <code>display-sales</code><br>
-Deletes the sales record for <code>Fried Rice</code> from the sales report dated 10-02-2018.</p>
-</li>
-<li>
-<p><code>delete-sales 23-06-2018</code><br>
-Deletes the entire sales report dated 23-06-2018.</p>
+Deletes the sales record for <code>Fried Rice</code> dated 10-02-2018 from the sales book.</p>
 </li>
 </ul>
 </div>
@@ -1652,8 +1636,8 @@ Deletes the entire sales report dated 23-06-2018.</p>
 <div class="sect2">
 <h3 id="editing-a-sales-record-code-edit-sales-code"><a class="link" href="#editing-a-sales-record-code-edit-sales-code">5.53. Editing a sales record: <code>edit-sales</code></a></h3>
 <div class="paragraph">
-<p>Edit a menu item&#8217;s sales record in the sales report for the specified day.<br>
-Format: <code>edit-sales DATE NAME [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE]</code> / <code>edit-sales DATE INDEX [n/ITEM_NAME]
+<p>Edits the sales record with the specified date and item name.<br>
+Format: <code>edit-sales DATE NAME [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE]</code> / <code>edit-sales INDEX [n/ITEM_NAME]
 [q/QUANTITY SOLD] [p/ITEM_PRICE]</code></p>
 </div>
 <div class="sidebarblock">
@@ -1661,8 +1645,10 @@ Format: <code>edit-sales DATE NAME [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE
 <div class="ulist">
 <ul>
 <li>
-<p>Edits the record at the specified <code>INDEX</code>. The index refers to the index number shown in the sales report for the
-specified day. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+<p>Edits the record at the specified <code>INDEX</code>. The index refers to the index number shown in the sales book.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
 <p>At least one of the optional fields must be provided.</p>
@@ -1671,7 +1657,7 @@ specified day. The index <strong>must be a positive integer</strong> 1, 2, 3, &#
 <p>Existing values will be updated to the input values.</p>
 </li>
 <li>
-<p>Alternatively, edits the sales record with the specified <code>NAME</code>.</p>
+<p>Alternatively, edits the sales record with the specified <code>DATE</code> and <code>NAME</code>.</p>
 </li>
 </ul>
 </div>
@@ -1684,15 +1670,16 @@ specified day. The index <strong>must be a positive integer</strong> 1, 2, 3, &#
 <ul>
 <li>
 <p><code>edit-sales 23-06-2018 Fried Rice n/Fried Rice with Shrimps</code><br>
-In the sales report dated 23-06-2018, edits the name of "Fried Rice" to be "Fried Rice with Shrimps".</p>
+In the sales record of "Fried Rice" dated 23-06-2018, edits its name to be "Fried Rice with Shrimps".</p>
 </li>
 <li>
 <p><code>edit-sales 12-02-2018 Pasta q/37 p/6.50</code> <br>
-In the sales report dated 12-02-2018, edits the quantity sold and price of "Pasta" to be 37 and 6.50 respectively.</p>
+In the sales record of "Pasta" dated 12-02-2018, edits its quantity sold and price to be 37 and 6.50
+respectively.</p>
 </li>
 <li>
-<p><code>edit-sales 01-01-2018 3 n/Fried Omelet</code> <br>
-In the sales report dated 01-01-2018, edits the menu item&#8217;s name of the 3rd record to be "Fried Omelet".</p>
+<p><code>edit-sales 3 n/Fried Omelet</code> <br>
+In the 3rd record in the sales book, edits the menu item&#8217;s name to be "Fried Omelet".</p>
 </li>
 </ul>
 </div>
@@ -1918,17 +1905,13 @@ e.g. <code>record-sales d/25-09-2018 n/Fried Rice q/35 p/5.50</code></p>
 e.g. <code>display-sales</code> or <code>display-sales 25-09-2018</code></p>
 </li>
 <li>
-<p><strong>Delete sales record</strong> : <code>delete-sales DATE ITEM_NAME</code> or <code>delete-sales DATE ITEM_INDEX</code><br>
-e.g. <code>delete-sales 10-02-2018 Fried Rice</code> or <code>delete-sales 25-09-2018 2</code></p>
+<p><strong>Delete sales record</strong> : <code>delete-sales DATE ITEM_NAME</code> or <code>delete-sales ITEM_INDEX</code><br>
+e.g. <code>delete-sales 10-02-2018 Fried Rice</code> or <code>delete-sales 2</code></p>
 </li>
 <li>
-<p><strong>Delete sales report</strong> : <code>delete-sales DATE</code><br>
-e.g. <code>delete-sales 23-06-2018</code></p>
-</li>
-<li>
-<p><strong>Edit sales record</strong> : <code>edit-sales DATE NAME [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE]</code> or <code>edit-sales DATE
+<p><strong>Edit sales record</strong> : <code>edit-sales DATE NAME [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE]</code> or <code>edit-sales
 INDEX [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE]</code><br>
-e.g. <code>edit-sales 12-02-2018 Pasta q/37 p/6.50</code> or <code>edit-sales 01-01-2018 3 n/Fried Omelet</code></p>
+e.g. <code>edit-sales 12-02-2018 Pasta q/37 p/6.50</code> or <code>edit-sales 3 n/Fried Omelet</code></p>
 </li>
 <li>
 <p><strong>Check sales history of menu item</strong> : <code>check-sales ITEM_NAME</code><br>
@@ -1943,4 +1926,4 @@ e.g. <code>check-sales Fried Rice</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-11 09:19:59 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-11 12:38:04 UTC</div></div></div></body></html>
