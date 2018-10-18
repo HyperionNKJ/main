@@ -32,9 +32,10 @@
 <ul class="sectlevel2">
 <li><a href="#undo-redo-feature">4.1. Undo/Redo feature</a></li>
 <li><a href="#delete-ingredient-feature">4.2. Delete Ingredient feature</a></li>
-<li><a href="#proposed-data-encryption">4.3. [Proposed] Data Encryption</a></li>
-<li><a href="#logging">4.4. Logging</a></li>
-<li><a href="#Implementation-Configuration">4.5. Configuration</a></li>
+<li><a href="#reservations-feature">4.3. Reservations feature</a></li>
+<li><a href="#proposed-data-encryption">4.4. [Proposed] Data Encryption</a></li>
+<li><a href="#logging">4.5. Logging</a></li>
+<li><a href="#Implementation-Configuration">4.6. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">5. Documentation</a>
@@ -914,20 +915,167 @@ their own behaviour for these methods.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">4.3. [Proposed] Data Encryption</a></h3>
+<h3 id="reservations-feature"><a class="link" href="#reservations-feature">4.3. Reservations feature</a></h3>
+<div class="paragraph">
+<p>The Reservations feature allows users to store customer reservations, view them, and to cancel them.</p>
+</div>
+<div class="sect3">
+<h4 id="current-implementation-3"><a class="link" href="#current-implementation-3">4.3.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>The Reservations feature currently contains 3 commands to modify the <code>UniqueReservationsList</code> stored in <code>ModelManager</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-reservation</code> command - Adds reservations to the reservations list.</p>
+</li>
+<li>
+<p><code>edit-reservation</code> command - Edits existing reservations in the reservations list.</p>
+</li>
+<li>
+<p><code>delete-reservation</code> command - Deletes existing reservations in the reservations list.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Each <code>Reservation</code> object contains <code>Name</code>, <code>Pax</code>, and <code>LocalDateTime</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>Name</code> is a separate class from the <code>Name</code> used by <code>Person</code>, but is functionally the same.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="code-add-reservation-code-command"><a class="link" href="#code-add-reservation-code-command">4.3.2. <code>add-reservation</code> Command</a></h4>
+<div class="paragraph">
+<p>The <code>add-reservation</code> command follows similar implementation of the current <code>add</code> command.</p>
+</div>
+<div class="paragraph">
+<p>The command takes in 3 parameters, <code>Name</code>, <code>Pax</code>, and <code>DateTime</code> to create a <code>Reservation</code> object.</p>
+</div>
+<div class="paragraph">
+<p>After the <code>Reservation</code> Object is created, AddressBook#addReservation(Reservation reservation) is called to add the
+<code>Reservation</code> Object to the <code>UniqueReservationsList</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="code-edit-reservation-code-command"><a class="link" href="#code-edit-reservation-code-command">4.3.3. <code>edit-reservation</code> Command</a></h4>
+<div class="paragraph">
+<p>The <code>edit-reservation</code> command follows similar implementation of the current <code>edit</code> command.</p>
+</div>
+<div class="paragraph">
+<p>The command takes in 1 mandatory parameter, <code>Index</code>, followed by <strong>1 or more</strong> of the following  optional parameters,
+ <code>Name</code>, <code>Pax</code>, <code>DateTime</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>Reservation</code> associated with the given <code>Index</code> is then identified within the internal <code>UniqueReservationsList</code>,
+then has its values updated to the new values specified by the <code>Name</code>, <code>Pax</code>, and <code>DateTime</code> parameters.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="code-delete-reservation-code-command"><a class="link" href="#code-delete-reservation-code-command">4.3.4. <code>delete-reservation</code> Command</a></h4>
+<div class="paragraph">
+<p>The <code>delete-reservation</code> command follows similar implementation of the current <code>delete</code> command.</p>
+</div>
+<div class="paragraph">
+<p>The command takes in 1 parameter, <code>Index</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>Reservation</code> associated with the given <code>Index</code> is then identified, then deleted from the internal
+<code>UniqueReservationsList</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">4.3.5. Design Considerations</a></h4>
+<div class="paragraph">
+<p><strong>Aspect: How DateTime is stored</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> <code>Reservation</code> stores the Date and Time by wrapping it in a <code>LocalDateTime</code> object.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement.</p>
+</li>
+<li>
+<p>Cons: Unable to easily change attributes like how the Date and Time are displayed, and unable to store Message
+Constraints as it is not its own dedicated class.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Create dedicated <code>DateTime</code> class.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: This will solve the aforementioned issues of not having a dedicated class to store the Date and Time.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Aspect: How DateTime is parsed</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> <code>DateTime</code> is parsed in the format <code>yyyy-mm-ddThh:mm:ss</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement as the <code>LocalDateTime</code> object can directly parse this format without any additional input
+manipulation.</p>
+</li>
+<li>
+<p>Cons: Unintuitive and troublesome to enter the fields. Additionally, it is unnecessary to keep track of the
+<code>Seconds</code> field in the context of restaurant reservations.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Use <code>Natty</code> library for <code>DateTime</code> parsing</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Natty uses natural language parsing, so the user can enter the <code>Date</code> and <code>Time</code> fields in their preferred
+format.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">4.4. [Proposed] Data Encryption</a></h3>
 <div class="paragraph">
 <p><em>{Explain here how the data encryption feature will be implemented}</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">4.4. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">4.5. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 4.5, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 4.6, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -958,7 +1106,7 @@ their own behaviour for these methods.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">4.5. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">4.6. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -3120,4 +3268,4 @@ Expected: The most recent window size and location is retained.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-18 13:04:57 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-18 14:22:41 UTC</div></div></div></body></html>
