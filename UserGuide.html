@@ -13,10 +13,11 @@
 <li><a href="#quick-start">2. Quick Start</a></li>
 <li><a href="#Components">3. Components</a>
 <ul class="sectlevel2">
-<li><a href="#menus">3.1. Menus</a></li>
-<li><a href="#inventory">3.2. Inventory</a></li>
-<li><a href="#sales">3.3. Sales</a></li>
-<li><a href="#bookings">3.4. Bookings</a></li>
+<li><a href="#accounts">3.1. Accounts</a></li>
+<li><a href="#menus">3.2. Menus</a></li>
+<li><a href="#inventory">3.3. Inventory</a></li>
+<li><a href="#sales">3.4. Sales</a></li>
+<li><a href="#bookings">3.5. Bookings</a></li>
 </ul>
 </li>
 <li><a href="#Features">4. Key Features</a>
@@ -43,52 +44,49 @@
 <li><a href="#saving-the-data">5.13. Saving the data</a></li>
 <li><a href="#logging-in-code-login-code">5.14. Logging in: <code>login</code></a></li>
 <li><a href="#logging-out-code-logout-code">5.15. Logging out: <code>logout</code></a></li>
-<li><a href="#creating-user-account-code-create-acc-code">5.16. Creating user account: <code>create-acc</code></a></li>
-<li><a href="#editing-user-account-code-edit-acc-code">5.17. Editing user account: <code>edit-acc</code></a></li>
-<li><a href="#deleting-user-account-code-delete-acc-code">5.18. Deleting user account: <code>delete-acc</code></a></li>
-<li><a href="#list-all-user-accounts-code-list-acc-code">5.19. List all user accounts: <code>list-acc</code></a></li>
-<li><a href="#creating-user-role-code-create-role-code">5.20. Creating user role: <code>create-role</code></a></li>
-<li><a href="#editing-user-role-code-edit-role-code">5.21. Editing user role: <code>edit-role</code></a></li>
-<li><a href="#deleting-user-role-code-delete-role-code">5.22. Deleting user role: <code>delete-role</code></a></li>
-<li><a href="#list-all-user-roles-code-list-role-code">5.23. List all user roles: <code>list-role</code></a></li>
-<li><a href="#adding-an-ingredient-code-add-ingredient-code">5.24. Adding an ingredient: <code>add-ingredient</code></a></li>
-<li><a href="#listing-all-ingredients-code-list-ingredients-code">5.25. Listing all ingredients : <code>list-ingredients</code></a></li>
-<li><a href="#listing-ingredients-with-low-stock-count-code-list-ingredients-low-code">5.26. Listing ingredients with low stock count: <code>list-ingredients-low</code></a></li>
-<li><a href="#removing-an-ingredient-code-delete-ingredient-code">5.27. Removing an ingredient: <code>delete-ingredient</code></a></li>
-<li><a href="#editing-an-ingredient-code-edit-ingredient-code">5.28. Editing an ingredient: <code>edit-ingredient</code></a></li>
-<li><a href="#stocking-up-an-ingredient-code-stockup-code">5.29. Stocking up an ingredient: <code>stockup</code></a></li>
-<li><a href="#consuming-an-ingredient-code-consume-code">5.30. Consuming an ingredient: <code>consume</code></a></li>
-<li><a href="#removing-out-of-stock-dishes-from-daily-menu-code-remove-oos-dish-code">5.31. Removing out-of-stock dishes from daily menu: <code>remove-oos-dish</code></a></li>
-<li><a href="#show-history-of-stockup-or-consumption-code-history-code">5.32. Show history of stockup or consumption: <code>history</code></a></li>
-<li><a href="#adding-an-item-to-the-menu-code-add-item-code-or-code-ai-code">5.33. Adding an item to the menu: <code>add-item</code> or <code>ai</code></a></li>
-<li><a href="#listing-all-items-in-the-menu-code-list-items-code-or-li">5.34. Listing all items in the menu : <code>list-items</code> or 'li'</a></li>
-<li><a href="#editing-an-item-in-the-menu-code-edit-item-code-or-code-ei-code">5.35. Editing an item in the menu : <code>edit-item</code> or <code>ei</code></a></li>
-<li><a href="#deleting-an-item-code-delete-item-code-or-code-di-code">5.36. Deleting an item : <code>delete-item</code> or <code>di</code></a></li>
-<li><a href="#selecting-an-item-code-select-item-code-or-code-si-code">5.37. Selecting an item : <code>select-item</code> or <code>si</code></a></li>
-<li><a href="#locating-items-by-name-code-find-item-code-or-code-fi-code">5.38. Locating items by name: <code>find-item</code> or <code>fi</code></a></li>
-<li><a href="#filter-menu-by-tag-code-filter-menu-code-or-code-fm-code">5.39. Filter menu by tag: <code>filter-menu</code> or <code>fm</code></a></li>
-<li><a href="#sort-menu-code-sort-menu-code-or-code-sm-code">5.40. Sort menu : <code>sort-menu</code> or <code>sm</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-menu-code-or-code-cm-code">5.41. Clearing all entries : <code>clear-menu</code> or <code>cm</code></a></li>
-<li><a href="#giving-a-discount-to-an-item-code-discount-item-code-or-code-di-code">5.42. Giving a discount to an item : <code>discount-item</code> or <code>di</code></a></li>
-<li><a href="#today-s-specials-code-today-special-code-or-code-ts-code">5.43. Today&#8217;s specials : <code>today-special</code> or <code>ts</code></a></li>
-<li><a href="#export-menu-code-export-menu-code-or-code-em-code">5.44. Export menu : <code>export-menu</code> or <code>em</code></a></li>
-<li><a href="#import-menu-code-import-menu-code-or-code-im-code">5.45. Import menu : <code>import-menu</code> or <code>im</code></a></li>
-<li><a href="#adding-a-reservation-code-add-reservation-code">5.46. Adding a reservation: <code>add-reservation</code></a></li>
-<li><a href="#listing-all-reservations-code-list-reservations-code">5.47. Listing all reservations : <code>list-reservations</code></a></li>
-<li><a href="#editing-a-reservation-code-edit-reservation-code">5.48. Editing a reservation: <code>edit-reservation</code></a></li>
-<li><a href="#sorting-reservations-list-code-sort-reservations-code">5.49. Sorting reservations list: <code>sort-reservations</code></a></li>
-<li><a href="#deleting-a-reservation-code-delete-reservation-code">5.50. Deleting a reservation: <code>delete-reservation</code></a></li>
-<li><a href="#recording-daily-sales-volume-of-a-menu-item-code-record-sales-code">5.51. Recording daily sales volume of a menu item: <code>record-sales</code></a></li>
-<li><a href="#display-sales-report-code-display-sales-code">5.52. Display sales report: <code>display-sales</code></a></li>
-<li><a href="#deleting-a-sales-record-code-delete-sales-code">5.53. Deleting a sales record: <code>delete-sales</code></a></li>
-<li><a href="#editing-a-sales-record-code-edit-sales-code">5.54. Editing a sales record: <code>edit-sales</code></a></li>
-<li><a href="#checking-sales-history-of-a-menu-item-code-check-sales-code">5.55. Checking sales history of a menu item: <code>check-sales</code></a></li>
-<li><a href="#ranking-menu-items-according-to-profitability-code-rank-dish-code">5.56. Ranking menu items according to profitability: <code>rank-dish</code></a></li>
-<li><a href="#ranking-dates-according-to-profitability-code-rank-date-code">5.57. Ranking dates according to profitability: <code>rank-date</code></a></li>
+<li><a href="#creating-user-account-code-register-code-or-code-reg-code">5.16. Creating user account: <code>register</code> or <code>reg</code></a></li>
+<li><a href="#editing-user-account-code-edit-acc-code-or-code-ea-code">5.17. Editing user account: <code>edit-acc</code> or <code>ea</code></a></li>
+<li><a href="#deleting-user-account-code-deregister-code-or-code-dereg-code">5.18. Deleting user account: <code>deregister</code> or <code>dereg</code></a></li>
+<li><a href="#user-roles-code-coming-in-v2-0-code">5.19. User roles <code>[coming in v2.0]</code></a></li>
+<li><a href="#adding-an-ingredient-code-add-ingredient-code">5.20. Adding an ingredient: <code>add-ingredient</code></a></li>
+<li><a href="#listing-all-ingredients-code-list-ingredients-code">5.21. Listing all ingredients : <code>list-ingredients</code></a></li>
+<li><a href="#listing-ingredients-with-low-stock-count-code-list-ingredients-low-code">5.22. Listing ingredients with low stock count: <code>list-ingredients-low</code></a></li>
+<li><a href="#removing-an-ingredient-code-delete-ingredient-code">5.23. Removing an ingredient: <code>delete-ingredient</code></a></li>
+<li><a href="#editing-an-ingredient-code-edit-ingredient-code">5.24. Editing an ingredient: <code>edit-ingredient</code></a></li>
+<li><a href="#stocking-up-an-ingredient-code-stockup-code">5.25. Stocking up an ingredient: <code>stockup</code></a></li>
+<li><a href="#consuming-an-ingredient-code-consume-code">5.26. Consuming an ingredient: <code>consume</code></a></li>
+<li><a href="#removing-out-of-stock-dishes-from-daily-menu-code-remove-oos-dish-code">5.27. Removing out-of-stock dishes from daily menu: <code>remove-oos-dish</code></a></li>
+<li><a href="#show-history-of-stockup-or-consumption-code-history-code">5.28. Show history of stockup or consumption: <code>history</code></a></li>
+<li><a href="#adding-an-item-to-the-menu-code-add-item-code-or-code-ai-code">5.29. Adding an item to the menu: <code>add-item</code> or <code>ai</code></a></li>
+<li><a href="#listing-all-items-in-the-menu-code-list-items-code-or-li">5.30. Listing all items in the menu : <code>list-items</code> or 'li'</a></li>
+<li><a href="#editing-an-item-in-the-menu-code-edit-item-code-or-code-ei-code">5.31. Editing an item in the menu : <code>edit-item</code> or <code>ei</code></a></li>
+<li><a href="#deleting-an-item-code-delete-item-code-or-code-di-code">5.32. Deleting an item : <code>delete-item</code> or <code>di</code></a></li>
+<li><a href="#selecting-an-item-code-select-item-code-or-code-si-code">5.33. Selecting an item : <code>select-item</code> or <code>si</code></a></li>
+<li><a href="#locating-items-by-name-code-find-item-code-or-code-fi-code">5.34. Locating items by name: <code>find-item</code> or <code>fi</code></a></li>
+<li><a href="#filter-menu-by-tag-code-filter-menu-code-or-code-fm-code">5.35. Filter menu by tag: <code>filter-menu</code> or <code>fm</code></a></li>
+<li><a href="#sort-menu-code-sort-menu-code-or-code-sm-code">5.36. Sort menu : <code>sort-menu</code> or <code>sm</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-menu-code-or-code-cm-code">5.37. Clearing all entries : <code>clear-menu</code> or <code>cm</code></a></li>
+<li><a href="#giving-a-discount-to-an-item-code-discount-item-code-or-code-di-code">5.38. Giving a discount to an item : <code>discount-item</code> or <code>di</code></a></li>
+<li><a href="#today-s-specials-code-today-special-code-or-code-ts-code">5.39. Today&#8217;s specials : <code>today-special</code> or <code>ts</code></a></li>
+<li><a href="#export-menu-code-export-menu-code-or-code-em-code">5.40. Export menu : <code>export-menu</code> or <code>em</code></a></li>
+<li><a href="#import-menu-code-import-menu-code-or-code-im-code">5.41. Import menu : <code>import-menu</code> or <code>im</code></a></li>
+<li><a href="#adding-a-reservation-code-add-reservation-code">5.42. Adding a reservation: <code>add-reservation</code></a></li>
+<li><a href="#listing-all-reservations-code-list-reservations-code">5.43. Listing all reservations : <code>list-reservations</code></a></li>
+<li><a href="#editing-a-reservation-code-edit-reservation-code">5.44. Editing a reservation: <code>edit-reservation</code></a></li>
+<li><a href="#sorting-reservations-list-code-sort-reservations-code">5.45. Sorting reservations list: <code>sort-reservations</code></a></li>
+<li><a href="#deleting-a-reservation-code-delete-reservation-code">5.46. Deleting a reservation: <code>delete-reservation</code></a></li>
+<li><a href="#recording-daily-sales-volume-of-a-menu-item-code-record-sales-code">5.47. Recording daily sales volume of a menu item: <code>record-sales</code></a></li>
+<li><a href="#display-sales-report-code-display-sales-code">5.48. Display sales report: <code>display-sales</code></a></li>
+<li><a href="#deleting-a-sales-record-code-delete-sales-code">5.49. Deleting a sales record: <code>delete-sales</code></a></li>
+<li><a href="#editing-a-sales-record-code-edit-sales-code">5.50. Editing a sales record: <code>edit-sales</code></a></li>
+<li><a href="#checking-sales-history-of-a-menu-item-code-check-sales-code">5.51. Checking sales history of a menu item: <code>check-sales</code></a></li>
+<li><a href="#ranking-menu-items-according-to-profitability-code-rank-dish-code">5.52. Ranking menu items according to profitability: <code>rank-dish</code></a></li>
+<li><a href="#ranking-dates-according-to-profitability-code-rank-date-code">5.53. Ranking dates according to profitability: <code>rank-date</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">6. FAQ</a></li>
 <li><a href="#command-summary">7. Command Summary</a></li>
+<li><a href="#glossary">Appendix A: Glossary</a></li>
 </ul>
 </div>
 </div>
@@ -96,7 +94,7 @@
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>As the name implies, <a href="https://github.com/CS2103-AY1819S1-F10-4/main/tree/master">MeNUS</a> helps you improve the Management(M) and its efficiency(e) of your
+<p><a href="https://github.com/CS2103-AY1819S1-F10-4/main/tree/master">MeNUS</a> empowers you in improving the Management(M) and its efficiency(e) of your
 restaurants in NUS.</p>
 </div>
 <div class="paragraph">
@@ -163,28 +161,38 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <h2 id="Components"><a class="link" href="#Components">3. Components</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>MeNUS</strong> consists of four main components: menus, inventory, sales and bookings management.</p>
+<p><strong>MeNUS</strong> consists of five main components: menus, inventory, sales and bookings management.</p>
 </div>
 <div class="sect2">
-<h3 id="menus"><a class="link" href="#menus">3.1. Menus</a></h3>
+<h3 id="accounts"><a class="link" href="#accounts">3.1. Accounts</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>You can create accounts for your employees to manage the system on your behalf.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="menus"><a class="link" href="#menus">3.2. Menus</a></h3>
 <div class="paragraph">
 <p><em>To be completed by Yi Can</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="inventory"><a class="link" href="#inventory">3.2. Inventory</a></h3>
+<h3 id="inventory"><a class="link" href="#inventory">3.3. Inventory</a></h3>
 <div class="paragraph">
 <p><em>To be completed by Rebecca</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="sales"><a class="link" href="#sales">3.3. Sales</a></h3>
+<h3 id="sales"><a class="link" href="#sales">3.4. Sales</a></h3>
 <div class="paragraph">
 <p><em>To be completed by Kai Jun</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="bookings"><a class="link" href="#bookings">3.4. Bookings</a></h3>
+<h3 id="bookings"><a class="link" href="#bookings">3.5. Bookings</a></h3>
 <div class="paragraph">
 <p><em>To be completed by Ming Xian</em></p>
 </div>
@@ -203,7 +211,7 @@ restaurants in NUS.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Export data to <code>.xml</code> (default) or Excel file.</p>
+<p>Export data to <code>.xml</code> (default) or Excel file <code>[coming in v2.0]</code>.</p>
 </li>
 </ul>
 </div>
@@ -216,7 +224,7 @@ restaurants in NUS.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Encrypting all restaurant data using AES-265.</p>
+<p>Encrypting all restaurant data using AES-265. <code>[coming in v2.0]</code></p>
 </li>
 <li>
 <p>Securing account passwords using bcrypt.</p>
@@ -225,7 +233,7 @@ restaurants in NUS.</p>
 <p>User needs to be authenticated before they can run any commands.</p>
 </li>
 <li>
-<p>Authentication attempts (both succeed and failed) are logged.</p>
+<p>Login attempts, both success and failure are logged.</p>
 </li>
 </ul>
 </div>
@@ -241,14 +249,7 @@ restaurants in NUS.</p>
 <p>Load within 5 seconds.</p>
 </li>
 <li>
-<p>Execute command within split of a second.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Update the GUI almost instantaneously.</p>
-</li>
-</ul>
-</div>
+<p>Execute command within split of a second and updating the GUI almost instantaneously.</p>
 </li>
 </ul>
 </div>
@@ -642,10 +643,10 @@ Format: <code>logout</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="creating-user-account-code-create-acc-code"><a class="link" href="#creating-user-account-code-create-acc-code">5.16. Creating user account: <code>create-acc</code></a></h3>
+<h3 id="creating-user-account-code-register-code-or-code-reg-code"><a class="link" href="#creating-user-account-code-register-code-or-code-reg-code">5.16. Creating user account: <code>register</code> or <code>reg</code></a></h3>
 <div class="paragraph">
-<p>Creates a new user account with a given role.<br>
-Format: <code>create-acc id/USERNAME pw/PASSWORD r/ROLE_ID</code></p>
+<p>Creates a new user account.<br>
+Format: <code>register id/USERNAME pw/PASSWORD</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -653,16 +654,19 @@ Format: <code>create-acc id/USERNAME pw/PASSWORD r/ROLE_ID</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>create-acc id/azhikai pw/p@55w0rd r/0</code></p>
+<p><code>register id/azhikai pw/p@55w0rd</code></p>
+</li>
+<li>
+<p><code>reg id/azhikai pw/p@55w0rd</code></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-user-account-code-edit-acc-code"><a class="link" href="#editing-user-account-code-edit-acc-code">5.17. Editing user account: <code>edit-acc</code></a></h3>
+<h3 id="editing-user-account-code-edit-acc-code-or-code-ea-code"><a class="link" href="#editing-user-account-code-edit-acc-code-or-code-ea-code">5.17. Editing user account: <code>edit-acc</code> or <code>ea</code></a></h3>
 <div class="paragraph">
 <p>Edits an existing user account.<br>
-Format: <code>edit-acc id/USERNAME [nid/NEW_USERNAME] [pw/NEW_PASSWORD] [r/NEW_ROLE_ID]</code></p>
+Format: <code>edit-acc id/USERNAME [nid/NEW_USERNAME] [pw/NEW_PASSWORD]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -694,19 +698,19 @@ Format: <code>edit-acc id/USERNAME [nid/NEW_USERNAME] [pw/NEW_PASSWORD] [r/NEW_R
 <p><code>edit-acc id/azhikai nid/angzhikai</code></p>
 </li>
 <li>
+<p><code>ea id/azhikai nid/angzhikai</code></p>
+</li>
+<li>
 <p><code>edit-acc id/azhikai nid/angzhikai pw/n3wp@55w0rd</code></p>
 </li>
-<li>
-<p><code>edit-acc id/azhikai r/1</code></p>
-</li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-user-account-code-delete-acc-code"><a class="link" href="#deleting-user-account-code-delete-acc-code">5.18. Deleting user account: <code>delete-acc</code></a></h3>
+<h3 id="deleting-user-account-code-deregister-code-or-code-dereg-code"><a class="link" href="#deleting-user-account-code-deregister-code-or-code-dereg-code">5.18. Deleting user account: <code>deregister</code> or <code>dereg</code></a></h3>
 <div class="paragraph">
 <p>Deletes an existing user account.<br>
-Format: `delete-acc id/USERNAME `</p>
+Format: <code>deregister id/USERNAME</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -714,102 +718,23 @@ Format: `delete-acc id/USERNAME `</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>delete-acc id/azhikai</code></p>
+<p><code>deregister id/azhikai</code></p>
+</li>
+<li>
+<p><code>dereg id/azhikai</code></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="list-all-user-accounts-code-list-acc-code"><a class="link" href="#list-all-user-accounts-code-list-acc-code">5.19. List all user accounts: <code>list-acc</code></a></h3>
+<h3 id="user-roles-code-coming-in-v2-0-code"><a class="link" href="#user-roles-code-coming-in-v2-0-code">5.19. User roles <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
-<p>List all existing user accounts.<br>
-Format: <code>list-acc</code></p>
+<p>With user role, each user will only be able to execute certain commands, other than the administrator and/or
+restaurant owner who is able to execute all commands.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="creating-user-role-code-create-role-code"><a class="link" href="#creating-user-role-code-create-role-code">5.20. Creating user role: <code>create-role</code></a></h3>
-<div class="paragraph">
-<p>Creates a new user role.<br>
-Format: <code>create-role id/ROLE_ID n/ROLE_NAME</code></p>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>create-role id/0 n/Administrator</code></p>
-</li>
-<li>
-<p><code>create-role id/1 n/Manager</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="editing-user-role-code-edit-role-code"><a class="link" href="#editing-user-role-code-edit-role-code">5.21. Editing user role: <code>edit-role</code></a></h3>
-<div class="paragraph">
-<p>Edits an existing role.<br>
-Format: <code>edit-role id/ROLE_ID [nid/NEW_ROLE_ID] [n/ROLE_NAME]</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>The role&#8217;s data will remain intact if none of the optional fields are provided.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>edit-role id/0</code></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Nothing happens in this case.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><code>edit-role id/0 nid/2 n/Supervisor</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="deleting-user-role-code-delete-role-code"><a class="link" href="#deleting-user-role-code-delete-role-code">5.22. Deleting user role: <code>delete-role</code></a></h3>
-<div class="paragraph">
-<p>Deletes an existing user role.<br>
-Format: `delete-role id/ROLE_ID `</p>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>delete-role id/0</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="list-all-user-roles-code-list-role-code"><a class="link" href="#list-all-user-roles-code-list-role-code">5.23. List all user roles: <code>list-role</code></a></h3>
-<div class="paragraph">
-<p>List all existing user roles.<br>
-Format: <code>list-role</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="adding-an-ingredient-code-add-ingredient-code"><a class="link" href="#adding-an-ingredient-code-add-ingredient-code">5.24. Adding an ingredient: <code>add-ingredient</code></a></h3>
+<h3 id="adding-an-ingredient-code-add-ingredient-code"><a class="link" href="#adding-an-ingredient-code-add-ingredient-code">5.20. Adding an ingredient: <code>add-ingredient</code></a></h3>
 <div class="paragraph">
 <p>Adds a new ingredient to the ingredient list.<br>
 Format: <code>add-ingredient n/INGREDIENT_NAME t/UNIT_TYPE p/PRICE_PER_UNIT m/MINIMUM</code></p>
@@ -837,21 +762,21 @@ Format: <code>add-ingredient n/INGREDIENT_NAME t/UNIT_TYPE p/PRICE_PER_UNIT m/MI
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-ingredients-code-list-ingredients-code"><a class="link" href="#listing-all-ingredients-code-list-ingredients-code">5.25. Listing all ingredients : <code>list-ingredients</code></a></h3>
+<h3 id="listing-all-ingredients-code-list-ingredients-code"><a class="link" href="#listing-all-ingredients-code-list-ingredients-code">5.21. Listing all ingredients : <code>list-ingredients</code></a></h3>
 <div class="paragraph">
 <p>Shows a list of all ingredients in the ingredient list.<br>
 Format: <code>list-ingredients</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-ingredients-with-low-stock-count-code-list-ingredients-low-code"><a class="link" href="#listing-ingredients-with-low-stock-count-code-list-ingredients-low-code">5.26. Listing ingredients with low stock count: <code>list-ingredients-low</code></a></h3>
+<h3 id="listing-ingredients-with-low-stock-count-code-list-ingredients-low-code"><a class="link" href="#listing-ingredients-with-low-stock-count-code-list-ingredients-low-code">5.22. Listing ingredients with low stock count: <code>list-ingredients-low</code></a></h3>
 <div class="paragraph">
 <p>Shows a list of ingredients that are low in stock count.<br>
 Format: <code>list-ingredients-low</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="removing-an-ingredient-code-delete-ingredient-code"><a class="link" href="#removing-an-ingredient-code-delete-ingredient-code">5.27. Removing an ingredient: <code>delete-ingredient</code></a></h3>
+<h3 id="removing-an-ingredient-code-delete-ingredient-code"><a class="link" href="#removing-an-ingredient-code-delete-ingredient-code">5.23. Removing an ingredient: <code>delete-ingredient</code></a></h3>
 <div class="paragraph">
 <p>Deletes the specified ingredient from the ingredient list.<br>
 Format: <code>delete-ingredient INDEX</code> or <code>delete-ingredient NAME</code></p>
@@ -896,7 +821,7 @@ Deletes the ingredient <code>cod fish</code> from the ingredient list.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-an-ingredient-code-edit-ingredient-code"><a class="link" href="#editing-an-ingredient-code-edit-ingredient-code">5.28. Editing an ingredient: <code>edit-ingredient</code></a></h3>
+<h3 id="editing-an-ingredient-code-edit-ingredient-code"><a class="link" href="#editing-an-ingredient-code-edit-ingredient-code">5.24. Editing an ingredient: <code>edit-ingredient</code></a></h3>
 <div class="paragraph">
 <p>Edits an ingredient in the ingredient list.<br>
 Format: <code>edit-ingredient INDEX [n/INGREDIENT_NAME] [t/UNIT_TYPE] [p/PRICE_PER_UNIT] [m/MINIMUM]</code> or <code>edit-ingredient NAME [n/INGREDIENT_NAME] [t/UNIT_TYPE] [p/PRICE_PER_UNIT] [m/MINIMUM]</code></p>
@@ -942,7 +867,7 @@ Edits the name of <code>ketchup</code> to be <code>tomato ketchup</code>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="stocking-up-an-ingredient-code-stockup-code"><a class="link" href="#stocking-up-an-ingredient-code-stockup-code">5.29. Stocking up an ingredient: <code>stockup</code></a></h3>
+<h3 id="stocking-up-an-ingredient-code-stockup-code"><a class="link" href="#stocking-up-an-ingredient-code-stockup-code">5.25. Stocking up an ingredient: <code>stockup</code></a></h3>
 <div class="paragraph">
 <p>Increase the number of units of an ingredient or multiple ingredients.<br>
 Format: <code>stockup n/INGREDIENT_NAME&#8230;&#8203; u/NUMBER_OF_UNITS&#8230;&#8203;</code></p>
@@ -973,7 +898,7 @@ Format: <code>stockup n/INGREDIENT_NAME&#8230;&#8203; u/NUMBER_OF_UNITS&#8230;&#
 </div>
 </div>
 <div class="sect2">
-<h3 id="consuming-an-ingredient-code-consume-code"><a class="link" href="#consuming-an-ingredient-code-consume-code">5.30. Consuming an ingredient: <code>consume</code></a></h3>
+<h3 id="consuming-an-ingredient-code-consume-code"><a class="link" href="#consuming-an-ingredient-code-consume-code">5.26. Consuming an ingredient: <code>consume</code></a></h3>
 <div class="paragraph">
 <p>Decrease the number of units of an ingredient or multiple ingredients.<br>
 Format: <code>consume n/INGREDIENT_NAME&#8230;&#8203; u/NUMBER_OF_UNITS&#8230;&#8203;</code></p>
@@ -1004,14 +929,14 @@ Format: <code>consume n/INGREDIENT_NAME&#8230;&#8203; u/NUMBER_OF_UNITS&#8230;&#
 </div>
 </div>
 <div class="sect2">
-<h3 id="removing-out-of-stock-dishes-from-daily-menu-code-remove-oos-dish-code"><a class="link" href="#removing-out-of-stock-dishes-from-daily-menu-code-remove-oos-dish-code">5.31. Removing out-of-stock dishes from daily menu: <code>remove-oos-dish</code></a></h3>
+<h3 id="removing-out-of-stock-dishes-from-daily-menu-code-remove-oos-dish-code"><a class="link" href="#removing-out-of-stock-dishes-from-daily-menu-code-remove-oos-dish-code">5.27. Removing out-of-stock dishes from daily menu: <code>remove-oos-dish</code></a></h3>
 <div class="paragraph">
 <p>Removes out-of-stock dishes that require ingredients with low stock count from the daily menu.<br>
 Format: <code>remove-oos-dish</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="show-history-of-stockup-or-consumption-code-history-code"><a class="link" href="#show-history-of-stockup-or-consumption-code-history-code">5.32. Show history of stockup or consumption: <code>history</code></a></h3>
+<h3 id="show-history-of-stockup-or-consumption-code-history-code"><a class="link" href="#show-history-of-stockup-or-consumption-code-history-code">5.28. Show history of stockup or consumption: <code>history</code></a></h3>
 <div class="paragraph">
 <p>Shows the history of past ingredient stockups or past ingredient consumption.<br>
 Format: <code>history [stockup] [consumption]</code></p>
@@ -1029,7 +954,7 @@ Format: <code>history [stockup] [consumption]</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-an-item-to-the-menu-code-add-item-code-or-code-ai-code"><a class="link" href="#adding-an-item-to-the-menu-code-add-item-code-or-code-ai-code">5.33. Adding an item to the menu: <code>add-item</code> or <code>ai</code></a></h3>
+<h3 id="adding-an-item-to-the-menu-code-add-item-code-or-code-ai-code"><a class="link" href="#adding-an-item-to-the-menu-code-add-item-code-or-code-ai-code">5.29. Adding an item to the menu: <code>add-item</code> or <code>ai</code></a></h3>
 <div class="paragraph">
 <p>Adds an item to the menu<br>
 Format: <code>add-item n/ITEM_NAME p/ITEM_PRICE [t/TAG]&#8230;&#8203;</code></p>
@@ -1063,14 +988,14 @@ Format: <code>add-item n/ITEM_NAME p/ITEM_PRICE [t/TAG]&#8230;&#8203;</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-items-in-the-menu-code-list-items-code-or-li"><a class="link" href="#listing-all-items-in-the-menu-code-list-items-code-or-li">5.34. Listing all items in the menu : <code>list-items</code> or 'li'</a></h3>
+<h3 id="listing-all-items-in-the-menu-code-list-items-code-or-li"><a class="link" href="#listing-all-items-in-the-menu-code-list-items-code-or-li">5.30. Listing all items in the menu : <code>list-items</code> or 'li'</a></h3>
 <div class="paragraph">
 <p>Shows a list of all items in the menu.<br>
 Format: <code>list-items</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-an-item-in-the-menu-code-edit-item-code-or-code-ei-code"><a class="link" href="#editing-an-item-in-the-menu-code-edit-item-code-or-code-ei-code">5.35. Editing an item in the menu : <code>edit-item</code> or <code>ei</code></a></h3>
+<h3 id="editing-an-item-in-the-menu-code-edit-item-code-or-code-ei-code"><a class="link" href="#editing-an-item-in-the-menu-code-edit-item-code-or-code-ei-code">5.31. Editing an item in the menu : <code>edit-item</code> or <code>ei</code></a></h3>
 <div class="paragraph">
 <p>Edits an existing item in the menu.<br>
 Format: <code>edit-item INDEX [n/ITEM_NAME] [p/ITEM_PRICE] [t/TAG]&#8230;&#8203;</code> or <code>edit-item NAME [n/ITEM_NAME] [p/ITEM_PRICE]
@@ -1120,7 +1045,7 @@ Edits the price of the 2nd item to be <code>4</code> and clears all existing tag
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-an-item-code-delete-item-code-or-code-di-code"><a class="link" href="#deleting-an-item-code-delete-item-code-or-code-di-code">5.36. Deleting an item : <code>delete-item</code> or <code>di</code></a></h3>
+<h3 id="deleting-an-item-code-delete-item-code-or-code-di-code"><a class="link" href="#deleting-an-item-code-delete-item-code-or-code-di-code">5.32. Deleting an item : <code>delete-item</code> or <code>di</code></a></h3>
 <div class="paragraph">
 <p>Deletes the specified item from the menu.<br>
 Format: <code>delete-item INDEX</code> or <code>delete-item NAME</code></p>
@@ -1164,7 +1089,7 @@ Deletes the 1st item in the results of the <code>find</code> command.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="selecting-an-item-code-select-item-code-or-code-si-code"><a class="link" href="#selecting-an-item-code-select-item-code-or-code-si-code">5.37. Selecting an item : <code>select-item</code> or <code>si</code></a></h3>
+<h3 id="selecting-an-item-code-select-item-code-or-code-si-code"><a class="link" href="#selecting-an-item-code-select-item-code-or-code-si-code">5.33. Selecting an item : <code>select-item</code> or <code>si</code></a></h3>
 <div class="paragraph">
 <p>Selects the item identified by the index number used in the menu.<br>
 Format: <code>select-item INDEX</code></p>
@@ -1205,7 +1130,7 @@ Selects the 1st item in the results of the <code>find</code> command.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="locating-items-by-name-code-find-item-code-or-code-fi-code"><a class="link" href="#locating-items-by-name-code-find-item-code-or-code-fi-code">5.38. Locating items by name: <code>find-item</code> or <code>fi</code></a></h3>
+<h3 id="locating-items-by-name-code-find-item-code-or-code-fi-code"><a class="link" href="#locating-items-by-name-code-find-item-code-or-code-fi-code">5.34. Locating items by name: <code>find-item</code> or <code>fi</code></a></h3>
 <div class="paragraph">
 <p>Finds items whose names contain any of the given keywords.<br>
 Format: <code>find-item KEYWORD [MORE_KEYWORDS]</code></p>
@@ -1251,7 +1176,7 @@ Returns any item having names <code>Cheese</code>, <code>Chocolate</code>, or <c
 </div>
 </div>
 <div class="sect2">
-<h3 id="filter-menu-by-tag-code-filter-menu-code-or-code-fm-code"><a class="link" href="#filter-menu-by-tag-code-filter-menu-code-or-code-fm-code">5.39. Filter menu by tag: <code>filter-menu</code> or <code>fm</code></a></h3>
+<h3 id="filter-menu-by-tag-code-filter-menu-code-or-code-fm-code"><a class="link" href="#filter-menu-by-tag-code-filter-menu-code-or-code-fm-code">5.35. Filter menu by tag: <code>filter-menu</code> or <code>fm</code></a></h3>
 <div class="paragraph">
 <p>Finds items that contain the given tag in the menu.<br>
 Format: <code>filter-menu t/TAG</code></p>
@@ -1294,7 +1219,7 @@ Returns any item that contains tag <code>set</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="sort-menu-code-sort-menu-code-or-code-sm-code"><a class="link" href="#sort-menu-code-sort-menu-code-or-code-sm-code">5.40. Sort menu : <code>sort-menu</code> or <code>sm</code></a></h3>
+<h3 id="sort-menu-code-sort-menu-code-or-code-sm-code"><a class="link" href="#sort-menu-code-sort-menu-code-or-code-sm-code">5.36. Sort menu : <code>sort-menu</code> or <code>sm</code></a></h3>
 <div class="paragraph">
 <p>Sort the menu by name or price.<br>
 Format: <code>sort-menu [NAME] [PRICE]</code></p>
@@ -1333,14 +1258,14 @@ Sorts the menu by item price in ascending order(lowest to highest).</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-menu-code-or-code-cm-code"><a class="link" href="#clearing-all-entries-code-clear-menu-code-or-code-cm-code">5.41. Clearing all entries : <code>clear-menu</code> or <code>cm</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-menu-code-or-code-cm-code"><a class="link" href="#clearing-all-entries-code-clear-menu-code-or-code-cm-code">5.37. Clearing all entries : <code>clear-menu</code> or <code>cm</code></a></h3>
 <div class="paragraph">
 <p>Clears all entries from the menu.<br>
 Format: <code>clear-menu</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="giving-a-discount-to-an-item-code-discount-item-code-or-code-di-code"><a class="link" href="#giving-a-discount-to-an-item-code-discount-item-code-or-code-di-code">5.42. Giving a discount to an item : <code>discount-item</code> or <code>di</code></a></h3>
+<h3 id="giving-a-discount-to-an-item-code-discount-item-code-or-code-di-code"><a class="link" href="#giving-a-discount-to-an-item-code-discount-item-code-or-code-di-code">5.38. Giving a discount to an item : <code>discount-item</code> or <code>di</code></a></h3>
 <div class="paragraph">
 <p>Gives the item identified by the index number used in the displayed item list a discount.<br>
 Format: <code>discount-item INDEX|ALL d/PERCENTAGE</code></p>
@@ -1390,7 +1315,7 @@ Discounts the 1st item in the results of the <code>find</code> command.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="today-s-specials-code-today-special-code-or-code-ts-code"><a class="link" href="#today-s-specials-code-today-special-code-or-code-ts-code">5.43. Today&#8217;s specials : <code>today-special</code> or <code>ts</code></a></h3>
+<h3 id="today-s-specials-code-today-special-code-or-code-ts-code"><a class="link" href="#today-s-specials-code-today-special-code-or-code-ts-code">5.39. Today&#8217;s specials : <code>today-special</code> or <code>ts</code></a></h3>
 <div class="paragraph">
 <p>Lists the items that have been tagged with the particular day in the menu.<br>
 Format: <code>today-special</code></p>
@@ -1409,7 +1334,7 @@ List the items that have been tagged with <code>Monday</code> in the menu.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="export-menu-code-export-menu-code-or-code-em-code"><a class="link" href="#export-menu-code-export-menu-code-or-code-em-code">5.44. Export menu : <code>export-menu</code> or <code>em</code></a></h3>
+<h3 id="export-menu-code-export-menu-code-or-code-em-code"><a class="link" href="#export-menu-code-export-menu-code-or-code-em-code">5.40. Export menu : <code>export-menu</code> or <code>em</code></a></h3>
 <div class="paragraph">
 <p>Exports the menu to a particular file path.<br>
 Format: <code>export-menu fp/FILEPATH fn/FILENAME</code></p>
@@ -1427,7 +1352,7 @@ Export the menu to test folder with the file name <code>menu.txt</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="import-menu-code-import-menu-code-or-code-im-code"><a class="link" href="#import-menu-code-import-menu-code-or-code-im-code">5.45. Import menu : <code>import-menu</code> or <code>im</code></a></h3>
+<h3 id="import-menu-code-import-menu-code-or-code-im-code"><a class="link" href="#import-menu-code-import-menu-code-or-code-im-code">5.41. Import menu : <code>import-menu</code> or <code>im</code></a></h3>
 <div class="paragraph">
 <p>Imports an existing menu from specified file path to replace current menu.<br>
 Format: <code>import-menu fp/FILEPATH fn/FILENAME</code></p>
@@ -1445,7 +1370,7 @@ Import the menu.txt from test folder to replace current menu.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-reservation-code-add-reservation-code"><a class="link" href="#adding-a-reservation-code-add-reservation-code">5.46. Adding a reservation: <code>add-reservation</code></a></h3>
+<h3 id="adding-a-reservation-code-add-reservation-code"><a class="link" href="#adding-a-reservation-code-add-reservation-code">5.42. Adding a reservation: <code>add-reservation</code></a></h3>
 <div class="paragraph">
 <p>Adds a new reservation to the reservations list.<br>
 Format: <code>add-reservation n/NAME p/PAX d/DATE t/TIME</code></p>
@@ -1476,14 +1401,14 @@ Format: <code>add-reservation n/NAME p/PAX d/DATE t/TIME</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-reservations-code-list-reservations-code"><a class="link" href="#listing-all-reservations-code-list-reservations-code">5.47. Listing all reservations : <code>list-reservations</code></a></h3>
+<h3 id="listing-all-reservations-code-list-reservations-code"><a class="link" href="#listing-all-reservations-code-list-reservations-code">5.43. Listing all reservations : <code>list-reservations</code></a></h3>
 <div class="paragraph">
 <p>Shows a list of all reservations in the reservations list.<br>
 Format: <code>list-reservations</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-reservation-code-edit-reservation-code"><a class="link" href="#editing-a-reservation-code-edit-reservation-code">5.48. Editing a reservation: <code>edit-reservation</code></a></h3>
+<h3 id="editing-a-reservation-code-edit-reservation-code"><a class="link" href="#editing-a-reservation-code-edit-reservation-code">5.44. Editing a reservation: <code>edit-reservation</code></a></h3>
 <div class="paragraph">
 <p>Edits an reservation in the reservation list.<br>
 Format: <code>edit-reservation INDEX [n/NAME] [p/PAX] [d/DATE] [t/TIME]</code></p>
@@ -1523,14 +1448,14 @@ Edits the name and pax of the 6th reservation to <code>ONG</code> and <code>4</c
 </div>
 </div>
 <div class="sect2">
-<h3 id="sorting-reservations-list-code-sort-reservations-code"><a class="link" href="#sorting-reservations-list-code-sort-reservations-code">5.49. Sorting reservations list: <code>sort-reservations</code></a></h3>
+<h3 id="sorting-reservations-list-code-sort-reservations-code"><a class="link" href="#sorting-reservations-list-code-sort-reservations-code">5.45. Sorting reservations list: <code>sort-reservations</code></a></h3>
 <div class="paragraph">
 <p>Sorts the reservations list by Date/Time.<br>
 Format: <code>sort-reservations</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-reservation-code-delete-reservation-code"><a class="link" href="#deleting-a-reservation-code-delete-reservation-code">5.50. Deleting a reservation: <code>delete-reservation</code></a></h3>
+<h3 id="deleting-a-reservation-code-delete-reservation-code"><a class="link" href="#deleting-a-reservation-code-delete-reservation-code">5.46. Deleting a reservation: <code>delete-reservation</code></a></h3>
 <div class="paragraph">
 <p>Deletes the specified reservation from the reservations list.<br>
 Format: <code>delete-reservation INDEX</code></p>
@@ -1567,7 +1492,7 @@ Deletes the 2nd reservation in the reservations list.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="recording-daily-sales-volume-of-a-menu-item-code-record-sales-code"><a class="link" href="#recording-daily-sales-volume-of-a-menu-item-code-record-sales-code">5.51. Recording daily sales volume of a menu item: <code>record-sales</code></a></h3>
+<h3 id="recording-daily-sales-volume-of-a-menu-item-code-record-sales-code"><a class="link" href="#recording-daily-sales-volume-of-a-menu-item-code-record-sales-code">5.47. Recording daily sales volume of a menu item: <code>record-sales</code></a></h3>
 <div class="paragraph">
 <p>Records the quantity of a menu item sold within the specified day into the sales book.<br>
 Format: <code>record-sales d/DATE n/ITEM_NAME q/QUANTITY SOLD p/ITEM_PRICE</code></p>
@@ -1598,7 +1523,7 @@ Format: <code>record-sales d/DATE n/ITEM_NAME q/QUANTITY SOLD p/ITEM_PRICE</code
 </div>
 </div>
 <div class="sect2">
-<h3 id="display-sales-report-code-display-sales-code"><a class="link" href="#display-sales-report-code-display-sales-code">5.52. Display sales report: <code>display-sales</code></a></h3>
+<h3 id="display-sales-report-code-display-sales-code"><a class="link" href="#display-sales-report-code-display-sales-code">5.48. Display sales report: <code>display-sales</code></a></h3>
 <div class="paragraph">
 <p>Displays the sales report for all days.<br>
 Format: <code>display-sales</code><br>
@@ -1634,7 +1559,7 @@ Displays the sales report dated 25-09-2018.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-sales-record-code-delete-sales-code"><a class="link" href="#deleting-a-sales-record-code-delete-sales-code">5.53. Deleting a sales record: <code>delete-sales</code></a></h3>
+<h3 id="deleting-a-sales-record-code-delete-sales-code"><a class="link" href="#deleting-a-sales-record-code-delete-sales-code">5.49. Deleting a sales record: <code>delete-sales</code></a></h3>
 <div class="paragraph">
 <p>Deletes the sales record with the specified date and item name.<br>
 Format: <code>delete-sales DATE ITEM_NAME</code> / <code>delete-sales ITEM_INDEX</code></p>
@@ -1679,7 +1604,7 @@ Deletes the sales record for <code>Fried Rice</code> dated 10-02-2018 from the s
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-sales-record-code-edit-sales-code"><a class="link" href="#editing-a-sales-record-code-edit-sales-code">5.54. Editing a sales record: <code>edit-sales</code></a></h3>
+<h3 id="editing-a-sales-record-code-edit-sales-code"><a class="link" href="#editing-a-sales-record-code-edit-sales-code">5.50. Editing a sales record: <code>edit-sales</code></a></h3>
 <div class="paragraph">
 <p>Edits the sales record with the specified date and item name.<br>
 Format: <code>edit-sales DATE NAME [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE]</code> / <code>edit-sales INDEX [n/ITEM_NAME]
@@ -1730,7 +1655,7 @@ In the 3rd record in the sales book, edits the menu item&#8217;s name to be "Fri
 </div>
 </div>
 <div class="sect2">
-<h3 id="checking-sales-history-of-a-menu-item-code-check-sales-code"><a class="link" href="#checking-sales-history-of-a-menu-item-code-check-sales-code">5.55. Checking sales history of a menu item: <code>check-sales</code></a></h3>
+<h3 id="checking-sales-history-of-a-menu-item-code-check-sales-code"><a class="link" href="#checking-sales-history-of-a-menu-item-code-check-sales-code">5.51. Checking sales history of a menu item: <code>check-sales</code></a></h3>
 <div class="paragraph">
 <p>Displays the sales history of a menu item and the total revenue it has accumulated.<br>
 Format: <code>check-sales ITEM_NAME</code><br></p>
@@ -1747,14 +1672,14 @@ Format: <code>check-sales ITEM_NAME</code><br></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="ranking-menu-items-according-to-profitability-code-rank-dish-code"><a class="link" href="#ranking-menu-items-according-to-profitability-code-rank-dish-code">5.56. Ranking menu items according to profitability: <code>rank-dish</code></a></h3>
+<h3 id="ranking-menu-items-according-to-profitability-code-rank-dish-code"><a class="link" href="#ranking-menu-items-according-to-profitability-code-rank-dish-code">5.52. Ranking menu items according to profitability: <code>rank-dish</code></a></h3>
 <div class="paragraph">
 <p>Ranks the menu items based on their total revenue accumulated in past sales records in descending order.<br>
 Format: <code>rank-dish</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="ranking-dates-according-to-profitability-code-rank-date-code"><a class="link" href="#ranking-dates-according-to-profitability-code-rank-date-code">5.57. Ranking dates according to profitability: <code>rank-date</code></a></h3>
+<h3 id="ranking-dates-according-to-profitability-code-rank-date-code"><a class="link" href="#ranking-dates-according-to-profitability-code-rank-date-code">5.53. Ranking dates according to profitability: <code>rank-date</code></a></h3>
 <div class="paragraph">
 <p>Ranks the dates based on their revenue accumulated in past sales records in descending order.<br>
 Format: <code>rank-date</code></p>
@@ -1775,204 +1700,275 @@ contains the data of your previous <strong>MeNUS</strong> folder.</p>
 <div class="sect1">
 <h2 id="command-summary"><a class="link" href="#command-summary">7. Command Summary</a></h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Add</strong> <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague</code></p>
-</li>
-<li>
-<p><strong>Clear</strong> : <code>clear</code></p>
-</li>
-<li>
-<p><strong>Delete</strong> : <code>delete INDEX</code><br>
-e.g. <code>delete 3</code></p>
-</li>
-<li>
-<p><strong>Edit</strong> : <code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>edit 2 n/James Lee e/jameslee@example.com</code></p>
-</li>
-<li>
-<p><strong>Find</strong> : <code>find KEYWORD [MORE_KEYWORDS]</code><br>
-e.g. <code>find James Jake</code></p>
-</li>
-<li>
-<p><strong>List</strong> : <code>list</code></p>
-</li>
-<li>
-<p><strong>Help</strong> : <code>help</code></p>
-</li>
-<li>
-<p><strong>Select</strong> : <code>select INDEX</code><br>
-e.g.<code>select 2</code></p>
-</li>
-<li>
-<p><strong>History</strong> : <code>history</code></p>
-</li>
-<li>
-<p><strong>Undo</strong> : <code>undo</code></p>
-</li>
-<li>
-<p><strong>Redo</strong> : <code>redo</code></p>
-</li>
-<li>
-<p><strong>Logging in</strong>: <code>login id/USERNAME pw/PASSWORD</code></p>
-</li>
-<li>
-<p><strong>Logging out</strong>: <code>logout</code></p>
-</li>
-<li>
-<p><strong>Creating user account</strong>: <code>create-acc id/USERNAME pw/PASSWORD r/ROLE_ID</code></p>
-</li>
-<li>
-<p><strong>Editing user account</strong>: <code>edit-acc id/USERNAME [nid/NEW_USERNAME] [pw/NEW_PASSWORD] [r/NEW_ROLE_ID]</code></p>
-</li>
-<li>
-<p><strong>Deleting user account</strong>: <code>delete-acc id/USERNAME</code></p>
-</li>
-<li>
-<p><strong>Listing user accounts</strong>: <code>list-acc</code></p>
-</li>
-<li>
-<p><strong>Creating user role</strong>: <code>create-role id/ROLE_ID n/ROLE_NAME</code></p>
-</li>
-<li>
-<p><strong>Editing user role</strong>: <code>edit-role id/ROLE_ID [nid/NEW_ROLE_ID] [n/NEW_ROLE_NAME]</code></p>
-</li>
-<li>
-<p><strong>Deleting user role</strong>: <code>delete-role id/ROLE_ID</code></p>
-</li>
-<li>
-<p><strong>Listing user roles</strong>: <code>list-role</code></p>
-</li>
-<li>
-<p><strong>Add ingredient</strong> : <code>add-ingredient n/INGREDIENT_NAME t/UNIT_TYPE p/PRICE_PER_UNIT m/MINIMUM</code><br>
-e.g. <code>add-ingredient n/cod fish t/kilogram p/20 m/1</code></p>
-</li>
-<li>
-<p><strong>List ingredients</strong> : <code>list-ingredients</code></p>
-</li>
-<li>
-<p><strong>List ingredients with low stock count</strong> : <code>list-ingredients-low</code></p>
-</li>
-<li>
-<p><strong>Delete ingredient</strong> : <code>delete-ingredient INDEX</code> or <code>delete-ingredient NAME</code><br>
-e.g. <code>delete-ingredient 1</code> or <code>delete-ingredient cod fish</code></p>
-</li>
-<li>
-<p><strong>Edit ingredient</strong> : <code>edit-ingredient INDEX [n/INGREDIENT_NAME] [t/UNIT_TYPE] [p/PRICE_PER_UNIT] [m/MINIMUM]</code> or <code>edit-ingredient NAME [n/INGREDIENT_NAME] [t/UNIT_TYPE] [p/PRICE_PER_UNIT] [m/MINIMUM]</code><br>
-e.g. <code>edit-ingredient 3 n/thin fries</code> or <code>edit-ingredient ketchup n/tomato ketchup</code></p>
-</li>
-<li>
-<p><strong>Stock up</strong> : <code>stockup n/INGREDIENT_NAME&#8230;&#8203; u/NUMBER_OF_UNITS&#8230;&#8203;</code><br>
-e.g. <code>stockup n/cod fish u/5</code></p>
-</li>
-<li>
-<p><strong>Consume</strong> : <code>consume n/INGREDIENT_NAME&#8230;&#8203; u/NUMBER_OF_UNITS&#8230;&#8203;</code><br>
-e.g. <code>consume n/cod fish u/1</code></p>
-</li>
-<li>
-<p><strong>Remove dishes with low ingredients</strong> : <code>remove-oos-dish</code></p>
-</li>
-<li>
-<p><strong>History of stockup/consumption</strong> : <code>history [purchase] [consumption]</code><br>
-e.g. <code>history stockup</code></p>
-</li>
-<li>
-<p><strong>Add item</strong> <code>add-item n/ITEM_NAME p/ITEM_PRICE [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>add-item n/Burger Set p/3 t/set</code></p>
-</li>
-<li>
-<p><strong>Clear menu</strong> : <code>clear-menu</code></p>
-</li>
-<li>
-<p><strong>Delete item</strong> : <code>delete-item INDEX</code><br>
-e.g. <code>delete-item 3</code></p>
-</li>
-<li>
-<p><strong>Edit item</strong> : <code>edit-item INDEX [n/ITEM_NAME] [p/ITEM_PRICE] [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>edit-item 2 n/Fries p/3</code></p>
-</li>
-<li>
-<p><strong>Find item</strong> : <code>find-item KEYWORD [MORE_KEYWORDS]</code><br>
-e.g. <code>find-item Cheese Burger</code></p>
-</li>
-<li>
-<p><strong>List items</strong> : <code>list-items</code></p>
-</li>
-<li>
-<p><strong>Select item</strong> : <code>select-items INDEX</code>
-e.g. <code>select-item 3</code></p>
-</li>
-<li>
-<p><strong>Filter menu</strong> : <code>fiiter-menu t/TAG</code><br>
-e.g. <code>filter-menu t/cheese</code></p>
-</li>
-<li>
-<p><strong>Sort menu</strong> : <code>sort-menu</code>
-e.g. <code>sort-menu NAME</code></p>
-</li>
-<li>
-<p><strong>Give an item a discount</strong> : <code>discount-item</code>
-e.g. <code>discount-item 2 d/20</code></p>
-</li>
-<li>
-<p><strong>Today&#8217;s special</strong> : <code>today-special</code></p>
-</li>
-<li>
-<p><strong>Export menu</strong> : <code>export-menu</code>
-e.g. <code>export-menu fp/backup/ fn/menu.txt</code></p>
-</li>
-<li>
-<p><strong>Import menu</strong> : <code>import-menu</code>
-e.g. <code>import-menu fp/backup/ fn/menu.txt</code></p>
-</li>
-<li>
-<p><strong>Add a reservation</strong> : <code>add-reservation n/NAME p/PAX d/DATE t/TIME</code><br>
-e.g. <code>add-reservation n/TAN p/4 d/21072018 t/1300</code></p>
-</li>
-<li>
-<p><strong>List reservations</strong> : <code>list-reservations</code></p>
-</li>
-<li>
-<p><strong>Edit reservation</strong> : <code>edit-reservation INDEX [n/NAME] [p/PAX] [d/DATE] [t/TIME]</code><br>
-e.g. <code>edit-reservation 2 t/1700</code></p>
-</li>
-<li>
-<p><strong>Sort reservations</strong> : <code>sort-reservations</code></p>
-</li>
-<li>
-<p><strong>Delete a reservation</strong> : <code>delete-reservation INDEX</code><br>
-e.g. <code>delete-reservations 2</code></p>
-</li>
-<li>
-<p><strong>Record sales volume of menu item</strong> : <code>record-sales d/DATE n/ITEM_NAME q/QUANTITY SOLD p/ITEM_PRICE</code><br>
-e.g. <code>record-sales d/25-09-2018 n/Fried Rice q/35 p/5.50</code></p>
-</li>
-<li>
-<p><strong>Display sales report for all / specific day</strong> : <code>display-sales</code> or <code>display-sales DATE</code><br>
-e.g. <code>display-sales</code> or <code>display-sales 25-09-2018</code></p>
-</li>
-<li>
-<p><strong>Delete sales record</strong> : <code>delete-sales DATE ITEM_NAME</code> or <code>delete-sales ITEM_INDEX</code><br>
-e.g. <code>delete-sales 10-02-2018 Fried Rice</code> or <code>delete-sales 2</code></p>
-</li>
-<li>
-<p><strong>Edit sales record</strong> : <code>edit-sales DATE NAME [d/DATE] [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE]</code> or <code>edit-sales
-INDEX [d/DATE] [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE]</code><br>
-e.g. <code>edit-sales 12-02-2018 Pasta q/37 p/6.50</code> or <code>edit-sales 3 n/Fried Omelet</code></p>
-</li>
-<li>
-<p><strong>Check sales history of menu item</strong> : <code>check-sales ITEM_NAME</code><br>
-e.g. <code>check-sales Fried Rice</code></p>
-</li>
-<li>
-<p><strong>Rank menu items according to profitability</strong> : <code>rank-dish</code><br></p>
-</li>
-<li>
-<p><strong>Rank dates according to profitability</strong> : <code>rank-date</code></p>
-</li>
-</ul>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 45%;">
+<col style="width: 45%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Format</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Help</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Add</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Clear</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clear</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clear</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Delete</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete INDEX</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete 3</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Edit</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit 2 n/James Lee e/jameslee@example.com</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Find</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>find KEYWORD [MORE_KEYWORDS]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>find James Jake</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>List</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Select</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>select INDEX</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>select 2</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>History</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>history</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>history</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Undo</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>undo</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>undo</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Redo</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>redo</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>redo</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Login</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>login id/USERNAME pw/PASSWORD</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>login id/azhikai pw/1122qq</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Logout</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>logout</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>logout</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Create account</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>register id/USERNAME pw/PASSWORD</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>register id/azhikai pw/1122qq</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Edit account</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit-acc id/USERNAME [nid/NEW_USERNAME] [pw/NEW_PASSWORD]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit-acc id/azhikai nid/angzhikai</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Delete account</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deregister id/USERNAME</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deregister id/azhikai</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Add ingredient</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add-ingredient n/INGREDIENT_NAME t/UNIT_TYPE p/PRICE_PER_UNIT m/MINIMUM</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add-ingredient n/cod fish t/kilogram p/20 m/1</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>List ingredient</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list-ingredients</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list-ingredients</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>List ingredient with low stock count</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list-ingredients-low</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list-ingredients-low</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Edit ingredient</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit-ingredient INDEX [n/INGREDIENT_NAME] [t/UNIT_TYPE] [p/PRICE_PER_UNIT] [m/MINIMUM]</code> or <code>edit-ingredient NAME [n/INGREDIENT_NAME] [t/UNIT_TYPE] [p/PRICE_PER_UNIT] [m/MINIMUM]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit-ingredient 3 n/thin fries</code> or <code>edit-ingredient ketchup n/tomato ketchup</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Delete ingredient</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete-ingredient INDEX</code> or <code>delete-ingredient NAME</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete-ingredient 1</code> or <code>delete-ingredient cod fish</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Stock up</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stockup n/INGREDIENT_NAME&#8230;&#8203; u/NUMBER_OF_UNITS&#8230;&#8203;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stockup n/cod fish u/5</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Consume</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>consume n/INGREDIENT_NAME&#8230;&#8203; u/NUMBER_OF_UNITS&#8230;&#8203;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>consume n/cod fish u/1</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Remove dishes with low ingredients</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>remove-oos-dish</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>remove-oos-dish</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>History of stockup/consumption</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>history [purchase] [consumption]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>history stockup</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Add item</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add-item n/ITEM_NAME p/ITEM_PRICE [t/TAG]&#8230;&#8203;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add-item n/Burger Set p/3 t/set</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Edit menu</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit-item INDEX [n/ITEM_NAME] [p/ITEM_PRICE] [t/TAG]&#8230;&#8203;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit-item 2 n/Fries p/3</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Delete item</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete-item INDEX</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete-item 3</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Select item</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>select-items INDEX</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>select-items 3</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Find item</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>find-item KEYWORD [MORE_KEYWORDS]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>find-item Cheese Burger</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>List items</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list-items</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list-items</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Filter menu</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>filter-menu t/TAG</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>filter-menu t/cheese</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sort menu</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sort-menu</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sort-menu NAME</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Discount item</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>discount-item INDEX d/PERCENTAGE</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>discount-item 2 d/20</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Today&#8217;s special</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>today-special</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>today-special</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Export menu</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>export-menu fp/FILE_PATH fn/FILE_NAME</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>export-menu fp/backup/ fn/menu.txt</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Import menu</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>import-menu fp/FILE_PATH fn/FILE_NAME</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>import-menu fp/backup/ fn/menu.txt</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Add reservation</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add-reservation n/NAME p/PAX d/DATE t/TIME</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add-reservation n/TAN p/4 d/21072018 t/1300</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Edit reservation</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit-reservation INDEX [n/NAME] [p/PAX] [d/DATE] [t/TIME]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit-reservation 2 t/1700</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Delete reservation</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete-reservation INDEX</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete-reservations 2</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>List reservation</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list-reservations</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list-reservations</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sort reservation</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sort-reservations</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sort-reservations</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Record sales volume</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>record-sales d/DATE n/ITEM_NAME q/QUANTITY SOLD p/ITEM_PRICE</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>record-sales d/25-09-2018 n/Fried Rice q/35 p/5.50</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Display sales record</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>display-sales</code> or <code>display-sales DATE</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>display-sales</code> or <code>display-sales 25-09-2018</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Edit sales record</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit-sales DATE NAME [d/DATE] [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE]</code> or <code>edit-sales INDEX [d/DATE] [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit-sales 12-02-2018 Pasta q/37 p/6.50</code> or <code>edit-sales 3 n/Fried Omelet</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check sales history of menu item</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>check-sales ITEM_NAME</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>check-sales Fried Rice</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Delete sales record</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete-sales DATE ITEM_NAME</code> or <code>delete-sales ITEM_INDEX</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete-sales 10-02-2018 Fried Rice</code> or <code>delete-sales 2</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rank by profitability</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rank-dish</code> or <code>rank-date</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TO BE CONFIRMED</code></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-18 02:33:57 UTC</div></div></div></body></html>
+<div class="sect1">
+<h2 id="glossary"><a class="link" href="#glossary">Appendix A: Glossary</a></h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a id="gui"></a> GUI</dt>
+<dd>
+<p><strong>Graphical User Interface</strong> allows the use of icons or other visual indicators to interact with electronic devices,
+rather than using only text via the command line.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-18 03:38:31 UTC</div></div></div></body></html>
