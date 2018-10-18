@@ -76,13 +76,12 @@
 <li><a href="#editing-a-reservation-code-edit-reservation-code-or-code-er-code">5.45. Editing a reservation: <code>edit-reservation</code> or <code>er</code></a></li>
 <li><a href="#sorting-reservations-list-code-sort-reservations-code-or-code-sr-code">5.46. Sorting reservations list: <code>sort-reservations</code> or <code>sr</code></a></li>
 <li><a href="#deleting-a-reservation-code-delete-reservation-code-or-code-dr-code">5.47. Deleting a reservation: <code>delete-reservation</code> or <code>dr</code></a></li>
-<li><a href="#recording-daily-sales-volume-of-a-menu-item-code-record-sales-code">5.48. Recording daily sales volume of a menu item: <code>record-sales</code></a></li>
-<li><a href="#display-sales-report-code-display-sales-code">5.49. Display sales report: <code>display-sales</code></a></li>
-<li><a href="#deleting-a-sales-record-code-delete-sales-code">5.50. Deleting a sales record: <code>delete-sales</code></a></li>
-<li><a href="#editing-a-sales-record-code-edit-sales-code">5.51. Editing a sales record: <code>edit-sales</code></a></li>
-<li><a href="#checking-sales-history-of-a-menu-item-code-check-sales-code">5.52. Checking sales history of a menu item: <code>check-sales</code></a></li>
-<li><a href="#ranking-menu-items-according-to-profitability-code-rank-dish-code">5.53. Ranking menu items according to profitability: <code>rank-dish</code></a></li>
-<li><a href="#ranking-dates-according-to-profitability-code-rank-date-code">5.54. Ranking dates according to profitability: <code>rank-date</code></a></li>
+<li><a href="#recording-sales-volume-of-an-item-code-record-sales-code-or-code-rs-code">5.48. Recording sales volume of an item: <code>record-sales</code> or <code>rs</code></a></li>
+<li><a href="#display-sales-report-code-display-sales-code-or-code-dis-code">5.49. Display sales report: <code>display-sales</code> or <code>dis</code></a></li>
+<li><a href="#deleting-a-sales-record-code-delete-sales-code-or-code-des-code">5.50. Deleting a sales record: <code>delete-sales</code> or <code>des</code></a></li>
+<li><a href="#editing-a-sales-record-code-edit-sales-code-or-code-es-code">5.51. Editing a sales record: <code>edit-sales</code> or <code>es</code></a></li>
+<li><a href="#ranking-items-according-to-total-revenue-code-rank-item-code-or-code-ri-code">5.52. Ranking items according to total revenue: <code>rank-item</code> or <code>ri</code></a></li>
+<li><a href="#ranking-dates-according-to-total-revenue-code-rank-date-code-or-code-rd-code">5.53. Ranking dates according to total revenue: <code>rank-date</code> or <code>rd</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">6. FAQ</a></li>
@@ -192,8 +191,13 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 </div>
 <div class="sect2">
 <h3 id="sales"><a class="link" href="#sales">3.4. Sales</a></h3>
-<div class="paragraph">
-<p><em>To be completed by Kai Jun</em></p>
+<div class="ulist">
+<ul>
+<li>
+<p>You can record sales volume of an item and edit/delete past sales records. You can also generate and display the
+sales report for a specific day.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
@@ -1505,9 +1509,9 @@ Deletes the 2nd reservation in the reservations list.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="recording-daily-sales-volume-of-a-menu-item-code-record-sales-code"><a class="link" href="#recording-daily-sales-volume-of-a-menu-item-code-record-sales-code">5.48. Recording daily sales volume of a menu item: <code>record-sales</code></a></h3>
+<h3 id="recording-sales-volume-of-an-item-code-record-sales-code-or-code-rs-code"><a class="link" href="#recording-sales-volume-of-an-item-code-record-sales-code-or-code-rs-code">5.48. Recording sales volume of an item: <code>record-sales</code> or <code>rs</code></a></h3>
 <div class="paragraph">
-<p>Records the quantity of a menu item sold within the specified day into the sales book.<br>
+<p>Records the quantity of an item sold within a specific day into the sales list.<br>
 Format: <code>record-sales d/DATE n/ITEM_NAME q/QUANTITY SOLD p/ITEM_PRICE</code></p>
 </div>
 <div class="sidebarblock">
@@ -1518,7 +1522,10 @@ Format: <code>record-sales d/DATE n/ITEM_NAME q/QUANTITY SOLD p/ITEM_PRICE</code
 <p>DATE must be written in the DD-MM-YYYY format.</p>
 </li>
 <li>
-<p>Both DATE and ITEM_NAME cannot be same as another record in the sales book.</p>
+<p>DATE must exist in the calendar.</p>
+</li>
+<li>
+<p>Both DATE and ITEM_NAME cannot be same as another record in the sales list.</p>
 </li>
 </ul>
 </div>
@@ -1536,12 +1543,9 @@ Format: <code>record-sales d/DATE n/ITEM_NAME q/QUANTITY SOLD p/ITEM_PRICE</code
 </div>
 </div>
 <div class="sect2">
-<h3 id="display-sales-report-code-display-sales-code"><a class="link" href="#display-sales-report-code-display-sales-code">5.49. Display sales report: <code>display-sales</code></a></h3>
+<h3 id="display-sales-report-code-display-sales-code-or-code-dis-code"><a class="link" href="#display-sales-report-code-display-sales-code-or-code-dis-code">5.49. Display sales report: <code>display-sales</code> or <code>dis</code></a></h3>
 <div class="paragraph">
-<p>Displays the sales report for all days.<br>
-Format: <code>display-sales</code><br>
-OR<br>
-Displays the sales report for the specified day.<br>
+<p>Generate and display the sales report for a specific day.<br>
 Format: <code>display-sales DATE</code></p>
 </div>
 <div class="sidebarblock">
@@ -1550,6 +1554,9 @@ Format: <code>display-sales DATE</code></p>
 <ul>
 <li>
 <p>DATE must be written in the DD-MM-YYYY format.</p>
+</li>
+<li>
+<p>DATE must exist in the calendar.</p>
 </li>
 </ul>
 </div>
@@ -1561,10 +1568,6 @@ Format: <code>display-sales DATE</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>display-sales</code><br>
-Displays the sales report for all days.<br></p>
-</li>
-<li>
 <p><code>display-sales 25-09-2018</code><br>
 Displays the sales report dated 25-09-2018.</p>
 </li>
@@ -1572,10 +1575,10 @@ Displays the sales report dated 25-09-2018.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-sales-record-code-delete-sales-code"><a class="link" href="#deleting-a-sales-record-code-delete-sales-code">5.50. Deleting a sales record: <code>delete-sales</code></a></h3>
+<h3 id="deleting-a-sales-record-code-delete-sales-code-or-code-des-code"><a class="link" href="#deleting-a-sales-record-code-delete-sales-code-or-code-des-code">5.50. Deleting a sales record: <code>delete-sales</code> or <code>des</code></a></h3>
 <div class="paragraph">
-<p>Deletes the sales record with the specified date and item name.<br>
-Format: <code>delete-sales DATE ITEM_NAME</code> / <code>delete-sales ITEM_INDEX</code></p>
+<p>Deletes the sales record identified by the index, or by the date and item name.<br>
+Format: <code>delete-sales ITEM_INDEX</code> / <code>delete-sales DATE ITEM_NAME</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -1585,7 +1588,7 @@ Format: <code>delete-sales DATE ITEM_NAME</code> / <code>delete-sales ITEM_INDEX
 <p>Deletes the record at the specified <code>ITEM_INDEX</code>.</p>
 </li>
 <li>
-<p>The item index refers to the index number shown in the sales book.</p>
+<p>The item index refers to the index number shown in the sales list.</p>
 </li>
 <li>
 <p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
@@ -1603,32 +1606,29 @@ Format: <code>delete-sales DATE ITEM_NAME</code> / <code>delete-sales ITEM_INDEX
 <div class="ulist">
 <ul>
 <li>
-<p><code>display-sales</code><br>
-<code>delete-sales 2</code><br>
-<code>display-sales</code><br>
-Deletes the 2nd record from the sales book.</p>
+<p><code>delete-sales 2</code><br>
+Deletes the 2nd record from the sales list.</p>
 </li>
 <li>
 <p><code>delete-sales 10-02-2018 Fried Rice</code><br>
-<code>display-sales</code><br>
-Deletes the sales record for <code>Fried Rice</code> dated 10-02-2018 from the sales book.</p>
+Deletes the sales record for <code>Fried Rice</code> dated 10-02-2018 from the sales list.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-sales-record-code-edit-sales-code"><a class="link" href="#editing-a-sales-record-code-edit-sales-code">5.51. Editing a sales record: <code>edit-sales</code></a></h3>
+<h3 id="editing-a-sales-record-code-edit-sales-code-or-code-es-code"><a class="link" href="#editing-a-sales-record-code-edit-sales-code-or-code-es-code">5.51. Editing a sales record: <code>edit-sales</code> or <code>es</code></a></h3>
 <div class="paragraph">
-<p>Edits the sales record with the specified date and item name.<br>
-Format: <code>edit-sales DATE NAME [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE]</code> / <code>edit-sales INDEX [n/ITEM_NAME]
-[q/QUANTITY SOLD] [p/ITEM_PRICE]</code></p>
+<p>Edits the sales record identified by the index, or by the date and item name.<br>
+Format: <code>edit-sales ITEM_INDEX [d/DATE] [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE]</code>/ <code>edit-sales DATE
+ITEM_NAME [d/DATE] [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>Edits the record at the specified <code>INDEX</code>. The index refers to the index number shown in the sales book.</p>
+<p>Edits the record at the specified <code>INDEX</code>. The index refers to the index number shown in the sales list.</p>
 </li>
 <li>
 <p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
@@ -1640,7 +1640,7 @@ Format: <code>edit-sales DATE NAME [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE
 <p>Existing values will be updated to the input values.</p>
 </li>
 <li>
-<p>Alternatively, edits the sales record with the specified <code>DATE</code> and <code>NAME</code>.</p>
+<p>Alternatively, edits the record with the specified <code>DATE</code> and <code>ITEM_NAME</code>.</p>
 </li>
 </ul>
 </div>
@@ -1652,49 +1652,31 @@ Format: <code>edit-sales DATE NAME [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE
 <div class="ulist">
 <ul>
 <li>
+<p><code>edit-sales 3 n/Fried Omelet</code> <br>
+Edits the item name of the 3rd record to be "Fried Omelet".</p>
+</li>
+<li>
 <p><code>edit-sales 23-06-2018 Fried Rice n/Fried Rice with Shrimps</code><br>
-In the sales record of "Fried Rice" dated 23-06-2018, edits its name to be "Fried Rice with Shrimps".</p>
+Edits the item name of the record "23-06-2018, Fried Rice" to be "Fried Rice with Shrimps".</p>
 </li>
 <li>
 <p><code>edit-sales 12-02-2018 Pasta q/37 p/6.50</code> <br>
-In the sales record of "Pasta" dated 12-02-2018, edits its quantity sold and price to be 37 and 6.50
-respectively.</p>
-</li>
-<li>
-<p><code>edit-sales 3 n/Fried Omelet</code> <br>
-In the 3rd record in the sales book, edits the menu item&#8217;s name to be "Fried Omelet".</p>
+Edits the quantity sold and price of the record "12-02-2018, Pasta" to be 37 and 6.50 respectively.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="checking-sales-history-of-a-menu-item-code-check-sales-code"><a class="link" href="#checking-sales-history-of-a-menu-item-code-check-sales-code">5.52. Checking sales history of a menu item: <code>check-sales</code></a></h3>
+<h3 id="ranking-items-according-to-total-revenue-code-rank-item-code-or-code-ri-code"><a class="link" href="#ranking-items-according-to-total-revenue-code-rank-item-code-or-code-ri-code">5.52. Ranking items according to total revenue: <code>rank-item</code> or <code>ri</code></a></h3>
 <div class="paragraph">
-<p>Displays the sales history of a menu item and the total revenue it has accumulated.<br>
-Format: <code>check-sales ITEM_NAME</code><br></p>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>check-sales Fried Rice</code></p>
-</li>
-</ul>
+<p>Ranks the items based on their total revenue accumulated in past sales records.<br>
+Format: <code>rank-item</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="ranking-menu-items-according-to-profitability-code-rank-dish-code"><a class="link" href="#ranking-menu-items-according-to-profitability-code-rank-dish-code">5.53. Ranking menu items according to profitability: <code>rank-dish</code></a></h3>
+<h3 id="ranking-dates-according-to-total-revenue-code-rank-date-code-or-code-rd-code"><a class="link" href="#ranking-dates-according-to-total-revenue-code-rank-date-code-or-code-rd-code">5.53. Ranking dates according to total revenue: <code>rank-date</code> or <code>rd</code></a></h3>
 <div class="paragraph">
-<p>Ranks the menu items based on their total revenue accumulated in past sales records in descending order.<br>
-Format: <code>rank-dish</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="ranking-dates-according-to-profitability-code-rank-date-code"><a class="link" href="#ranking-dates-according-to-profitability-code-rank-date-code">5.54. Ranking dates according to profitability: <code>rank-date</code></a></h3>
-<div class="paragraph">
-<p>Ranks the dates based on their revenue accumulated in past sales records in descending order.<br>
+<p>Ranks the dates based on their total revenue for that day.<br>
 Format: <code>rank-date</code></p>
 </div>
 </div>
@@ -1943,29 +1925,29 @@ contains the data of your previous <strong>MeNUS</strong> folder.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>record-sales d/25-09-2018 n/Fried Rice q/35 p/5.50</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Display sales record</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>display-sales</code> or <code>display-sales DATE</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>display-sales</code> or <code>display-sales 25-09-2018</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Display sales report</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>display-sales DATE</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>display-sales 25-09-2018</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Edit sales record</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit-sales DATE NAME [d/DATE] [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE]</code> or <code>edit-sales INDEX [d/DATE] [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE]</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit-sales 12-02-2018 Pasta q/37 p/6.50</code> or <code>edit-sales 3 n/Fried Omelet</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check sales history of menu item</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>check-sales ITEM_NAME</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>check-sales Fried Rice</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit-sales ITEM_INDEX [d/DATE] [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE]</code> or <code>edit-sales DATE ITEM_NAME [d/DATE] [n/ITEM_NAME] [q/QUANTITY SOLD] [p/ITEM_PRICE]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit-sales 3 n/Fried Omelet</code> or <code>edit-sales 12-02-2018 Pasta q/37 p/6.50</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Delete sales record</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete-sales DATE ITEM_NAME</code> or <code>delete-sales ITEM_INDEX</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete-sales 10-02-2018 Fried Rice</code> or <code>delete-sales 2</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete-sales ITEM_INDEX</code> or <code>delete-sales DATE ITEM_NAME</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete-sales 2</code> or <code>delete-sales  10-02-2018 Fried Rice</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rank by profitability</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rank-dish</code> or <code>rank-date</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TO BE CONFIRMED</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rank items by total revenue</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rank-item</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rank-item</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rank dates by total revenue</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rank-date</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rank-date</code></p></td>
 </tr>
 </tbody>
 </table>
@@ -1984,4 +1966,4 @@ rather than using only text via the command line.</p>
 </dl>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-18 15:15:50 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-18 15:43:30 UTC</div></div></div></body></html>
