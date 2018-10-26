@@ -1,7 +1,7 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>John Doe - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Ang Zhi Kai - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">MeNUS</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/CS2103-AY1819S1-F10-4/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>John Doe - Project Portfolio</h1></div><div id="content"><div class="sect1">
-<h2 id="project-addressbook-level-4"><a class="link" href="#project-addressbook-level-4">PROJECT: AddressBook - Level 4</a></h2>
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">MeNUS</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/CS2103-AY1819S1-F10-4/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Ang Zhi Kai - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<h2 id="project-menus"><a class="link" href="#project-menus">PROJECT: MeNUS</a></h2>
 <div class="sectionbody">
 <hr>
 </div>
@@ -10,7 +10,15 @@
 <h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>AddressBook - Level 4 is a desktop address book application used for teaching Software Engineering principles. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 10 kLoC.</p>
+<p><strong>MeNUS</strong> is a restaurant management desktop application targeting restaurant owners in the National University
+of Singapore (NUS). It is built to help them better manage their restaurants, especially if they are using complex,
+expensive and independent systems.<br></p>
+</div>
+<div class="paragraph">
+<p>Restaurant owners interact with <strong>MeNUS</strong> using a Command Line Interface
+(CLI). <strong>MeNUS</strong> also has a Graphical User Interface(GUI) created with <a href="https://docs.oracle.com/javafx/2/">JavaFX</a> and it
+is written using <a href="https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase9-3934878.html">Java 9</a> with
+approximately 30 KLOC.</p>
 </div>
 </div>
 </div>
@@ -20,40 +28,53 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Major enhancement</strong>: added <strong>the ability to undo/redo previous commands</strong></p>
+<p><strong>Major enhancement</strong>: Added the <strong>user management</strong> feature</p>
 <div class="ulist">
 <ul>
 <li>
-<p>What it does: allows the user to undo all previous commands one at a time. Preceding undo commands can be reversed by using the redo command.</p>
+<p><strong>What it does</strong>: Allows the restaurant owner to create account for each of his employee to manage the system.</p>
 </li>
 <li>
-<p>Justification: This feature improves the product significantly because a user can make mistakes in commands and the app should provide a convenient way to rectify them.</p>
+<p><strong>Justification</strong>: This feature introduce the security layer to the application by ensuring that only
+authorised personnel are able to execute certain sets of commands depending on their level of privilege.</p>
 </li>
 <li>
-<p>Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands.</p>
+<p><strong>Highlights</strong>: This enhancement affects existing commands such that certain commands require the user to be
+authenticated, otherwise it will not be executed. It required an in-depth analysis and understanding of the <code>Logic</code>,
+<code>Model</code> and <code>Storage</code> components. The implementation too was challenging as it required modifications to existing
+commands.</p>
 </li>
 <li>
-<p>Credits: <em>{mention here if you reused any code/ideas from elsewhere or if a third-party library is heavily used in the feature so that a reader can make a more accurate judgement of how much effort went into the feature}</em></p>
+<p><strong>Credits</strong>: Account password is hashed using <a href="https://github.com/patrickfav/bcrypt"><code>bcrypt</code></a>.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Minor enhancement</strong>: added a history command that allows the user to navigate to previous commands using up/down keys.</p>
-</li>
-<li>
-<p><strong>Code contributed</strong>: [<a href="https://github.com">Functional code</a>] [<a href="https://github.com">Test code</a>] <em>{give links to collated code files}</em></p>
+<p><strong>Minor enhancement</strong>: Added side navigation bar to access the different components of the application.</p>
 </li>
 <li>
 <p><strong>Other contributions</strong>:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Project management:</p>
+<p>Project Management:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Managed releases <code>v1.3</code> - <code>v1.5rc</code> (3 releases) on GitHub</p>
+<p>Team Lead; responsible for overall project coordination.</p>
+</li>
+<li>
+<p>Set up GitHub repository, Travis, AppVeyor, Codacy and Coveralls.</p>
+</li>
+<li>
+<p>Maintained issue tracker, milestone, pull request approval and merger.</p>
+</li>
+<li>
+<p>Managed releases <code>v1.1</code>, <code>v1.2</code>, <code>v1.2.1</code>, <code>v1.3</code> and <code>v1.4</code> (5 releases) on GitHub.</p>
+</li>
+<li>
+<p>Configured deployment of static pages to GitHub Pages and Netlify.</p>
 </li>
 </ul>
 </div>
@@ -63,10 +84,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Updated the GUI color scheme (Pull requests <a href="https://github.com">#33</a>, <a href="https://github.com">#34</a>)</p>
-</li>
-<li>
-<p>Wrote additional tests for existing features to increase coverage from 88% to 92% (Pull requests <a href="https://github.com">#36</a>, <a href="https://github.com">#38</a>)</p>
+<p>TBU</p>
 </li>
 </ul>
 </div>
@@ -76,7 +94,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Did cosmetic tweaks to existing contents of the User Guide: <a href="https://github.com">#14</a></p>
+<p>Morphed existing contents (UML and Sequence diagrams) of the User Guide and Developer Guide.</p>
 </li>
 </ul>
 </div>
@@ -86,16 +104,32 @@
 <div class="ulist">
 <ul>
 <li>
-<p>PRs reviewed (with non-trivial review comments): <a href="https://github.com">#12</a>, <a href="https://github.com">#32</a>, <a href="https://github.com">#19</a>, <a href="https://github.com">#42</a></p>
+<p>Reviewed significant number of pull requests with non-trivial review comments:
+<a href="https://github.com/CS2103-AY1819S1-F10-4/main/pull/27">#27</a>,
+<a href="https://github.com/CS2103-AY1819S1-F10-4/main/pull/36">#36</a>,
+<a href="https://github.com/CS2103-AY1819S1-F10-4/main/pull/37">#37</a>,
+<a href="https://github.com/CS2103-AY1819S1-F10-4/main/pull/42">#42</a>,
+<a href="https://github.com/CS2103-AY1819S1-F10-4/main/pull/44">#44</a>,
+<a href="https://github.com/CS2103-AY1819S1-F10-4/main/pull/50">#50</a>,
+<a href="https://github.com/CS2103-AY1819S1-F10-4/main/pull/51">#51</a>,
+<a href="https://github.com/CS2103-AY1819S1-F10-4/main/pull/52">#52</a>,
+<a href="https://github.com/CS2103-AY1819S1-F10-4/main/pull/53">#53</a>,
+<a href="https://github.com/CS2103-AY1819S1-F10-4/main/pull/83">#83</a>,
+<a href="https://github.com/CS2103-AY1819S1-F10-4/main/pull/84">#84</a>,
+<a href="https://github.com/CS2103-AY1819S1-F10-4/main/pull/91">#91</a>,
+<a href="https://github.com/CS2103-AY1819S1-F10-4/main/pull/92">#92</a>,
+<a href="https://github.com/CS2103-AY1819S1-F10-4/main/pull/136">#136</a></p>
 </li>
 <li>
-<p>Contributed to forum discussions (examples:  <a href="https://github.com">1</a>, <a href="https://github.com">2</a>, <a href="https://github.com">3</a>, <a href="https://github.com">4</a>)</p>
+<p>Contributed to forum discussions using GitHub&#8217;s Issue Tracker:
+<a href="https://github.com/nus-cs2103-AY1819S1/forum/issues/7">#7</a>,
+<a href="https://github.com/nus-cs2103-AY1819S1/forum/issues/20">#20</a>,
+<a href="https://github.com/nus-cs2103-AY1819S1/forum/issues/33">#33</a>,
+<a href="https://github.com/nus-cs2103-AY1819S1/forum/issues/79">#79</a></p>
 </li>
 <li>
-<p>Reported bugs and suggestions for other teams in the class (examples:  <a href="https://github.com">1</a>, <a href="https://github.com">2</a>, <a href="https://github.com">3</a>)</p>
-</li>
-<li>
-<p>Some parts of the history feature I added was adopted by several other class mates (<a href="https://github.com">1</a>, <a href="https://github.com">2</a>)</p>
+<p>Reported bugs and suggestions for other teams in the class:
+<a href="https://github.com/nus-cs2103-AY1819S1/forum/issues/74#issuecomment-430956137">#74</a></p>
 </li>
 </ul>
 </div>
@@ -105,21 +139,17 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Integrated a third party library (Natty) to the project (<a href="https://github.com">#42</a>)</p>
-</li>
-<li>
-<p>Integrated a new Github plugin (CircleCI) to the team repo</p>
-</li>
-</ul>
-</div>
+<p>Integrated a third party library (bcrypt) to the project:
+<a href="https://github.com/CS2103-AY1819S1-F10-4/main/pull/38">#38</a>,
+<a href="https://github.com/CS2103-AY1819S1-F10-4/main/pull/70">#70</a></p>
 </li>
 </ul>
 </div>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><em>{you can add/remove categories in the list above}</em></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -132,15 +162,34 @@
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users.</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>The following sections are my contribution to the User Guide. They showcase my ability to write documentation
+targeting end-users with little or no technical knowledge.</em></p></td>
 </tr>
 </tbody>
 </table>
-<div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code-or-code-u-code"><a class="link" href="#undoing-previous-command-code-undo-code-or-code-u-code">Undoing previous command : <code>undo</code> or <code>u</code></a></h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="welcome-to-menus"><a class="link" href="#welcome-to-menus">Welcome to MeNUS</a></h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
-Format: <code>undo</code></p>
+<p><a href="{repoURL}">MeNUS</a> empowers you to improve the Management(M) and efficiency(e) of your restaurants in NUS.</p>
+</div>
+<div class="paragraph">
+<p>As long as you feel like your restaurants are using too many complex and expensive systems,
+<a href="{repoURL}">MeNUS</a> is here to help you!</p>
+</div>
+<div class="paragraph">
+<p>Introducing <a href="{repoURL}">MeNUS</a>, a revolutionary restaurant management desktop application that is <strong>optimized for
+users who prefer to work with a Command Line Interface (CLI) while still having the benefits of a Graphical User
+Interface (GUI)</strong>. If you can type fast, <a href="{repoURL}">MeNUS</a> allows you to manage aspects of your restaurants&#8201;&#8212;&#8201;staff accounts,
+menus, ingredient, sales and reservations management&#8201;&#8212;&#8201;all from a single location !</p>
+</div>
+<div class="sect2">
+<h3 id="legends"><a class="link" href="#legends">Legends</a></h3>
+<div class="paragraph">
+<p>The following <strong>3</strong> legends will be used throughout the documentation which you may wish to pay attention to as it may
+contain important details:</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -149,43 +198,47 @@ Format: <code>undo</code></p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<div class="paragraph">
-<p>Undoable commands: those commands that modify the address book&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code> and <code>clear</code>)</p>
+Just for your info, do not be alarmed!
+</td>
+</tr>
+</table>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Perhaps something can be done using another approach, but it is up to you to decide.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Some things might go wrong if you are not careful, or did not follow the instructions correctly; strongly advised to
+read whatever is in this block.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>delete 1</code><br>
-<code>list</code><br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
-</li>
-<li>
-<p><code>select 1</code><br>
-<code>list</code><br>
-<code>undo</code><br>
-The <code>undo</code> command fails as there are no undoable commands executed previously.</p>
-</li>
-<li>
-<p><code>delete 1</code><br>
-<code>clear</code><br>
-<code>undo</code> (reverses the <code>clear</code> command)<br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
-</li>
-</ul>
+<p>Let&#8217;s get started!</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code-or-code-r-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code-or-code-r-code">Redoing the previously undone command : <code>redo</code> or <code>r</code></a></h3>
+<h3 id="accounts-management"><a class="link" href="#accounts-management">Accounts Management</a></h3>
+<div class="sect3">
+<h4 id="logging-in-code-login-code"><a class="link" href="#logging-in-code-login-code">Logging in: <code>login</code></a></h4>
 <div class="paragraph">
-<p>Reverses the most recent <code>undo</code> command.<br>
-Format: <code>redo</code></p>
+<p>Logs into an existing account.<br>
+Format: <code>login id/USERNAME pw/PASSWORD</code> or <code>li id/USERNAME pw/PASSWORD</code><br></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -193,24 +246,126 @@ Format: <code>redo</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>delete 1</code><br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br>
-<code>redo</code> (reapplies the <code>delete 1</code> command)<br></p>
+<p><code>login id/azhikai pw/p@55w0rd</code></p>
 </li>
 <li>
-<p><code>delete 1</code><br>
-<code>redo</code><br>
-The <code>redo</code> command fails as there are no <code>undo</code> commands executed previously.</p>
-</li>
-<li>
-<p><code>delete 1</code><br>
-<code>clear</code><br>
-<code>undo</code> (reverses the <code>clear</code> command)<br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br>
-<code>redo</code> (reapplies the <code>delete 1</code> command)<br>
-<code>redo</code> (reapplies the <code>clear</code> command)<br></p>
+<p><code>li id/azhikai pw/p@55w0rd</code></p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="logging-out-code-logout-code"><a class="link" href="#logging-out-code-logout-code">Logging out: <code>logout</code></a></h4>
+<div class="paragraph">
+<p>Logs out of the account.<br>
+Format: <code>logout</code> or <code>lo</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="creating-user-account-code-register-code-or-code-reg-code"><a class="link" href="#creating-user-account-code-register-code-or-code-reg-code">Creating user account: <code>register</code> or <code>reg</code></a></h4>
+<div class="paragraph">
+<p>Creates a new user account.<br>
+Format: <code>register id/USERNAME pw/PASSWORD</code> or <code>reg id/USERNAME pw/PASSWORD</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>register id/azhikai pw/p@55w0rd</code></p>
+</li>
+<li>
+<p><code>reg id/azhikai pw/p@55w0rd</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="editing-user-account-code-edit-account-code-or-code-ea-code"><a class="link" href="#editing-user-account-code-edit-account-code-or-code-ea-code">Editing user account: <code>edit-account</code> or <code>ea</code></a></h4>
+<div class="paragraph">
+<p>Edits an existing user account.<br>
+Format: <code>edit-account id/USERNAME [nid/NEW_USERNAME] [pw/NEW_PASSWORD]</code> or
+<code>ea id/USERNAME [nid/NEW_USERNAME] [pw/NEW_PASSWORD]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The account&#8217;s data will remain intact if none of the optional fields are provided.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>edit-acc id/azhikai</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Nothing happens in this case.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>edit-acc id/azhikai nid/angzhikai</code></p>
+</li>
+<li>
+<p><code>ea id/azhikai nid/angzhikai</code></p>
+</li>
+<li>
+<p><code>edit-acc id/azhikai nid/angzhikai pw/n3wp@55w0rd</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="deleting-user-account-code-deregister-code-or-code-dereg-code"><a class="link" href="#deleting-user-account-code-deregister-code-or-code-dereg-code">Deleting user account: <code>deregister</code> or <code>dereg</code></a></h4>
+<div class="paragraph">
+<p>Deletes an existing user account.<br>
+Format: <code>deregister id/USERNAME</code> or <code>dereg id/USERNAME</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>deregister id/azhikai</code></p>
+</li>
+<li>
+<p><code>dereg id/azhikai</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="list-user-accounts-code-list-accounts-code-or-code-la-code"><a class="link" href="#list-user-accounts-code-list-accounts-code-or-code-la-code">List user accounts: <code>list-accounts</code> or <code>la</code></a></h4>
+<div class="paragraph">
+<p>List all user accounts.<br>
+Format: <code>list-accounts</code> or <code>la</code></p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Password is masked by default and should never be shown</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -224,61 +379,43 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project.</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>The following sections are my contribution to the Developer Guide. They showcase my ability to write
+technical documentation and the technical depth of my contributions to the project.</em></p></td>
 </tr>
 </tbody>
 </table>
-<div class="sect2">
-<h3 id="undo-redo-feature"><a class="link" href="#undo-redo-feature">Undo/Redo feature</a></h3>
-<div class="sect3">
-<h4 id="current-implementation"><a class="link" href="#current-implementation">Current Implementation</a></h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="welcome-to-menus-2"><a class="link" href="#welcome-to-menus-2">Welcome to MeNUS</a></h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>The undo/redo mechanism is facilitated by <code>VersionedAddressBook</code>.
-It extends <code>AddressBook</code> with an undo/redo history, stored internally as an <code>addressBookStateList</code> and <code>currentStatePointer</code>.
-Additionally, it implements the following operations:</p>
+<p>This Developer Guide is written by the <strong>MeNUS</strong> v1.4 team for the benefits of future developers and maintainers of the
+application.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>VersionedAddressBook#commit()</code>&#8201;&#8212;&#8201;Saves the current address book state in its history.</p>
+<p>This guide includes instructions for setting up the development environment.</p>
 </li>
 <li>
-<p><code>VersionedAddressBook#undo()</code>&#8201;&#8212;&#8201;Restores the previous address book state from its history.</p>
+<p>This guide provides sufficient UMLs (unified model diagrams) to illustrate the architectural structure and design
+methodology.</p>
 </li>
 <li>
-<p><code>VersionedAddressBook#redo()</code>&#8201;&#8212;&#8201;Restores a previously undone address book state from its history.</p>
+<p>This guide offers advice for troubleshooting some common issues.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>These operations are exposed in the <code>Model</code> interface as <code>Model#commitAddressBook()</code>, <code>Model#undoAddressBook()</code> and <code>Model#redoAddressBook()</code> respectively.</p>
+<p><strong>MeNUS</strong> is an open-source project, should any developers be interested to contribute, see the
+<a href="{repoURL}/docs/AboutUs.adoc"><code>Contact Us</code></a> page for more information.</p>
 </div>
+<div class="sect2">
+<h3 id="legends-2"><a class="link" href="#legends-2">Legends</a></h3>
 <div class="paragraph">
-<p>Given below is an example usage scenario and how the undo/redo mechanism behaves at each step.</p>
-</div>
-<div class="paragraph">
-<p>Step 1. The user launches the application for the first time. The <code>VersionedAddressBook</code> will be initialized with the initial address book state, and the <code>currentStatePointer</code> pointing to that single address book state.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/UndoRedoStartingStateListDiagram.png" alt="UndoRedoStartingStateListDiagram" width="800">
-</div>
-</div>
-<div class="paragraph">
-<p>Step 2. The user executes <code>delete 5</code> command to delete the 5th person in the address book. The <code>delete</code> command calls <code>Model#commitAddressBook()</code>, causing the modified state of the address book after the <code>delete 5</code> command executes to be saved in the <code>addressBookStateList</code>, and the <code>currentStatePointer</code> is shifted to the newly inserted address book state.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/UndoRedoNewCommand1StateListDiagram.png" alt="UndoRedoNewCommand1StateListDiagram" width="800">
-</div>
-</div>
-<div class="paragraph">
-<p>Step 3. The user executes <code>add n/David &#8230;&#8203;</code> to add a new person. The <code>add</code> command also calls <code>Model#commitAddressBook()</code>, causing another modified address book state to be saved into the <code>addressBookStateList</code>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/UndoRedoNewCommand2StateListDiagram.png" alt="UndoRedoNewCommand2StateListDiagram" width="800">
-</div>
+<p>The following <strong>3</strong> legends will be used throughout the documentation which you may wish to pay attention to as it may
+contain important details:</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -287,18 +424,89 @@ Additionally, it implements the following operations:</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If a command fails its execution, it will not call <code>Model#commitAddressBook()</code>, so the address book state will not be saved into the <code>addressBookStateList</code>.
+Just for your info, do not be alarmed!
 </td>
 </tr>
 </table>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Perhaps something can be done using another approach, but it is up to you to decide.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Some things might go wrong if you are not careful, or did not follow the instructions correctly; strongly advised to
+read whatever is in this block.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="user-account-feature"><a class="link" href="#user-account-feature">User account feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation"><a class="link" href="#current-implementation">Current Implementation</a></h4>
 <div class="paragraph">
-<p>Step 4. The user now decides that adding the person was a mistake, and decides to undo that action by executing the <code>undo</code> command. The <code>undo</code> command will call <code>Model#undoAddressBook()</code>, which will shift the <code>currentStatePointer</code> once to the left, pointing it to the previous address book state, and restores the address book to that state.</p>
+<p>The user account mechanism is facilitated by <code>RestaurantBook</code>. Additionally, it implements the following operations:</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/UndoRedoExecuteUndoStateListDiagram.png" alt="UndoRedoExecuteUndoStateListDiagram" width="800">
+<div class="ulist">
+<ul>
+<li>
+<p><code>RestaurantBook#getAccount(Account)</code>&#8201;&#8212;&#8201;Retrieves the account.</p>
+</li>
+<li>
+<p><code>RestaurantBook#addAccount(Account)</code>&#8201;&#8212;&#8201;Saves the new account.</p>
+</li>
+<li>
+<p><code>RestaurantBook#updateAccount(Account, Account)</code>&#8201;&#8212;&#8201;Update the existing account.</p>
+</li>
+<li>
+<p><code>RestaurantBook#removeAccount(Account)</code>&#8201;&#8212;&#8201;Removes the account.</p>
+</li>
+</ul>
 </div>
+<div class="paragraph">
+<p>These operations are exposed in the <code>Model</code> interface as <code>Model#getAccount(Account)</code>, <code>Model#addAccount(Account)</code>,
+<code>Model#updateAccount(Account, Account)</code> and <code>Model#removeAccount(Account)</code>. The following commands will
+invoke the aforementioned operations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Command#LoginCommand()</code>&#8201;&#8212;&#8201;Invokes <code>Model#getAccount(Account)</code>.</p>
+</li>
+<li>
+<p><code>Command#RegisterCommand()</code>&#8201;&#8212;&#8201;Invokes <code>Model#addAccount(Account)</code>.</p>
+</li>
+<li>
+<p><code>Command#DeregisterCommand()</code>&#8201;&#8212;&#8201;Invokes <code>Model#removeAccount(Account)</code>.</p>
+</li>
+<li>
+<p><code>Command#EditCommand()</code>&#8201;&#8212;&#8201;Invokes <code>Model#updateAccount(Account, Account)</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Described below are example usage scenarios and how each of the command and its respective operations behaves at each
+step which involves two components, <code>Logic</code> which is responsible for parsing the user input and <code>Model</code> which is
+responsible for manipulating the list, if necessary. Both components are extended by <code>LogicManager</code> and
+<code>ModelManager</code> respectively.</p>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram shows how the <code>register</code> command works:</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -307,21 +515,17 @@ If a command fails its execution, it will not call <code>Model#commitAddressBook
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If the <code>currentStatePointer</code> is at index 0, pointing to the initial address book state, then there are no previous address book states to restore. The <code>undo</code> command uses <code>Model#canUndoAddressBook()</code> to check if this is the case. If so, it will return an error to the user rather than attempting to perform the undo.
+The <code>deregister</code> command works the same way by checking if the account exists before calling <code>Model#removeAccount
+(Account)</code>.
 </td>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>The following sequence diagram shows how the undo operation works:</p>
-</div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/UndoRedoSequenceDiagram.png" alt="UndoRedoSequenceDiagram" width="800">
+<img src="../images/RegisterSequenceDiagram.png" alt="RegisterSequenceDiagram" width="800">
 </div>
-</div>
-<div class="paragraph">
-<p>The <code>redo</code> command does the opposite&#8201;&#8212;&#8201;it calls <code>Model#redoAddressBook()</code>, which shifts the <code>currentStatePointer</code> once to the right, pointing to the previously undone state, and restores the address book to that state.</p>
+<div class="title">Figure 1. Sequence diagram to illustrate component interactions for the <code>register</code> command</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -330,97 +534,188 @@ If the <code>currentStatePointer</code> is at index 0, pointing to the initial a
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If the <code>currentStatePointer</code> is at index <code>addressBookStateList.size() - 1</code>, pointing to the latest address book state, then there are no undone address book states to restore. The <code>redo</code> command uses <code>Model#canRedoAddressBook()</code> to check if this is the case. If so, it will return an error to the user rather than attempting to perform the redo.
+We assume the user is already logged in
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If the username already exists, a warning message will be shown to the user to select another username
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Step 5. The user then decides to execute the command <code>list</code>. Commands that do not modify the address book, such as <code>list</code>, will usually not call <code>Model#commitAddressBook()</code>, <code>Model#undoAddressBook()</code> or <code>Model#redoAddressBook()</code>. Thus, the <code>addressBookStateList</code> remains unchanged.</p>
+<p>Step 1. The user executes <code>register id/azhikai pw/1122qq</code> command to create a new user account.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. <code>LogicManager</code> invokes the <code>RestaurantBookParser#parseCommand()</code> method which takes in the user input
+as arguments.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. When the command is parsed, the <code>Command#RegisterCommand</code> will be created which is returned to the
+<code>LogicManager</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. <code>LogicManager</code> invokes the <code>execute()</code> method of the <code>Command#RegisterCommand</code>, <code>rc</code> which is instantiated in
+Step 3. The <code>Model</code> component will be involved as the <code>Command#RegisterCommand</code> invokes a request to add the account
+into the storage by calling <code>Model#addAccount(Account)</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 5: The new account is added into the storage. Then, a <code>CommandResult</code> is generated and returned to
+<code>LogicManager</code> which is used to display the result to the user.</p>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram shows how the <code>login</code> command works:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/UndoRedoNewCommand3StateListDiagram.png" alt="UndoRedoNewCommand3StateListDiagram" width="800">
+<img src="../images/LoginSequenceDiagram.png" alt="LoginSequenceDiagram" width="800">
+</div>
+<div class="title">Figure 2. Sequence diagram to illustrate component interactions for the <code>login</code> command</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+We assume the user will enter the correct password. Otherwise, warning message will be shown to the user to re-enter
+the credential
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Step 1. The user executes <code>login id/azhikai pw/1122qq</code> command to login to an existing user account.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. <code>LogicManager</code> invokes the <code>RestaurantBookParser#parseCommand()</code> method which takes in the user input
+as arguments.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. When the command is parsed, the <code>Command#LoginCommand</code> will be created which is returned to the
+<code>LogicManager</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. <code>LogicManager</code> invokes the <code>execute()</code> method of the <code>Command#LoginCommand</code>, <code>lc</code> which is instantiated in Step 3.
+The <code>Model</code> component will be involved as the <code>Command#LoginCommand</code> invokes a request to retrieve an account based
+on the username. If it exists, the account will be retrieved and the password hash will be compared. If it matches,
+then the credential is valid and the user is authenticated.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="user-session-feature"><a class="link" href="#user-session-feature">User session feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-2"><a class="link" href="#current-implementation-2">Current Implementation</a></h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If a privileged command is executed when a session is not set, an error will be shown. The only commands that can
+be executed without a session being set are <code>help</code>, <code>login</code> and <code>exit</code>. Any other commands are considered privileged
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The user session is facilitated by <code>UserSession</code> which stores the authentication state of the application.
+This is triggered by raising a <code>Login</code> and <code>Logout</code> event upon executing either the <code>Command#LoginCommand()</code> or
+<code>Command#LogoutCommand()</code>.<br></p>
+</div>
+<div class="paragraph">
+<p>Additionally, it implements the following static operations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>UserSession#login()</code>&#8201;&#8212;&#8201;Set a login session.</p>
+</li>
+<li>
+<p><code>UserSession#logout()</code>&#8201;&#8212;&#8201;Removes the existing login session.</p>
+</li>
+<li>
+<p><code>UserSession#isAuthenticated()</code>&#8201;&#8212;&#8201;Checks if there is an existing login session.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Given below is an example usage scenario and how the user session mechanism behaves at each step.</p>
+</div>
+<div class="paragraph">
+<p>The following activity diagram summarizes what happens when a user logs in or out:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/UserSessionActivityDiagram.png" alt="UserSessionActivityDiagram" width="650">
 </div>
 </div>
 <div class="paragraph">
-<p>Step 6. The user executes <code>clear</code>, which calls <code>Model#commitAddressBook()</code>. Since the <code>currentStatePointer</code> is not pointing at the end of the <code>addressBookStateList</code>, all address book states after the <code>currentStatePointer</code> will be purged. We designed it this way because it no longer makes sense to redo the <code>add n/David &#8230;&#8203;</code> command. This is the behavior that most modern desktop applications follow.</p>
+<p>The following code snippet demonstrates how these static methods are implemented:</p>
 </div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="../images/UndoRedoNewCommand4StateListDiagram.png" alt="UndoRedoNewCommand4StateListDiagram" width="800">
-</div>
-</div>
-<div class="paragraph">
-<p>The following activity diagram summarizes what happens when a user executes a new command:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/UndoRedoActivityDiagram.png" alt="UndoRedoActivityDiagram" width="650">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="comment">/**
+ * Stores this {@link Account} info as part of this session.
+ *
+ * @param account logged in for this session.
+ */</span>
+<span class="directive">public</span> <span class="directive">static</span> <span class="type">void</span> login(Account account) {
+    isAuthenticated = <span class="predefined-constant">true</span>;
+    username = account.getUsername();
+}
+
+<span class="comment">/**
+ * Logs out of this account which releases this session.
+ */</span>
+<span class="directive">public</span> <span class="directive">static</span> <span class="type">void</span> logout() {
+    <span class="keyword">if</span> (isAuthenticated) {
+        isAuthenticated = <span class="predefined-constant">false</span>;
+        username = <span class="predefined-constant">null</span>;
+    }
+}</code></pre>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
 <div class="sect4">
-<h5 id="aspect-how-undo-redo-executes"><a class="link" href="#aspect-how-undo-redo-executes">Aspect: How undo &amp; redo executes</a></h5>
+<h5 id="aspect-how-user-session-is-handled"><a class="link" href="#aspect-how-user-session-is-handled">Aspect: How user session is handled</a></h5>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Alternative 1 (current choice):</strong> Saves the entire address book.</p>
+<p><strong>Alternative 1 (current choice):</strong> Use static flags and methods.</p>
 <div class="ulist">
 <ul>
 <li>
 <p>Pros: Easy to implement.</p>
 </li>
 <li>
-<p>Cons: May have performance issues in terms of memory usage.</p>
+<p>Cons: Can only support one user at any time. If another user wants to login, the current logged in user must log out.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Alternative 2:</strong> Individual command knows how to undo/redo by itself.</p>
+<p><strong>Alternative 2:</strong> Store a list of user sessions to allow multiple login.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: Will use less memory (e.g. for <code>delete</code>, just save the person being deleted).</p>
+<p>Pros: More user can login and manage the systems concurrently.</p>
 </li>
 <li>
-<p>Cons: We must ensure that the implementation of each individual command are correct.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="aspect-data-structure-to-support-the-undo-redo-commands"><a class="link" href="#aspect-data-structure-to-support-the-undo-redo-commands">Aspect: Data structure to support the undo/redo commands</a></h5>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Alternative 1 (current choice):</strong> Use a list to store the history of address book states.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Easy for new Computer Science student undergraduates to understand, who are likely to be the new incoming developers of our project.</p>
-</li>
-<li>
-<p>Cons: Logic is duplicated twice. For example, when a new command is executed, we must remember to update both <code>HistoryManager</code> and <code>VersionedAddressBook</code>.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Alternative 2:</strong> Use <code>HistoryManager</code> for undo/redo</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: We do not need to maintain a separate list, and just reuse what is already in the codebase.</p>
-</li>
-<li>
-<p>Cons: Requires dealing with commands that have already been undone: We must remember to skip these commands. Violates Single Responsibility Principle and Separation of Concerns as <code>HistoryManager</code> now needs to do two different things.</p>
+<p>Cons: More memory usage to track each user session.</p>
 </li>
 </ul>
 </div>
@@ -430,20 +725,5 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">[Proposed] Data Encryption</a></h3>
-<div class="paragraph">
-<p><em>{Explain here how the data encryption feature will be implemented}</em></p>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="project-powerpointlabs"><a class="link" href="#project-powerpointlabs">PROJECT: PowerPointLabs</a></h2>
-<div class="sectionbody">
-<hr>
-<div class="paragraph">
-<p><em>{Optionally, you may include other projects in your portfolio.}</em></p>
-</div>
-</div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-26 07:07:25 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-26 12:22:32 UTC</div></div></div></body></html>

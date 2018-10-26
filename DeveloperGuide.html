@@ -9,7 +9,11 @@
 <div id="toc" class="toc">
 <div id="toctitle"></div>
 <ul class="sectlevel1">
-<li><a href="#introduction">1. Introduction</a></li>
+<li><a href="#welcome-to-menus">1. Welcome to MeNUS</a>
+<ul class="sectlevel2">
+<li><a href="#legends">1.1. Legends</a></li>
+</ul>
+</li>
 <li><a href="#setting-up">2. Setting up</a>
 <ul class="sectlevel2">
 <li><a href="#prerequisites">2.1. Prerequisites</a></li>
@@ -37,9 +41,8 @@
 <li><a href="#delete-ingredient-feature">4.5. Delete Ingredient feature</a></li>
 <li><a href="#menu-management-feature">4.6. Menu Management feature</a></li>
 <li><a href="#reservations-feature">4.7. Reservations feature</a></li>
-<li><a href="#proposed-data-encryption">4.8. [Proposed] Data Encryption</a></li>
-<li><a href="#logging">4.9. Logging</a></li>
-<li><a href="#Implementation-Configuration">4.10. Configuration</a></li>
+<li><a href="#logging">4.8. Logging</a></li>
+<li><a href="#Implementation-Configuration">4.9. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">5. Documentation</a>
@@ -83,10 +86,10 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
+<h2 id="welcome-to-menus"><a class="link" href="#welcome-to-menus">1. Welcome to MeNUS</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This Developer Guide is written by the MeNUS v1.4 team for the benefits of future developers and maintainers of the
+<p>This Developer Guide is written by the <strong>MeNUS</strong> v1.4 team for the benefits of future developers and maintainers of the
 application.</p>
 </div>
 <div class="ulist">
@@ -104,15 +107,61 @@ methodology.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>MeNUS is an open-source project, should any developers be interested, see the <a href="https://github.com/CS2103-AY1819S1-F10-4/main/tree/master/docs/AboutUs.adoc"><code>Contact
-Us</code></a> page
- for more information.</p>
+<p><strong>MeNUS</strong> is an open-source project, should any developers be interested to contribute, see the
+<a href="https://github.com/CS2103-AY1819S1-F10-4/main/tree/master/docs/AboutUs.adoc"><code>Contact Us</code></a> page for more information.</p>
+</div>
+<div class="sect2">
+<h3 id="legends"><a class="link" href="#legends">1.1. Legends</a></h3>
+<div class="paragraph">
+<p>The following <strong>3</strong> legends will be used throughout the documentation which you may wish to pay attention to as it may
+contain important details:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Just for your info, do not be alarmed!
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Perhaps something can be done using another approach, but it is up to you to decide.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Some things might go wrong if you are not careful, or did not follow the instructions correctly; strongly advised to
+read whatever is in this block.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="setting-up"><a class="link" href="#setting-up">2. Setting up</a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Follow this setup guide to get <strong>MeNUS</strong> up and running on your computer.</p>
+</div>
 <div class="sect2">
 <h3 id="prerequisites"><a class="link" href="#prerequisites">2.1. Prerequisites</a></h3>
 <div class="olist arabic">
@@ -127,7 +176,8 @@ Us</code></a> page
 </td>
 <td class="content">
 JDK <code>10</code> on Windows will fail to run tests in <a href="UsingGradle.html#Running-Tests">headless mode</a> due to a <a href="https://github.com/javafxports/openjdk-jfx/issues/66">JavaFX bug</a>.
-Windows developers are highly recommended to use JDK <code>9</code>.
+Windows developers are highly recommended to use JDK <code>9</code> which can be downloaded
+<a href="https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase9-3934878.html">here</a>
 </td>
 </tr>
 </table>
@@ -143,7 +193,7 @@ Windows developers are highly recommended to use JDK <code>9</code>.
 </td>
 <td class="content">
 IntelliJ by default has Gradle and JavaFX plugins installed.<br>
-Do not disable them. If you have disabled them, go to <code>File</code> &gt; <code>Settings</code> &gt; <code>Plugins</code> to re-enable them.
+Do not disable them. If you have disabled them, go to <code>File</code> &gt; <code>Settings</code> &gt; <code>Plugins</code> to re-enable them
 </td>
 </tr>
 </table>
@@ -192,7 +242,8 @@ Do not disable them. If you have disabled them, go to <code>File</code> &gt; <co
 This will generate all resources required by the application and tests.</p>
 </li>
 <li>
-<p>Open <a href="https://github.com/CS2103-AY1819S1-F10-4/main/tree/master/src/main/java/seedu/address/storage/XmlAdaptedPerson.java"><code>XmlAdaptedPerson.java</code></a> and <a href="https://github.com/CS2103-AY1819S1-F10-4/main/tree/master/src/main/java/seedu/address/ui/MainWindow.java"><code>MainWindow.java</code></a> and check for any code errors</p>
+<p>Open <a href="https://github.com/CS2103-AY1819S1-F10-4/main/tree/master/src/main/java/seedu/address/storage/XmlAdaptedAccount.java"><code>XmlAdaptedAccount.java</code></a> and
+<a href="https://github.com/CS2103-AY1819S1-F10-4/main/tree/master/src/main/java/seedu/address/ui/MainWindow.java"><code>MainWindow.java</code></a> and check for any code errors</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -215,10 +266,10 @@ This will generate all resources required by the application and tests.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Run the <code>seedu.address.MainApp</code> and try a few commands</p>
+<p>Run the <code>seedu.address.MainApp</code> and try a few commands.</p>
 </li>
 <li>
-<p><a href="#Testing">Run the tests</a> to ensure they all pass</p>
+<p><a href="#Testing">Run the tests</a> to ensure they all pass.</p>
 </li>
 </ol>
 </div>
@@ -259,26 +310,7 @@ standards</a>. IntelliJ&#8217;s default style is mostly compliant with ours but 
 </div>
 </div>
 <div class="sect3">
-<h4 id="updating-documentation-to-match-your-fork"><a class="link" href="#updating-documentation-to-match-your-fork">2.4.2. Updating documentation to match your fork</a></h4>
-<div class="paragraph">
-<p>After forking the repo, the documentation will still have the SE-EDU branding and refer to the <code>se-edu/addressbook-level4</code> repo.</p>
-</div>
-<div class="paragraph">
-<p>If you plan to develop this fork as a separate product (i.e. instead of contributing to <code>se-edu/addressbook-level4</code>), you should do the following:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Configure the <a href="#Docs-SiteWideDocSettings">site-wide documentation settings</a> in <a href="https://github.com/CS2103-AY1819S1-F10-4/main/tree/master/build.gradle"><code>build.gradle</code></a>, such as the <code>site-name</code>, to suit your own project.</p>
-</li>
-<li>
-<p>Replace the URL in the attribute <code>repoURL</code> in <a href="https://github.com/CS2103-AY1819S1-F10-4/main/tree/master/docs/DeveloperGuide.adoc"><code>DeveloperGuide.adoc</code></a> and <a href="https://github.com/CS2103-AY1819S1-F10-4/main/tree/master/docs/UserGuide.adoc"><code>UserGuide.adoc</code></a> with the URL of your fork.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="setting-up-ci"><a class="link" href="#setting-up-ci">2.4.3. Setting up CI</a></h4>
+<h4 id="setting-up-ci"><a class="link" href="#setting-up-ci">2.4.2. Setting up CI</a></h4>
 <div class="paragraph">
 <p>Set up Travis to perform Continuous Integration (CI) for your fork. See <a href="UsingTravis.html">UsingTravis.adoc</a> to learn how to set it up.</p>
 </div>
@@ -314,7 +346,7 @@ Having both Travis and AppVeyor ensures your App works on both Unix-based platfo
 </div>
 </div>
 <div class="sect3">
-<h4 id="getting-started-with-coding"><a class="link" href="#getting-started-with-coding">2.4.4. Getting started with coding</a></h4>
+<h4 id="getting-started-with-coding"><a class="link" href="#getting-started-with-coding">2.4.3. Getting started with coding</a></h4>
 <div class="paragraph">
 <p>When you are ready to start coding,</p>
 </div>
@@ -442,7 +474,8 @@ The <code>.pptx</code> files used to create diagrams in this document can be fou
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Note how the <code>Model</code> simply raises a <code>AddressBookChangedEvent</code> when the Address Book data are changed, instead of asking the <code>Storage</code> to save the updates to the hard disk.
+Note how the <code>Model</code> simply raises a <code>RestaurantBookChangedEvent</code> when the Restaurant Book data are changed, instead of
+asking the <code>Storage</code> to save the updates to the hard disk.
 </td>
 </tr>
 </table>
@@ -521,7 +554,7 @@ Note how the event is propagated through the <code>EventsCenter</code> to the <c
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>Logic</code> uses the <code>AddressBookParser</code> class to parse the user command.</p>
+<p><code>Logic</code> uses the <code>RestaurantBookParser</code> class to parse the user command.</p>
 </li>
 <li>
 <p>This results in a <code>Command</code> object which is executed by the <code>LogicManager</code>.</p>
@@ -535,11 +568,12 @@ Note how the event is propagated through the <code>EventsCenter</code> to the <c
 </ol>
 </div>
 <div class="paragraph">
-<p>Given below is the Sequence Diagram for interactions within the <code>Logic</code> component for the <code>execute("delete 1")</code> API call.</p>
+<p>Given below is the Sequence Diagram for interactions within the <code>Logic</code> component for the <code>execute("register
+id/azhikai pw/1122qq")</code> API call.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/DeletePersonSdForLogic.png" alt="DeletePersonSdForLogic" width="800">
+<img src="images/RegisterAccountSdForLogic.png" alt="RegisterAccountSdForLogic" width="800">
 </div>
 <div class="title">Figure 7. Interactions Inside the Logic Component for the <code>delete 1</code> Command</div>
 </div>
@@ -548,7 +582,7 @@ Note how the event is propagated through the <code>EventsCenter</code> to the <c
 <h3 id="Design-Model"><a class="link" href="#Design-Model">3.4. Model component</a></h3>
 <div class="imageblock">
 <div class="content">
-<img src="images/ModelClassDiagram.png" alt="ModelClassDiagram" width="800">
+<img src="images/ModelClassDiagramNew.png" alt="ModelClassDiagramNew" width="800">
 </div>
 <div class="title">Figure 8. Structure of the Model Component</div>
 </div>
@@ -564,7 +598,7 @@ Note how the event is propagated through the <code>EventsCenter</code> to the <c
 <p>stores a <code>UserPref</code> object that represents the user&#8217;s preferences.</p>
 </li>
 <li>
-<p>stores the Address Book data.</p>
+<p>stores the Restaurant Book data.</p>
 </li>
 <li>
 <p>exposes an unmodifiable <code>ObservableList&lt;Person&gt;</code> that can be 'observed' e.g. the UI can be bound to this list so that the UI automatically updates when the data in the list change.</p>
@@ -573,20 +607,6 @@ Note how the event is propagated through the <code>EventsCenter</code> to the <c
 <p>does not depend on any of the other three components.</p>
 </li>
 </ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book</code>, which <code>Person</code> can reference. This would allow <code>Address Book</code> to only require one <code>Tag</code> object per unique <code>Tag</code>, instead of each <code>Person</code> needing their own <code>Tag</code> object. An example of how such a model may look like is given below.<br>
-<br>
-<span class="image"><img src="images/ModelClassBetterOopDiagram.png" alt="ModelClassBetterOopDiagram" width="800"></span>
-</td>
-</tr>
-</table>
 </div>
 </div>
 <div class="sect2">
@@ -609,7 +629,7 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <p>can save <code>UserPref</code> objects in json format and read it back.</p>
 </li>
 <li>
-<p>can save the Address Book data in xml format and read it back.</p>
+<p>can save the Restaurant Book data in xml format and read it back.</p>
 </li>
 </ul>
 </div>
@@ -633,31 +653,33 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <div class="sect3">
 <h4 id="current-implementation"><a class="link" href="#current-implementation">4.1.1. Current Implementation</a></h4>
 <div class="paragraph">
-<p>The undo/redo mechanism is facilitated by <code>VersionedAddressBook</code>.
-It extends <code>AddressBook</code> with an undo/redo history, stored internally as an <code>addressBookStateList</code> and <code>currentStatePointer</code>.
+<p>The undo/redo mechanism is facilitated by <code>VersionedRestaurantBook</code>.
+It extends <code>RestaurantBook</code> with an undo/redo history, stored internally as an <code>restaurantBookStateList</code> and
+<code>currentStatePointer</code>.
 Additionally, it implements the following operations:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>VersionedAddressBook#commit()</code>&#8201;&#8212;&#8201;Saves the current address book state in its history.</p>
+<p><code>VersionedRestaurantBook#commit()</code>&#8201;&#8212;&#8201;Saves the current restaurant book state in its history.</p>
 </li>
 <li>
-<p><code>VersionedAddressBook#undo()</code>&#8201;&#8212;&#8201;Restores the previous address book state from its history.</p>
+<p><code>VersionedRestaurantBook#undo()</code>&#8201;&#8212;&#8201;Restores the previous restaurant book state from its history.</p>
 </li>
 <li>
-<p><code>VersionedAddressBook#redo()</code>&#8201;&#8212;&#8201;Restores a previously undone address book state from its history.</p>
+<p><code>VersionedRestaurantBook#redo()</code>&#8201;&#8212;&#8201;Restores a previously undone restaurant book state from its history.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>These operations are exposed in the <code>Model</code> interface as <code>Model#commitAddressBook()</code>, <code>Model#undoAddressBook()</code> and <code>Model#redoAddressBook()</code> respectively.</p>
+<p>These operations are exposed in the <code>Model</code> interface as <code>Model#RestaurantBook()</code>, <code>Model#undoRestaurantBook()</code> and
+<code>Model#redoRestaurantBook()</code> respectively.</p>
 </div>
 <div class="paragraph">
 <p>Given below is an example usage scenario and how the undo/redo mechanism behaves at each step.</p>
 </div>
 <div class="paragraph">
-<p>Step 1. The user launches the application for the first time. The <code>VersionedAddressBook</code> will be initialized with the initial address book state, and the <code>currentStatePointer</code> pointing to that single address book state.</p>
+<p>Step 1. The user launches the application for the first time. The <code>VersionedRestaurantBook</code> will be initialized with the initial restaurant book state, and the <code>currentStatePointer</code> pointing to that single restaurant book state.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -665,7 +687,9 @@ Additionally, it implements the following operations:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Step 2. The user executes <code>delete 5</code> command to delete the 5th person in the address book. The <code>delete</code> command calls <code>Model#commitAddressBook()</code>, causing the modified state of the address book after the <code>delete 5</code> command executes to be saved in the <code>addressBookStateList</code>, and the <code>currentStatePointer</code> is shifted to the newly inserted address book state.</p>
+<p>Step 2. The user executes <code>delete 5</code> command to delete the 5th person in the restaurant book. The <code>delete</code> command
+calls <code>Model#commitRestaurantBook()</code>, causing the modified state of the restaurant book after the <code>delete 5</code> command
+executes to be saved in the <code>restaurantBookStateList</code>, and the <code>currentStatePointer</code> is shifted to the newly inserted restaurant book state.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -673,7 +697,7 @@ Additionally, it implements the following operations:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Step 3. The user executes <code>add n/David &#8230;&#8203;</code> to add a new person. The <code>add</code> command also calls <code>Model#commitAddressBook()</code>, causing another modified address book state to be saved into the <code>addressBookStateList</code>.</p>
+<p>Step 3. The user executes <code>add n/David &#8230;&#8203;</code> to add a new person. The <code>add</code> command also calls <code>Model#commitRestaurantBook()</code>, causing another modified restaurant book state to be saved into the <code>restaurantBookStateList</code>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -687,13 +711,15 @@ Additionally, it implements the following operations:</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If a command fails its execution, it will not call <code>Model#commitAddressBook()</code>, so the address book state will not be saved into the <code>addressBookStateList</code>.
+If a command fails its execution, it will not call <code>Model#commitRestaurantBook()</code>, so the restaurant book state will not be saved into the <code>restaurantBookStateList</code>.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Step 4. The user now decides that adding the person was a mistake, and decides to undo that action by executing the <code>undo</code> command. The <code>undo</code> command will call <code>Model#undoAddressBook()</code>, which will shift the <code>currentStatePointer</code> once to the left, pointing it to the previous address book state, and restores the address book to that state.</p>
+<p>Step 4. The user now decides that adding the person was a mistake, and decides to undo that action by executing the
+<code>undo</code> command. The <code>undo</code> command will call <code>Model#undoRestaurantBook()</code>, which will shift the <code>currentStatePointer</code>
+once to the left, pointing it to the previous restaurant book state, and restores the restaurant book to that state.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -707,7 +733,9 @@ If a command fails its execution, it will not call <code>Model#commitAddressBook
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If the <code>currentStatePointer</code> is at index 0, pointing to the initial address book state, then there are no previous address book states to restore. The <code>undo</code> command uses <code>Model#canUndoAddressBook()</code> to check if this is the case. If so, it will return an error to the user rather than attempting to perform the undo.
+If the <code>currentStatePointer</code> is at index 0, pointing to the initial restaurant book state, then there are no previous
+restaurant book states to restore. The <code>undo</code> command uses <code>Model#canUndoRestaurantBook()</code> to check if this is the
+case. If so, it will return an error to the user rather than attempting to perform the undo.
 </td>
 </tr>
 </table>
@@ -719,9 +747,11 @@ If the <code>currentStatePointer</code> is at index 0, pointing to the initial a
 <div class="content">
 <img src="images/UndoRedoSequenceDiagram.png" alt="UndoRedoSequenceDiagram" width="800">
 </div>
+<div class="title">Figure 10. Structure of the Storage Component</div>
 </div>
 <div class="paragraph">
-<p>The <code>redo</code> command does the opposite&#8201;&#8212;&#8201;it calls <code>Model#redoAddressBook()</code>, which shifts the <code>currentStatePointer</code> once to the right, pointing to the previously undone state, and restores the address book to that state.</p>
+<p>The <code>redo</code> command does the opposite&#8201;&#8212;&#8201;it calls <code>Model#redoRestaurantBook()</code>, which shifts the <code>currentStatePointer</code>
+once to the right, pointing to the previously undone state, and restores the restaurant book to that state.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -730,13 +760,18 @@ If the <code>currentStatePointer</code> is at index 0, pointing to the initial a
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If the <code>currentStatePointer</code> is at index <code>addressBookStateList.size() - 1</code>, pointing to the latest address book state, then there are no undone address book states to restore. The <code>redo</code> command uses <code>Model#canRedoAddressBook()</code> to check if this is the case. If so, it will return an error to the user rather than attempting to perform the redo.
+If the <code>currentStatePointer</code> is at index <code>restaurantBookStateList.size() - 1</code>, pointing to the latest restaurant book
+ state, then there are no undone restaurant book states to restore. The <code>redo</code> command uses
+ <code>Model#canRedoRestaurantBook()</code> to check if this is the case. If so, it will return an error to the user rather than
+  attempting to perform the redo.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Step 5. The user then decides to execute the command <code>list</code>. Commands that do not modify the address book, such as <code>list</code>, will usually not call <code>Model#commitAddressBook()</code>, <code>Model#undoAddressBook()</code> or <code>Model#redoAddressBook()</code>. Thus, the <code>addressBookStateList</code> remains unchanged.</p>
+<p>Step 5. The user then decides to execute the command <code>list</code>. Commands that do not modify the restaurant book, such as
+ <code>list</code>, will usually not call <code>Model#commitRestaurantBook()</code>, <code>Model#undoRestaurantBook()</code> or
+ <code>Model#redoRestaurantBook()</code>. Thus, the <code>restaurantBookStateList</code> remains unchanged.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -744,7 +779,8 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="paragraph">
-<p>Step 6. The user executes <code>clear</code>, which calls <code>Model#commitAddressBook()</code>. Since the <code>currentStatePointer</code> is not pointing at the end of the <code>addressBookStateList</code>, all address book states after the <code>currentStatePointer</code> will be purged. We designed it this way because it no longer makes sense to redo the <code>add n/David &#8230;&#8203;</code> command. This is the behavior that most modern desktop applications follow.</p>
+<p>Step 6. The user executes <code>clear</code>, which calls <code>Model#commitRestaurantBook()</code>. Since the <code>currentStatePointer</code> is not
+pointing at the end of the <code>restaurantBookStateList</code>, all restaurant book states after the <code>currentStatePointer</code> will be purged. We designed it this way because it no longer makes sense to redo the <code>add n/David &#8230;&#8203;</code> command. This is the behavior that most modern desktop applications follow.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -767,7 +803,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Alternative 1 (current choice):</strong> Saves the entire address book.</p>
+<p><strong>Alternative 1 (current choice):</strong> Saves the entire restaurant book.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -800,14 +836,15 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Alternative 1 (current choice):</strong> Use a list to store the history of address book states.</p>
+<p><strong>Alternative 1 (current choice):</strong> Use a list to store the history of restaurant book states.</p>
 <div class="ulist">
 <ul>
 <li>
 <p>Pros: Easy for new Computer Science student undergraduates to understand, who are likely to be the new incoming developers of our project.</p>
 </li>
 <li>
-<p>Cons: Logic is duplicated twice. For example, when a new command is executed, we must remember to update both <code>HistoryManager</code> and <code>VersionedAddressBook</code>.</p>
+<p>Cons: Logic is duplicated twice. For example, when a new command is executed, we must remember to update both
+<code>HistoryManager</code> and <code>VersionedRestaurantBook</code>.</p>
 </li>
 </ul>
 </div>
@@ -835,36 +872,53 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="sect3">
 <h4 id="current-implementation-2"><a class="link" href="#current-implementation-2">4.2.1. Current Implementation</a></h4>
 <div class="paragraph">
-<p>The user account mechanism is facilitated by <code>AddressBook</code>. Additionally, it implements the following operations:</p>
+<p>The user account mechanism is facilitated by <code>RestaurantBook</code>. Additionally, it implements the following operations:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>AddressBook#getAccount(Account)</code>&#8201;&#8212;&#8201;Retrieves the account.</p>
+<p><code>RestaurantBook#getAccount(Account)</code>&#8201;&#8212;&#8201;Retrieves the account.</p>
 </li>
 <li>
-<p><code>AddressBook#addAccount(Account)</code>&#8201;&#8212;&#8201;Saves the new account.</p>
+<p><code>RestaurantBook#addAccount(Account)</code>&#8201;&#8212;&#8201;Saves the new account.</p>
 </li>
 <li>
-<p><code>AddressBook#updateAccount(Account, Account)</code>&#8201;&#8212;&#8201;Update the existing account&#8217;s detail(s).</p>
+<p><code>RestaurantBook#updateAccount(Account, Account)</code>&#8201;&#8212;&#8201;Update the existing account.</p>
 </li>
 <li>
-<p><code>AddressBook#removeAccount(Account)</code>&#8201;&#8212;&#8201;Removes the account.</p>
+<p><code>RestaurantBook#removeAccount(Account)</code>&#8201;&#8212;&#8201;Removes the account.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>These operations are exposed in the <code>Model</code> interface as <code>Model#getAccount(Account)</code>, <code>Model#addAccount(Account)</code>,
-<code>Model#updateAccount(Account, Account)</code> and <code>Model#removeAccount(Account)</code>  respectively.</p>
+<code>Model#updateAccount(Account, Account)</code> and <code>Model#removeAccount(Account)</code>. The following commands will
+invoke the aforementioned operations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Command#LoginCommand()</code>&#8201;&#8212;&#8201;Invokes <code>Model#getAccount(Account)</code>.</p>
+</li>
+<li>
+<p><code>Command#RegisterCommand()</code>&#8201;&#8212;&#8201;Invokes <code>Model#addAccount(Account)</code>.</p>
+</li>
+<li>
+<p><code>Command#DeregisterCommand()</code>&#8201;&#8212;&#8201;Invokes <code>Model#removeAccount(Account)</code>.</p>
+</li>
+<li>
+<p><code>Command#EditCommand()</code>&#8201;&#8212;&#8201;Invokes <code>Model#updateAccount(Account, Account)</code>.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Given below is an example usage scenario and how <code>AddressBook#addAccount(Account)</code> behaves at each step.</p>
+<p>Described below are example usage scenarios and how each of the command and its respective operations behaves at each
+step which involves two components, <code>Logic</code> which is responsible for parsing the user input and <code>Model</code> which is
+responsible for manipulating the list, if necessary. Both components are extended by <code>LogicManager</code> and
+<code>ModelManager</code> respectively.</p>
 </div>
 <div class="paragraph">
-<p>Step 1. The user launches the application and logs in to an existing account.</p>
-</div>
-<div class="paragraph">
-<p>Step 2. The user executes <code>register id/azhikai pw/1122qq</code> command to create a new user account.</p>
+<p>The following sequence diagram shows how the <code>register</code> command works:</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -873,18 +927,100 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If the username already exists, a warning message will be shown to the user
+The <code>deregister</code> command works the same way by checking if the account exists before calling <code>Model#removeAccount
+(Account)</code>.
 </td>
 </tr>
 </table>
-</div>
-<div class="paragraph">
-<p>The following sequence diagram shows how the <code>register</code> command works:</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/RegisterSequenceDiagram.png" alt="RegisterSequenceDiagram" width="800">
 </div>
+<div class="title">Figure 11. Sequence diagram to illustrate component interactions for the <code>register</code> command</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+We assume the user is already logged in
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If the username already exists, a warning message will be shown to the user to select another username
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Step 1. The user executes <code>register id/azhikai pw/1122qq</code> command to create a new user account.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. <code>LogicManager</code> invokes the <code>RestaurantBookParser#parseCommand()</code> method which takes in the user input
+as arguments.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. When the command is parsed, the <code>Command#RegisterCommand</code> will be created which is returned to the
+<code>LogicManager</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. <code>LogicManager</code> invokes the <code>execute()</code> method of the <code>Command#RegisterCommand</code>, <code>rc</code> which is instantiated in
+Step 3. The <code>Model</code> component will be involved as the <code>Command#RegisterCommand</code> invokes a request to add the account
+into the storage by calling <code>Model#addAccount(Account)</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 5: The new account is added into the storage. Then, a <code>CommandResult</code> is generated and returned to
+<code>LogicManager</code> which is used to display the result to the user.</p>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram shows how the <code>login</code> command works:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/LoginSequenceDiagram.png" alt="LoginSequenceDiagram" width="800">
+</div>
+<div class="title">Figure 12. Sequence diagram to illustrate component interactions for the <code>login</code> command</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+We assume the user will enter the correct password. Otherwise, warning message will be shown to the user to re-enter
+the credential
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Step 1. The user executes <code>login id/azhikai pw/1122qq</code> command to login to an existing user account.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. <code>LogicManager</code> invokes the <code>RestaurantBookParser#parseCommand()</code> method which takes in the user input
+as arguments.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. When the command is parsed, the <code>Command#LoginCommand</code> will be created which is returned to the
+<code>LogicManager</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. <code>LogicManager</code> invokes the <code>execute()</code> method of the <code>Command#LoginCommand</code>, <code>lc</code> which is instantiated in Step 3.
+The <code>Model</code> component will be involved as the <code>Command#LoginCommand</code> invokes a request to retrieve an account based
+on the username. If it exists, the account will be retrieved and the password hash will be compared. If it matches,
+then the credential is valid and the user is authenticated.</p>
 </div>
 </div>
 </div>
@@ -899,8 +1035,8 @@ If the username already exists, a warning message will be shown to the user
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If a private command is executed when a session is not set, it won&#8217;t be processed. The only commands that can
-be executed without a session being set are <code>help</code>, <code>login</code> and <code>exit</code>.
+If a privileged command is executed when a session is not set, an error will be shown. The only commands that can
+be executed without a session being set are <code>help</code>, <code>login</code> and <code>exit</code>. Any other commands are considered privileged
 </td>
 </tr>
 </table>
@@ -911,12 +1047,12 @@ This is triggered by raising a <code>Login</code> and <code>Logout</code> event 
 <code>Command#LogoutCommand()</code>.<br></p>
 </div>
 <div class="paragraph">
-<p>Additionally, it implements the following operations:</p>
+<p>Additionally, it implements the following static operations:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>UserSession#login()</code>&#8201;&#8212;&#8201;Creates a login session.</p>
+<p><code>UserSession#login()</code>&#8201;&#8212;&#8201;Set a login session.</p>
 </li>
 <li>
 <p><code>UserSession#logout()</code>&#8201;&#8212;&#8201;Removes the existing login session.</p>
@@ -937,6 +1073,32 @@ This is triggered by raising a <code>Login</code> and <code>Logout</code> event 
 <img src="images/UserSessionActivityDiagram.png" alt="UserSessionActivityDiagram" width="650">
 </div>
 </div>
+<div class="paragraph">
+<p>The following code snippet demonstrates how these static methods are implemented:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="comment">/**
+ * Stores this {@link Account} info as part of this session.
+ *
+ * @param account logged in for this session.
+ */</span>
+<span class="directive">public</span> <span class="directive">static</span> <span class="type">void</span> login(Account account) {
+    isAuthenticated = <span class="predefined-constant">true</span>;
+    username = account.getUsername();
+}
+
+<span class="comment">/**
+ * Logs out of this account which releases this session.
+ */</span>
+<span class="directive">public</span> <span class="directive">static</span> <span class="type">void</span> logout() {
+    <span class="keyword">if</span> (isAuthenticated) {
+        isAuthenticated = <span class="predefined-constant">false</span>;
+        username = <span class="predefined-constant">null</span>;
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">4.3.2. Design Considerations</a></h4>
@@ -945,24 +1107,24 @@ This is triggered by raising a <code>Login</code> and <code>Logout</code> event 
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Alternative 1 (current choice):</strong> Use a static flag.</p>
+<p><strong>Alternative 1 (current choice):</strong> Use static flags and methods.</p>
 <div class="ulist">
 <ul>
 <li>
 <p>Pros: Easy to implement.</p>
 </li>
 <li>
-<p>Cons: Can only support one user.</p>
+<p>Cons: Can only support one user at any time. If another user wants to login, the current logged in user must log out.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Alternative 2:</strong> Store a list of user sessions, allowing multiple login.</p>
+<p><strong>Alternative 2:</strong> Store a list of user sessions to allow multiple login.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: More user can login and manage the systems.</p>
+<p>Pros: More user can login and manage the systems concurrently.</p>
 </li>
 <li>
 <p>Cons: More memory usage to track each user session.</p>
@@ -1495,20 +1657,14 @@ format.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">4.8. [Proposed] Data Encryption</a></h3>
-<div class="paragraph">
-<p><em>{Explain here how the data encryption feature will be implemented}</em></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">4.9. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">4.8. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 4.10, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 4.9, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -1539,7 +1695,7 @@ format.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">4.10. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">4.9. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -1605,7 +1761,7 @@ Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows y
 <div class="content">
 <img src="images/chrome_save_as_pdf.png" alt="chrome save as pdf" width="300">
 </div>
-<div class="title">Figure 10. Saving documentation as PDF files in Chrome</div>
+<div class="title">Figure 13. Saving documentation as PDF files in Chrome</div>
 </div>
 </div>
 <div class="sect2">
@@ -1875,6 +2031,19 @@ e.g. <code>seedu.address.logic.LogicManagerTest</code></p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p><strong>Problem: Test failed with <code>Missing newline at end of file</code>.</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reason: A newline is missing in the file.</p>
+</li>
+<li>
+<p>Solution: <code>File</code> &gt; <code>Settings&#8230;&#8203;</code> &gt; <code>Editor</code> &gt; <code>General</code> &gt; <code>Ensure line feed at file end on Save</code>.</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -1930,7 +2099,8 @@ e.g. <code>seedu.address.logic.LogicManagerTest</code></p>
 <div class="sect2">
 <h3 id="managing-dependencies"><a class="link" href="#managing-dependencies">7.6. Managing Dependencies</a></h3>
 <div class="paragraph">
-<p>A project often depends on third-party libraries. For example, Address Book depends on the <a href="http://wiki.fasterxml.com/JacksonHome">Jackson library</a> for XML parsing. Managing these <em>dependencies</em> can be automated using Gradle. For example, Gradle can download the dependencies automatically, which is better than these alternatives.<br>
+<p>A project often depends on third-party libraries. For example, Restaurant Book depends on the <a href="http://wiki.fasterxml" class="bare">http://wiki.fasterxml</a>
+.com/JacksonHome[Jackson library] for XML parsing. Managing these <em>dependencies</em> can be automated using Gradle. For example, Gradle can download the dependencies automatically, which is better than these alternatives.<br>
 a. Include those libraries in the repo (this bloats the repo size).<br>
 b. Require developers to download those libraries manually (this creates extra work for developers).</p>
 </div>
@@ -3738,9 +3908,6 @@ The use case for ranking dates according to total revenue is the same.
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
-<div class="paragraph">
-<p><em>{More to be added}</em></p>
-</div>
 </li>
 </ul>
 </div>
@@ -3773,7 +3940,7 @@ The use case for ranking dates according to total revenue is the same.
 <p>System should not require constant maintenance and work off-the-shelf without any installation.</p>
 </li>
 <li>
-<p>JAR file should not exceed 100 MB.</p>
+<p>JAR file should not exceed 50 MB.</p>
 </li>
 <li>
 <p>Test coverage should be at least 80%.</p>
@@ -3782,7 +3949,7 @@ The use case for ranking dates according to total revenue is the same.
 <p>Should always favour security over efficiency in development.</p>
 </li>
 <li>
-<p>Any user who has the basic proficiency of the English language should be able to use the App with the help
+<p>Any user who has the basic proficiency of the English language should be able to use the application with the help
 of the <a href="https://github.com/CS2103-AY1819S1-F10-4/main/tree/master/docs/UserGuide.adoc"><code>UserGuide.adoc</code></a>.</p>
 </li>
 <li>
@@ -3836,11 +4003,11 @@ These instructions only provide a starting point for testers to work on; testers
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Download the jar file and copy into an empty folder</p>
+<p>Download the <code>jar</code> file and copy into an empty folder.</p>
 </li>
 <li>
-<p>Double-click the jar file<br>
-Expected: Shows the GUI with a set of sample contacts. The window size may not be optimum.</p>
+<p>Double-click the <code>jar</code> file.<br>
+<strong>Expected</strong>: Shows the GUI with a set of sample contacts. The window size may not be optimum.</p>
 </li>
 </ol>
 </div>
@@ -3853,17 +4020,14 @@ Expected: Shows the GUI with a set of sample contacts. The window size may not b
 <p>Resize the window to an optimum size. Move the window to a different location. Close the window.</p>
 </li>
 <li>
-<p>Re-launch the app by double-clicking the jar file.<br>
-Expected: The most recent window size and location is retained.</p>
+<p>Re-launch the app by double-clicking the <code>jar</code> file.<br>
+<strong>Expected</strong>: The most recent window size and location is retained.</p>
 </li>
 </ol>
 </div>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
 </div>
 </div>
-</div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-26 07:07:25 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-26 12:22:32 UTC</div></div></div></body></html>
