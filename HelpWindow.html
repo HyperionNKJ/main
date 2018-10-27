@@ -49,7 +49,7 @@
 <li><a href="#logging-in-code-login-code">5.2.1. Logging in: <code>login</code></a></li>
 <li><a href="#logging-out-code-logout-code">5.2.2. Logging out: <code>logout</code></a></li>
 <li><a href="#creating-user-account-code-register-code-or-code-reg-code">5.2.3. Creating user account: <code>register</code> or <code>reg</code></a></li>
-<li><a href="#editing-user-account-code-edit-account-code-or-code-ea-code">5.2.4. Editing user account: <code>edit-account</code> or <code>ea</code></a></li>
+<li><a href="#changing-user-password-code-change-password-code-or-code-cp-code">5.2.4. Changing user password: <code>change-password</code> or <code>cp</code></a></li>
 <li><a href="#deleting-user-account-code-deregister-code-or-code-dereg-code">5.2.5. Deleting user account: <code>deregister</code> or <code>dereg</code></a></li>
 <li><a href="#list-user-accounts-code-list-accounts-code-or-code-la-code">5.2.6. List user accounts: <code>list-accounts</code> or <code>la</code></a></li>
 </ul>
@@ -576,22 +576,10 @@ Format: <code>register id/USERNAME pw/PASSWORD</code> or <code>reg id/USERNAME p
 </div>
 </div>
 <div class="sect3">
-<h4 id="editing-user-account-code-edit-account-code-or-code-ea-code"><a class="link" href="#editing-user-account-code-edit-account-code-or-code-ea-code">5.2.4. Editing user account: <code>edit-account</code> or <code>ea</code></a></h4>
+<h4 id="changing-user-password-code-change-password-code-or-code-cp-code"><a class="link" href="#changing-user-password-code-change-password-code-or-code-cp-code">5.2.4. Changing user password: <code>change-password</code> or <code>cp</code></a></h4>
 <div class="paragraph">
-<p>Edits an existing user account.<br>
-Format: <code>edit-account id/USERNAME [nid/NEW_USERNAME] [pw/NEW_PASSWORD]</code> or
-<code>ea id/USERNAME [nid/NEW_USERNAME] [pw/NEW_PASSWORD]</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>The account&#8217;s data will remain intact if none of the optional fields are provided.</p>
-</li>
-</ul>
-</div>
-</div>
+<p>Edits the password of the current logged in user account.<br>
+Format: <code>change-password npw/NEW_PASSWORD</code> or <code>cp npw/NEW_PASSWORD</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -599,23 +587,10 @@ Format: <code>edit-account id/USERNAME [nid/NEW_USERNAME] [pw/NEW_PASSWORD]</cod
 <div class="ulist">
 <ul>
 <li>
-<p><code>edit-acc id/azhikai</code></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Nothing happens in this case.</p>
-</li>
-</ul>
-</div>
+<p><code>change-password npw/1122qq</code></p>
 </li>
 <li>
-<p><code>edit-acc id/azhikai nid/angzhikai</code></p>
-</li>
-<li>
-<p><code>ea id/azhikai nid/angzhikai</code></p>
-</li>
-<li>
-<p><code>edit-acc id/azhikai nid/angzhikai pw/n3wp@55w0rd</code></p>
+<p><code>cp npw/1122qq</code></p>
 </li>
 </ul>
 </div>
@@ -1928,4 +1903,4 @@ rather than using only text via the command line.</p>
 </dl>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-27 18:14:49 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-27 18:29:03 UTC</div></div></div></body></html>
