@@ -582,7 +582,7 @@ id/azhikai pw/1122qq")</code> API call.</p>
 <h3 id="Design-Model"><a class="link" href="#Design-Model">3.4. Model component</a></h3>
 <div class="imageblock">
 <div class="content">
-<img src="images/ModelClassDiagramNew.png" alt="ModelClassDiagramNew" width="800">
+<img src="images/ModelClassBetterOopDiagram.png" alt="ModelClassBetterOopDiagram" width="800">
 </div>
 <div class="title">Figure 8. Structure of the Model Component</div>
 </div>
@@ -601,7 +601,8 @@ id/azhikai pw/1122qq")</code> API call.</p>
 <p>stores the Restaurant Book data.</p>
 </li>
 <li>
-<p>exposes an unmodifiable <code>ObservableList&lt;Person&gt;</code> that can be 'observed' e.g. the UI can be bound to this list so that the UI automatically updates when the data in the list change.</p>
+<p>exposes data via an unmodifiable <code>ObservableList</code> that can be 'observed' e.g. the UI can be bound to this
+list so that the UI automatically updates when the data in the list change.</p>
 </li>
 <li>
 <p>does not depend on any of the other three components.</p>
@@ -1365,18 +1366,6 @@ must be in the menu and editedItem must not be the same as another existing item
 <div class="paragraph">
 <p>Each <code>Item</code> object consists of <code>Name</code> and <code>Price</code>.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<code>Name</code> is a separate class from the <code>Name</code> used by <code>Person</code>, but is functionally the same.
-</td>
-</tr>
-</table>
-</div>
 </div>
 <div class="sect3">
 <h4 id="code-add-item-code-command"><a class="link" href="#code-add-item-code-command">4.6.2. <code>add-item</code> Command</a></h4>
@@ -1535,18 +1524,6 @@ to check if the currency symbol and price entered are valid.</p>
 <div class="paragraph">
 <p>Each <code>Reservation</code> object contains <code>Name</code>, <code>Pax</code>, and <code>LocalDateTime</code>.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<code>Name</code> is a separate class from the <code>Name</code> used by <code>Person</code>, but is functionally the same.
-</td>
-</tr>
-</table>
-</div>
 </div>
 <div class="sect3">
 <h4 id="code-add-reservation-code-command"><a class="link" href="#code-add-reservation-code-command">4.7.2. <code>add-reservation</code> Command</a></h4>
@@ -1557,7 +1534,7 @@ to check if the currency symbol and price entered are valid.</p>
 <p>The command takes in 3 parameters, <code>Name</code>, <code>Pax</code>, and <code>DateTime</code> to create a <code>Reservation</code> object.</p>
 </div>
 <div class="paragraph">
-<p>After the <code>Reservation</code> Object is created, AddressBook#addReservation(Reservation reservation) is called to add the
+<p>After the <code>Reservation</code> Object is created, RestaurantBook#addReservation(Reservation reservation) is called to add the
 <code>Reservation</code> Object to the <code>UniqueReservationsList</code>.</p>
 </div>
 </div>
@@ -4030,4 +4007,4 @@ These instructions only provide a starting point for testers to work on; testers
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-30 14:29:56 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-30 16:59:24 UTC</div></div></div></body></html>
