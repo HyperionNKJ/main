@@ -37,12 +37,13 @@
 <li><a href="#undo-redo-feature">4.1. Undo/Redo feature</a></li>
 <li><a href="#user-account-feature">4.2. User account feature</a></li>
 <li><a href="#user-session-feature">4.3. User session feature</a></li>
-<li><a href="#display-sales-report-feature">4.4. Display sales report feature</a></li>
-<li><a href="#delete-ingredient-feature">4.5. Delete Ingredient feature</a></li>
-<li><a href="#menu-management-feature">4.6. Menu Management feature</a></li>
-<li><a href="#reservations-feature">4.7. Reservations feature</a></li>
-<li><a href="#logging">4.8. Logging</a></li>
-<li><a href="#Implementation-Configuration">4.9. Configuration</a></li>
+<li><a href="#auto-ingredient-update-feature">4.4. Auto-ingredient update feature</a></li>
+<li><a href="#display-sales-report-feature">4.5. Display sales report feature</a></li>
+<li><a href="#delete-ingredient-feature">4.6. Delete Ingredient feature</a></li>
+<li><a href="#menu-management-feature">4.7. Menu Management feature</a></li>
+<li><a href="#reservations-feature">4.8. Reservations feature</a></li>
+<li><a href="#logging">4.9. Logging</a></li>
+<li><a href="#Implementation-Configuration">4.10. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">5. Documentation</a>
@@ -1139,9 +1140,190 @@ This is triggered by raising a <code>Login</code> and <code>Logout</code> event 
 </div>
 </div>
 <div class="sect2">
-<h3 id="display-sales-report-feature"><a class="link" href="#display-sales-report-feature">4.4. Display sales report feature</a></h3>
+<h3 id="auto-ingredient-update-feature"><a class="link" href="#auto-ingredient-update-feature">4.4. Auto-ingredient update feature</a></h3>
+<div class="paragraph">
+<p>The auto-ingredient update mechanism is facilitated by <code>RecordSalesCommand</code> and triggers whenever the "record-sales"
+command is invoked. A <code>SalesRecord</code> will be instantiated based on the information given and attempts to compute
+the ingredients used before deducting them from the ingredient list automatically.</p>
+</div>
 <div class="sect3">
 <h4 id="current-implementation-4"><a class="link" href="#current-implementation-4">4.4.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>A <code>SalesRecord</code> is associated with 6 attributes - <code>Date</code>, <code>ItemName</code>, <code>QuantitySold</code>, <code>Price</code>, <code>Revenue</code> and
+<code>IngredientUsed</code>. The success of the auto-ingredient update mechanism is subjected to the following conditions:<br></p>
+</div>
+<div id="condition" class="paragraph">
+<p>1) <code>ItemName</code> exists in the <code>Menu</code>. <br>
+2) The required ingredients to make one unit of <code>ItemName</code> is specified in the <code>Menu</code>.<br>
+3) The required ingredients exist in the <code>Ingredient</code> list.<br>
+4) There are sufficient ingredients to make <code>QuantitySold</code> units of <code>ItemName</code> in the <code>Ingredient</code> list.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If any of the above conditions is not satisfied, the sales will be recorded without updating the ingredient
+list.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If conditions 1 and 2 are satisfied, <code>RecordSalesCommand</code> will compute all the ingredients used and store the data in
+ <code>IngredientUsed</code> attribute of <code>SalesRecord</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This mechanism is aided by methods from the <code>Menu</code> and <code>Ingredient</code> components, all of which are exposed in the
+<code>Model</code> interface. Given below is an example scenario and how the auto-ingredient update mechanism behaves at each step.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user executes <code>record-sales d/11-01-2018 n/Fried Rice q/35 p/5.50</code> command to record the sales volume of
+<code>Fried Rice</code> on <code>11-01-2018</code>. A <code>SalesRecord</code> would be instantiated based on the command arguments given.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. <code>RecordSalesCommand</code> will request for the item <code>Fried Rice</code> from <code>Menu</code>. This is done through the <code>Item findItem
+(Name)</code> method given in <code>Menu</code> component. This also checks if <a href="#condition">[condition]</a> 1 is satisfied.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. <code>RecordSalesCommand</code> then proceeds to request for the required ingredients to make a unit of <code>Fried Rice</code>
+from <code>Menu</code>. This is done through the <code>Map&lt;IngredientName, Integer&gt; getRequiredIngredients(Item)</code> method given
+in <code>Menu</code>. This also checks if <a href="#condition">[condition]</a> 2 is satisfied.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. With the required ingredients per unit data now at hand, <code>RecordSalesCommand</code> will compute the total
+ingredients used in making <code>35</code> units of <code>Fried Rice</code>. This is done by multiplying required ingredients per unit by the
+<code>35</code>. The <code>IngredientUsed</code> attribute in <code>SalesRecord</code> will then be updated.</p>
+</div>
+<div class="paragraph">
+<p>Step 5. <code>RecordSalesCommand</code> will then pass the computed <code>IngredientUsed</code> to <code>Ingredient</code> component to request for
+ an update of ingredients. This is done through the <code>void consumeIngredients(Map&lt;IngredientName, Integer&gt;)</code> method
+ given in <code>Ingredient</code> component. This checks for <a href="#condition">[condition]</a> 3 and 4.</p>
+</div>
+<div class="paragraph">
+<p>Step 6. The <code>SalesRecord</code> is then finally added into <code>UniqueRecordList</code> via the <code>void addRecord(SalesRecord)</code>
+method given in <code>Sales</code> component of <code>Model</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+An exception will be thrown in step 2, 3 or 5 should the conditions be violated. When this happens,
+<code>RecordSalesCommand</code> will proceed with step 6 instantly and omit the remaining steps.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">4.4.2. Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-should-the-auto-ingredient-update-mechanism-be-incorporated-when-deleting-sales"><a class="link" href="#aspect-should-the-auto-ingredient-update-mechanism-be-incorporated-when-deleting-sales">Aspect: Should the auto-ingredient update mechanism be incorporated when deleting sales?</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> <code>DeleteSalesCommand</code> does not update the ingredient list. That is, it does not
+"return" the ingredients which may or may not have been consumed during <code>record-sales</code>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Remove the possibility of unwanted updates to the ingredient list. This advantage is apparent when deleting
+an obsolete record. We do not want the ingredients to "magically appear" in the ingredient list.</p>
+</li>
+<li>
+<p>Cons: If user accidentally recorded sales by mistake, deleting sales will not help him/her recover the consumed
+ingredients. Instead, user will have to rely on the <code>Undo</code> command.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> <code>DeleteSalesCommand</code> "returns" the consumed ingredients to the ingredient list.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Resolves the issue stated in "Alternative 1 - Cons".</p>
+</li>
+<li>
+<p>Cons: Brings about the issue stated in "Alternative 1 - Pros".</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="aspect-should-the-auto-ingredient-update-mechanism-be-incorporated-when-editing-sales"><a class="link" href="#aspect-should-the-auto-ingredient-update-mechanism-be-incorporated-when-editing-sales">Aspect: Should the auto-ingredient update mechanism be incorporated when editing sales?</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> <code>EditSalesCommand</code> does not update the ingredient list. That is, it does not
+"correct" the ingredients which may or may not have been consumed during <code>record-sales</code>. Furthermore, the
+<code>IngredientUsed</code> attribute of the <code>SalesRecord</code> becomes invalid and hence removed permanently. There will be no
+re-computation of <code>IngredientUsed</code>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement. Avoids the implementation complexity as stated in "Alternative 2 - Cons"</p>
+</li>
+<li>
+<p>Cons: If user accidentally made an error while recording sales, editing sales will not help him/her alter the
+ingredients consumed. What is consumed previously will stay as it is. Also, the <code>IngredientUsed</code> attribute will no
+longer be available.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> <code>EditSalesCommand</code> "corrects" the consumed ingredients by re-computing the <code>IngredientUsed</code>
+attribute, "returning" the ingredients that were previously consumed and then passing the new <code>IngredientUsed</code> to the
+ingredient list to update it.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Resolves the issue stated in "Alternative 1 - Cons".</p>
+</li>
+<li>
+<p>Cons: Must take time into consideration when re-computing the <code>IngredientUsed</code> since "required ingredients per
+unit" may get edited over time. Do we use the "required ingredients per unit" data present during record-sales, or do
+ we use the data present during edit-sales?<br>
+ If we use the former, then we would require a repository to store the history of the entire <code>Menu</code> whenever we
+ record-sales. "Entire menu" so that data would be available should the <code>ItemName</code> gets edited in the future. This would
+ take up a massive amount of memory space in the long run. Certainly not worth it just for an <code>edit-sales</code>.<br>
+If we use the latter, then it would not make much sense. Say a glass of orange juice takes 1 orange to make at the
+time of record-sales, and 3 oranges to make at the time of edit-sales. If the user edits the <code>QuantitySold</code> attribute
+ from 1 to 10, he/she would certainly not want (3*10-1 = 29) oranges to be consumed from the ingredient list since it
+ only took (1*10 = 10) oranges! Now what happens if the user wants to edit the <code>ItemName</code> "Orange Juice" to "Fruit
+ Punch"? The ingredients required to make "Fruit Punch" might be available now, but we are not so sure if they were
+ even available during <code>record-sales</code>!</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="display-sales-report-feature"><a class="link" href="#display-sales-report-feature">4.5. Display sales report feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-5"><a class="link" href="#current-implementation-5">4.5.1. Current Implementation</a></h4>
 <div class="paragraph">
 <p>The display sales report mechanism is facilitated by the Model, UI and Event components of the App. A <code>SalesReport</code>
 class encapsulates the attributes of a sales report to be displayed.
@@ -1191,7 +1373,7 @@ in UI&#8217;s <code>MainWindow</code> being called. This method instantiates a <
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">4.4.2. Design Considerations</a></h4>
+<h4 id="design-considerations-4"><a class="link" href="#design-considerations-4">4.5.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-code-salesreport-code-is-generated-internally"><a class="link" href="#aspect-how-code-salesreport-code-is-generated-internally">Aspect: How <code>SalesReport</code> is generated internally</a></h5>
 <div class="ulist">
@@ -1232,9 +1414,9 @@ takes up an O(N) memory space.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="delete-ingredient-feature"><a class="link" href="#delete-ingredient-feature">4.5. Delete Ingredient feature</a></h3>
+<h3 id="delete-ingredient-feature"><a class="link" href="#delete-ingredient-feature">4.6. Delete Ingredient feature</a></h3>
 <div class="sect3">
-<h4 id="current-implementation-5"><a class="link" href="#current-implementation-5">4.5.1. Current Implementation</a></h4>
+<h4 id="current-implementation-6"><a class="link" href="#current-implementation-6">4.6.1. Current Implementation</a></h4>
 <div class="paragraph">
 <p>The delete ingredient mechanism is facilitated by <code>DeleteIngredientCommand</code>. It is implemented as an abstract class
 with the following abstract methods:</p>
@@ -1282,7 +1464,7 @@ their own behaviour for these methods.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-4"><a class="link" href="#design-considerations-4">4.5.2. Design Considerations</a></h4>
+<h4 id="design-considerations-5"><a class="link" href="#design-considerations-5">4.6.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-implementation-of-delete-ingredient-command"><a class="link" href="#aspect-implementation-of-delete-ingredient-command">Aspect: Implementation of delete ingredient command</a></h5>
 <div class="ulist">
@@ -1320,13 +1502,13 @@ their own behaviour for these methods.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="menu-management-feature"><a class="link" href="#menu-management-feature">4.6. Menu Management feature</a></h3>
+<h3 id="menu-management-feature"><a class="link" href="#menu-management-feature">4.7. Menu Management feature</a></h3>
 <div class="paragraph">
 <p>Menu management feature extends <code>MeNuS</code> with a menu and provides the users with the ability to add items to the
 menu, edit items and remove items from the menu.</p>
 </div>
 <div class="sect3">
-<h4 id="current-implementation-6"><a class="link" href="#current-implementation-6">4.6.1. Current Implementation</a></h4>
+<h4 id="current-implementation-7"><a class="link" href="#current-implementation-7">4.7.1. Current Implementation</a></h4>
 <div class="paragraph">
 <p>The menu is stored internally as <code>items</code>, which is a <code>UniqueItemList</code> object that contains a list of <code>Item</code> objects.
 The menu management feature implements the following operations:</p>
@@ -1368,7 +1550,7 @@ must be in the menu and editedItem must not be the same as another existing item
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-add-item-code-command"><a class="link" href="#code-add-item-code-command">4.6.2. <code>add-item</code> Command</a></h4>
+<h4 id="code-add-item-code-command"><a class="link" href="#code-add-item-code-command">4.7.2. <code>add-item</code> Command</a></h4>
 <div class="paragraph">
 <p>The <code>add-item</code> command is facilitated by <code>AddItemCommand</code> and <code>AddItemCommandParser</code>. The command takes in
 user input for <code>Name</code>, <code>Price</code> and <code>Tag</code>(optional).</p>
@@ -1395,7 +1577,7 @@ After adding the item, it will save the current state for undo/redo.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-sort-menu-code-command"><a class="link" href="#code-sort-menu-code-command">4.6.3. <code>sort-menu</code> Command</a></h4>
+<h4 id="code-sort-menu-code-command"><a class="link" href="#code-sort-menu-code-command">4.7.3. <code>sort-menu</code> Command</a></h4>
 <div class="paragraph">
 <p>The <code>sort-menu</code> command is facilitated by <code>SortMenuCommand</code> and <code>SortMenuCommandParser</code>. The command takes in
 user input for the sorting method.</p>
@@ -1450,7 +1632,7 @@ After sorting the menu, it will save the current state for undo/redo.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-filter-menu-code-command"><a class="link" href="#code-filter-menu-code-command">4.6.4. <code>filter-menu</code> Command</a></h4>
+<h4 id="code-filter-menu-code-command"><a class="link" href="#code-filter-menu-code-command">4.7.4. <code>filter-menu</code> Command</a></h4>
 <div class="paragraph">
 <p>The <code>filter-menu</code> command is facilitated by <code>FilterMenuCommand</code> and <code>FilterMenuCommandParser</code>. The command takes in
 user input for the keywords.</p>
@@ -1477,7 +1659,7 @@ set the predicate for <code>ModelManger#filteredItems</code>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-5"><a class="link" href="#design-considerations-5">4.6.5. Design Considerations</a></h4>
+<h4 id="design-considerations-6"><a class="link" href="#design-considerations-6">4.7.5. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-code-price-code-is-parsed"><a class="link" href="#aspect-how-code-price-code-is-parsed">Aspect: How <code>Price</code> is parsed</a></h5>
 <div class="ulist">
@@ -1515,12 +1697,12 @@ to check if the currency symbol and price entered are valid.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="reservations-feature"><a class="link" href="#reservations-feature">4.7. Reservations feature</a></h3>
+<h3 id="reservations-feature"><a class="link" href="#reservations-feature">4.8. Reservations feature</a></h3>
 <div class="paragraph">
 <p>The Reservations feature allows users to store customer reservations, view them, and to cancel them.</p>
 </div>
 <div class="sect3">
-<h4 id="current-implementation-7"><a class="link" href="#current-implementation-7">4.7.1. Current Implementation</a></h4>
+<h4 id="current-implementation-8"><a class="link" href="#current-implementation-8">4.8.1. Current Implementation</a></h4>
 <div class="paragraph">
 <p>The Reservations feature currently contains 3 commands to modify the <code>UniqueReservationsList</code> stored in <code>ModelManager</code>.</p>
 </div>
@@ -1542,7 +1724,7 @@ to check if the currency symbol and price entered are valid.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-add-reservation-code-command"><a class="link" href="#code-add-reservation-code-command">4.7.2. <code>add-reservation</code> Command</a></h4>
+<h4 id="code-add-reservation-code-command"><a class="link" href="#code-add-reservation-code-command">4.8.2. <code>add-reservation</code> Command</a></h4>
 <div class="paragraph">
 <p>The <code>add-reservation</code> command follows similar implementation of the current <code>add</code> command.</p>
 </div>
@@ -1555,7 +1737,7 @@ to check if the currency symbol and price entered are valid.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-edit-reservation-code-command"><a class="link" href="#code-edit-reservation-code-command">4.7.3. <code>edit-reservation</code> Command</a></h4>
+<h4 id="code-edit-reservation-code-command"><a class="link" href="#code-edit-reservation-code-command">4.8.3. <code>edit-reservation</code> Command</a></h4>
 <div class="paragraph">
 <p>The <code>edit-reservation</code> command follows similar implementation of the current <code>edit</code> command.</p>
 </div>
@@ -1569,7 +1751,7 @@ then has its values updated to the new values specified by the <code>Name</code>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-delete-reservation-code-command"><a class="link" href="#code-delete-reservation-code-command">4.7.4. <code>delete-reservation</code> Command</a></h4>
+<h4 id="code-delete-reservation-code-command"><a class="link" href="#code-delete-reservation-code-command">4.8.4. <code>delete-reservation</code> Command</a></h4>
 <div class="paragraph">
 <p>The <code>delete-reservation</code> command follows similar implementation of the current <code>delete</code> command.</p>
 </div>
@@ -1582,7 +1764,7 @@ then has its values updated to the new values specified by the <code>Name</code>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-6"><a class="link" href="#design-considerations-6">4.7.5. Design Considerations</a></h4>
+<h4 id="design-considerations-7"><a class="link" href="#design-considerations-7">4.8.5. Design Considerations</a></h4>
 <div class="paragraph">
 <p><strong>Aspect: How DateTime is stored</strong></p>
 </div>
@@ -1650,14 +1832,14 @@ format.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">4.8. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">4.9. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 4.9, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 4.10, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -1688,7 +1870,7 @@ format.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">4.9. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">4.10. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -3497,6 +3679,9 @@ The use case for creating account role is the same.
 <p>User requests to record sales volume of an item for a specified day.</p>
 </li>
 <li>
+<p>App computes the ingredients used and updates the ingredient list automatically.</p>
+</li>
+<li>
 <p>App appends the record at the end of sales list.</p>
 </li>
 <li>
@@ -3568,6 +3753,20 @@ The use case for creating account role is the same.
 </div>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>2a. Some of the <a href="#condition">[condition]</a> were not satisfied.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. App takes note of which condition was not satisfied, and appends a notification message after the success
+message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 3.</p>
 </div>
 </li>
 </ul>
@@ -4023,4 +4222,4 @@ These instructions only provide a starting point for testers to work on; testers
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-01 14:41:43 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-01 15:19:19 UTC</div></div></div></body></html>
