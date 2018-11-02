@@ -56,17 +56,17 @@
 </li>
 <li><a href="#ingredients-management">5.3. Ingredients Management</a>
 <ul class="sectlevel3">
-<li><a href="#Add-ingredient">5.3.1. Adding an ingredient: <code>add-ingredient</code> or <code>add-ing</code></a></li>
+<li><a href="#add-ingredient">5.3.1. Adding an ingredient: <code>add-ingredient</code> or <code>add-ing</code></a></li>
 <li><a href="#listing-all-ingredients-code-list-ingredients-code-or-code-list-ing-code">5.3.2. Listing all ingredients : <code>list-ingredients</code> or <code>list-ing</code></a></li>
 <li><a href="#listing-ingredients-with-low-stock-count-code-low-stock-code">5.3.3. Listing ingredients with low stock count: <code>low-stock</code></a></li>
 <li><a href="#removing-an-ingredient-code-delete-ingredient-code-or-code-delete-ing-code">5.3.4. Removing an ingredient: <code>delete-ingredient</code> or <code>delete-ing</code></a></li>
 <li><a href="#editing-an-ingredient-code-edit-ingredient-code-or-code-edit-ing-code">5.3.5. Editing an ingredient: <code>edit-ingredient</code> or <code>edit-ing</code></a></li>
-<li><a href="#Stockup">5.3.6. Stocking up an ingredient: <code>stockup</code></a></li>
+<li><a href="#stockup">5.3.6. Stocking up an ingredient: <code>stockup</code></a></li>
 </ul>
 </li>
 <li><a href="#menu-management">5.4. Menu Management</a>
 <ul class="sectlevel3">
-<li><a href="#Add-item">5.4.1. Adding an item to the menu: <code>add-item</code> or <code>ai</code></a></li>
+<li><a href="#add-item">5.4.1. Adding an item to the menu: <code>add-item</code> or <code>ai</code></a></li>
 <li><a href="#listing-all-items-in-the-menu-code-list-items-code-or-li">5.4.2. Listing all items in the menu : <code>list-items</code> or 'li'</a></li>
 <li><a href="#editing-an-item-in-the-menu-code-edit-item-code-or-code-ei-code">5.4.3. Editing an item in the menu : <code>edit-item</code> or <code>ei</code></a></li>
 <li><a href="#deleting-an-item-code-delete-item-code-or-code-di-code">5.4.4. Deleting an item : <code>delete-item</code> or <code>di</code></a></li>
@@ -571,7 +571,8 @@ Format: <code>login id/USERNAME pw/PASSWORD</code> or <code>li id/USERNAME pw/PA
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p>To testers: You may access the application using the default <code>root</code> account: <code>login id/root pw/1122qq</code></p>
+<p>To testers: You may access the application using the default <code>root</code> account: <code>login id/root pw/1122qq</code><br>
+Please ignore person-related commands as it&#8217;s still operational in the application.</p>
 </div>
 </div>
 </div>
@@ -668,7 +669,7 @@ Format: <code>list-accounts</code> or <code>la</code></p>
 <div class="sect2">
 <h3 id="ingredients-management"><a class="link" href="#ingredients-management">5.3. Ingredients Management</a></h3>
 <div class="sect3">
-<h4 id="Add-ingredient"><a class="link" href="#Add-ingredient">5.3.1. Adding an ingredient: <code>add-ingredient</code> or <code>add-ing</code></a></h4>
+<h4 id="add-ingredient"><a class="link" href="#add-ingredient">5.3.1. Adding an ingredient: <code>add-ingredient</code> or <code>add-ing</code></a></h4>
 <div class="paragraph">
 <p>Adds a new ingredient to the ingredient list.<br>
 Format: <code>add-ingredient n/INGREDIENT_NAME t/UNIT_TYPE p/PRICE_PER_UNIT m/MINIMUM</code></p>
@@ -837,7 +838,7 @@ Edits the name of <code>ketchup</code> to be <code>tomato ketchup</code>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Stockup"><a class="link" href="#Stockup">5.3.6. Stocking up an ingredient: <code>stockup</code></a></h4>
+<h4 id="stockup"><a class="link" href="#stockup">5.3.6. Stocking up an ingredient: <code>stockup</code></a></h4>
 <div class="paragraph">
 <p>Increases the number of units of an ingredient or multiple ingredients.<br>
 Format: <code>stockup n/INGREDIENT_NAME&#8230;&#8203; u/NUMBER_OF_UNITS&#8230;&#8203;</code></p>
@@ -871,7 +872,7 @@ Format: <code>stockup n/INGREDIENT_NAME&#8230;&#8203; u/NUMBER_OF_UNITS&#8230;&#
 <div class="sect2">
 <h3 id="menu-management"><a class="link" href="#menu-management">5.4. Menu Management</a></h3>
 <div class="sect3">
-<h4 id="Add-item"><a class="link" href="#Add-item">5.4.1. Adding an item to the menu: <code>add-item</code> or <code>ai</code></a></h4>
+<h4 id="add-item"><a class="link" href="#add-item">5.4.1. Adding an item to the menu: <code>add-item</code> or <code>ai</code></a></h4>
 <div class="paragraph">
 <p>Adds an item to the menu<br>
 Format: <code>add-item n/ITEM_NAME p/ITEM_PRICE [t/TAG]&#8230;&#8203;</code></p>
@@ -1554,12 +1555,14 @@ p/ITEM_PRICE</code><br></p>
 <div class="paragraph">
 <p><code>record-sales</code> also determines all the ingredients you used and automatically deducts them from the ingredient
 list, subjected to the following conditions:<br>
-1) The item exists in the menu. Refer to <a href="#Add-item">Section 5.4.1, &#8220;Adding an item to the menu: <code>add-item</code> or <code>ai</code>&#8221;</a> for more information.<br>
-2) The required ingredients to make one unit of <code>ITEM_NAME</code> is specified. Refer to <a href="#add-required-ingredient">Section 5.4.13, &#8220;Add required ingredients: <code>add-required-ingredients</code> or <code>ari</code>&#8221;</a> for more
-information.<br>
-3) All required ingredients exist in the ingredient list. Refer to <a href="#Add-ingredient">Section 5.3.1, &#8220;Adding an ingredient: <code>add-ingredient</code> or <code>add-ing</code>&#8221;</a> for more information.<br>
-4) There are sufficient ingredients to make <code>QUANTITY_SOLD</code> units of <code>ITEM_NAME</code>. Refer to <a href="#Stockup">Section 5.3.6, &#8220;Stocking up an ingredient: <code>stockup</code>&#8221;</a> for more
-information.</p>
+1) The item exists in the menu.<br>
+Refer to <a href="#add-item">Section 5.4.1, &#8220;Adding an item to the menu: <code>add-item</code> or <code>ai</code>&#8221;</a> for more information.<br>
+2) The required ingredients to make one unit of <code>ITEM_NAME</code> is specified.<br>
+Refer to <a href="#add-required-ingredient">Section 5.4.13, &#8220;Add required ingredients: <code>add-required-ingredients</code> or <code>ari</code>&#8221;</a> for more information.<br>
+3) All required ingredients exist in the ingredient list.<br>
+Refer to <a href="#add-ingredient">Section 5.3.1, &#8220;Adding an ingredient: <code>add-ingredient</code> or <code>add-ing</code>&#8221;</a> for more information.<br>
+4) There are sufficient ingredients to make <code>QUANTITY_SOLD</code> units of <code>ITEM_NAME</code>.<br>
+Refer to <a href="#stockup">Section 5.3.6, &#8220;Stocking up an ingredient: <code>stockup</code>&#8221;</a> for more information.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2217,4 +2220,4 @@ rather than using only text via the command line.</p>
 </dl>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-02 00:39:42 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-02 01:14:29 UTC</div></div></div></body></html>
