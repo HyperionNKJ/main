@@ -67,18 +67,19 @@
 <li><a href="#menu-management">5.4. Menu Management</a>
 <ul class="sectlevel3">
 <li><a href="#add-item">5.4.1. Adding an item to the menu: <code>add-item</code> or <code>ai</code></a></li>
-<li><a href="#listing-all-items-in-the-menu-code-list-items-code-or-li">5.4.2. Listing all items in the menu : <code>list-items</code> or 'li'</a></li>
+<li><a href="#listing-all-items-in-the-menu-code-list-items-code-or-code-li-code">5.4.2. Listing all items in the menu : <code>list-items</code> or <code>li</code></a></li>
 <li><a href="#editing-an-item-in-the-menu-code-edit-item-code-or-code-ei-code">5.4.3. Editing an item in the menu : <code>edit-item</code> or <code>ei</code></a></li>
-<li><a href="#deleting-an-item-code-delete-item-code-or-code-di-code">5.4.4. Deleting an item : <code>delete-item</code> or <code>di</code></a></li>
-<li><a href="#selecting-an-item-code-select-item-code-or-code-si-code">5.4.5. Selecting an item : <code>select-item</code> or <code>si</code></a></li>
-<li><a href="#locating-items-by-name-code-find-item-code-or-code-fi-code">5.4.6. Locating items by name: <code>find-item</code> or <code>fi</code></a></li>
-<li><a href="#filter-menu-by-tag-code-filter-menu-code-or-code-fm-code">5.4.7. Filter menu by tag: <code>filter-menu</code> or <code>fm</code></a></li>
-<li><a href="#sort-menu-code-sort-menu-code-or-code-sm-code">5.4.8. Sort menu : <code>sort-menu</code> or <code>sm</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-menu-code-or-code-cm-code">5.4.9. Clearing all entries : <code>clear-menu</code> or <code>cm</code></a></li>
-<li><a href="#giving-a-discount-to-an-item-code-discount-item-code-or-code-dci-code">5.4.10. Giving a discount to an item : <code>discount-item</code> or <code>dci</code></a></li>
-<li><a href="#today-s-specials-code-today-special-code-or-code-ts-code">5.4.11. Today&#8217;s specials : <code>today-special</code> or <code>ts</code></a></li>
-<li><a href="#add-recipe-to-item-code-recipe-item-code-or-code-ri-code">5.4.12. Add recipe to item : <code>recipe-item</code> or <code>ri</code></a></li>
-<li><a href="#add-required-ingredient">5.4.13. Add required ingredients: <code>add-required-ingredients</code> or <code>ari</code></a></li>
+<li><a href="#deleting-an-item-by-index-code-delete-item-index-code-or-code-dii-code">5.4.4. Deleting an item by index: <code>delete-item-index</code> or <code>dii</code></a></li>
+<li><a href="#deleting-an-item-by-name-code-delete-item-name-code-or-code-din-code">5.4.5. Deleting an item by name: <code>delete-item-name</code> or <code>din</code></a></li>
+<li><a href="#selecting-an-item-code-select-item-code-or-code-si-code">5.4.6. Selecting an item : <code>select-item</code> or <code>si</code></a></li>
+<li><a href="#locating-items-by-name-code-find-item-code-or-code-fi-code">5.4.7. Locating items by name: <code>find-item</code> or <code>fi</code></a></li>
+<li><a href="#filter-menu-by-tag-code-filter-menu-code-or-code-fm-code">5.4.8. Filter menu by tag: <code>filter-menu</code> or <code>fm</code></a></li>
+<li><a href="#sort-menu-code-sort-menu-code-or-code-sm-code">5.4.9. Sort menu : <code>sort-menu</code> or <code>sm</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-menu-code-or-code-cm-code">5.4.10. Clearing all entries : <code>clear-menu</code> or <code>cm</code></a></li>
+<li><a href="#giving-a-discount-to-an-item-code-discount-item-code-or-code-dci-code">5.4.11. Giving a discount to an item : <code>discount-item</code> or <code>dci</code></a></li>
+<li><a href="#today-s-specials-code-today-special-code-or-code-ts-code">5.4.12. Today&#8217;s specials : <code>today-special</code> or <code>ts</code></a></li>
+<li><a href="#add-update-recipe-to-item-code-recipe-item-code-or-code-ri-code">5.4.13. Add/Update recipe to item : <code>recipe-item</code> or <code>ri</code></a></li>
+<li><a href="#add-required-ingredient">5.4.14. Add required ingredients: <code>add-required-ingredients</code> or <code>ari</code></a></li>
 </ul>
 </li>
 <li><a href="#reservations-management">5.5. Reservations Management</a>
@@ -913,7 +914,7 @@ Format: <code>add-item n/ITEM_NAME p/ITEM_PRICE [t/TAG]&#8230;&#8203;</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="listing-all-items-in-the-menu-code-list-items-code-or-li"><a class="link" href="#listing-all-items-in-the-menu-code-list-items-code-or-li">5.4.2. Listing all items in the menu : <code>list-items</code> or 'li'</a></h4>
+<h4 id="listing-all-items-in-the-menu-code-list-items-code-or-code-li-code"><a class="link" href="#listing-all-items-in-the-menu-code-list-items-code-or-code-li-code">5.4.2. Listing all items in the menu : <code>list-items</code> or <code>li</code></a></h4>
 <div class="paragraph">
 <p>Shows a list of all items in the menu.<br>
 Format: <code>list-items</code></p>
@@ -923,8 +924,7 @@ Format: <code>list-items</code></p>
 <h4 id="editing-an-item-in-the-menu-code-edit-item-code-or-code-ei-code"><a class="link" href="#editing-an-item-in-the-menu-code-edit-item-code-or-code-ei-code">5.4.3. Editing an item in the menu : <code>edit-item</code> or <code>ei</code></a></h4>
 <div class="paragraph">
 <p>Edits an existing item in the menu.<br>
-Format: <code>edit-item INDEX [n/ITEM_NAME] [p/ITEM_PRICE] [t/TAG]&#8230;&#8203;</code> or <code>edit-item NAME [n/ITEM_NAME] [p/ITEM_PRICE]
-[t/TAG]&#8230;&#8203;</code></p>
+Format: <code>edit-item INDEX [n/ITEM_NAME] [p/ITEM_PRICE] [t/TAG]&#8230;&#8203;</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -945,9 +945,6 @@ index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
 <p>You can remove all the item&#8217;s tags by typing <code>t/</code> without specifying any tags after it.</p>
-</li>
-<li>
-<p>Alternatively, edits the item with the specified <code>NAME</code>.</p>
 </li>
 </ul>
 </div>
@@ -970,10 +967,10 @@ Edits the price of the 2nd item to be <code>4</code> and clears all existing tag
 </div>
 </div>
 <div class="sect3">
-<h4 id="deleting-an-item-code-delete-item-code-or-code-di-code"><a class="link" href="#deleting-an-item-code-delete-item-code-or-code-di-code">5.4.4. Deleting an item : <code>delete-item</code> or <code>di</code></a></h4>
+<h4 id="deleting-an-item-by-index-code-delete-item-index-code-or-code-dii-code"><a class="link" href="#deleting-an-item-by-index-code-delete-item-index-code-or-code-dii-code">5.4.4. Deleting an item by index: <code>delete-item-index</code> or <code>dii</code></a></h4>
 <div class="paragraph">
 <p>Deletes the specified item from the menu.<br>
-Format: <code>delete-item INDEX</code> or <code>delete-item NAME</code></p>
+Format: <code>delete-item-index INDEX [ei/INDEX]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -989,7 +986,7 @@ Format: <code>delete-item INDEX</code> or <code>delete-item NAME</code></p>
 <p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
-<p>Alternatively, deletes the item with the specified <code>NAME</code>.</p>
+<p>You can delete a range of items by adding the ending index <code>ei\INDEX</code>.</p>
 </li>
 </ul>
 </div>
@@ -1002,19 +999,63 @@ Format: <code>delete-item INDEX</code> or <code>delete-item NAME</code></p>
 <ul>
 <li>
 <p><code>list-items</code><br>
-<code>delete-item 2</code><br>
+<code>delete-item-index 2</code><br>
 Deletes the 2nd item in the menu.</p>
 </li>
 <li>
 <p><code>fi Cheese</code><br>
-<code>di 1</code><br>
-Deletes the 1st item in the results of the <code>find</code> command.</p>
+<code>dii 1 ei/3</code><br>
+Deletes 1st item, 2nd item and 3rd item in the results of the <code>find</code> command.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="selecting-an-item-code-select-item-code-or-code-si-code"><a class="link" href="#selecting-an-item-code-select-item-code-or-code-si-code">5.4.5. Selecting an item : <code>select-item</code> or <code>si</code></a></h4>
+<h4 id="deleting-an-item-by-name-code-delete-item-name-code-or-code-din-code"><a class="link" href="#deleting-an-item-by-name-code-delete-item-name-code-or-code-din-code">5.4.5. Deleting an item by name: <code>delete-item-name</code> or <code>din</code></a></h4>
+<div class="paragraph">
+<p>Deletes the specified item from the menu.<br>
+Format: <code>delete-item-name NAME</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Deletes the item by the specified <code>NAME</code>.</p>
+</li>
+<li>
+<p>The name of the item <strong>must be in the displayed item list</strong>.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>You can delete a range of items by adding the ending index <code>ei\INDEX</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list-items</code><br>
+<code>delete-item-name Apple Juice</code><br>
+Deletes the <code>Apple Juice</code> item in the menu.</p>
+</li>
+<li>
+<p><code>fi Cheese</code><br>
+<code>din Cheese Fries</code><br>
+Deletes <code>Cheese Fries</code> item in the results of the <code>find</code> command.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="selecting-an-item-code-select-item-code-or-code-si-code"><a class="link" href="#selecting-an-item-code-select-item-code-or-code-si-code">5.4.6. Selecting an item : <code>select-item</code> or <code>si</code></a></h4>
 <div class="paragraph">
 <p>Selects the item identified by the index number used in the menu.<br>
 Format: <code>select-item INDEX</code></p>
@@ -1055,7 +1096,7 @@ Selects the 1st item in the results of the <code>find</code> command.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="locating-items-by-name-code-find-item-code-or-code-fi-code"><a class="link" href="#locating-items-by-name-code-find-item-code-or-code-fi-code">5.4.6. Locating items by name: <code>find-item</code> or <code>fi</code></a></h4>
+<h4 id="locating-items-by-name-code-find-item-code-or-code-fi-code"><a class="link" href="#locating-items-by-name-code-find-item-code-or-code-fi-code">5.4.7. Locating items by name: <code>find-item</code> or <code>fi</code></a></h4>
 <div class="paragraph">
 <p>Finds items whose names contain any of the given keywords.<br>
 Format: <code>find-item KEYWORD [MORE_KEYWORDS]</code></p>
@@ -1101,7 +1142,7 @@ Returns any item having names <code>Cheese</code>, <code>Chocolate</code>, or <c
 </div>
 </div>
 <div class="sect3">
-<h4 id="filter-menu-by-tag-code-filter-menu-code-or-code-fm-code"><a class="link" href="#filter-menu-by-tag-code-filter-menu-code-or-code-fm-code">5.4.7. Filter menu by tag: <code>filter-menu</code> or <code>fm</code></a></h4>
+<h4 id="filter-menu-by-tag-code-filter-menu-code-or-code-fm-code"><a class="link" href="#filter-menu-by-tag-code-filter-menu-code-or-code-fm-code">5.4.8. Filter menu by tag: <code>filter-menu</code> or <code>fm</code></a></h4>
 <div class="paragraph">
 <p>Finds items that contain the given tag in the menu.<br>
 Format: <code>filter-menu t/TAG</code></p>
@@ -1144,7 +1185,7 @@ Returns any item that contains tag <code>set</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sort-menu-code-sort-menu-code-or-code-sm-code"><a class="link" href="#sort-menu-code-sort-menu-code-or-code-sm-code">5.4.8. Sort menu : <code>sort-menu</code> or <code>sm</code></a></h4>
+<h4 id="sort-menu-code-sort-menu-code-or-code-sm-code"><a class="link" href="#sort-menu-code-sort-menu-code-or-code-sm-code">5.4.9. Sort menu : <code>sort-menu</code> or <code>sm</code></a></h4>
 <div class="paragraph">
 <p>Sort the menu by name or price.<br>
 Format: <code>sort-menu [NAME] [PRICE]</code></p>
@@ -1183,14 +1224,14 @@ Sorts the menu by item price in ascending order(lowest to highest).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="clearing-all-entries-code-clear-menu-code-or-code-cm-code"><a class="link" href="#clearing-all-entries-code-clear-menu-code-or-code-cm-code">5.4.9. Clearing all entries : <code>clear-menu</code> or <code>cm</code></a></h4>
+<h4 id="clearing-all-entries-code-clear-menu-code-or-code-cm-code"><a class="link" href="#clearing-all-entries-code-clear-menu-code-or-code-cm-code">5.4.10. Clearing all entries : <code>clear-menu</code> or <code>cm</code></a></h4>
 <div class="paragraph">
 <p>Clears all entries from the menu.<br>
 Format: <code>clear-menu</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="giving-a-discount-to-an-item-code-discount-item-code-or-code-dci-code"><a class="link" href="#giving-a-discount-to-an-item-code-discount-item-code-or-code-dci-code">5.4.10. Giving a discount to an item : <code>discount-item</code> or <code>dci</code></a></h4>
+<h4 id="giving-a-discount-to-an-item-code-discount-item-code-or-code-dci-code"><a class="link" href="#giving-a-discount-to-an-item-code-discount-item-code-or-code-dci-code">5.4.11. Giving a discount to an item : <code>discount-item</code> or <code>dci</code></a></h4>
 <div class="paragraph">
 <p>Gives the item identified by the index number used in the displayed item list a discount.<br>
 Format: <code>discount-item INDEX|ALL [ei/INDEX] dp/PERCENTAGE</code></p>
@@ -1220,6 +1261,9 @@ Format: <code>discount-item INDEX|ALL [ei/INDEX] dp/PERCENTAGE</code></p>
 <li>
 <p>You can give a discount to a range of items by adding the ending index <code>ei\INDEX</code>.</p>
 </li>
+<li>
+<p>The ending index can not be smaller than index.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -1248,7 +1292,7 @@ Give the 1st item to the 3rd item in the menu a 50% discount.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="today-s-specials-code-today-special-code-or-code-ts-code"><a class="link" href="#today-s-specials-code-today-special-code-or-code-ts-code">5.4.11. Today&#8217;s specials : <code>today-special</code> or <code>ts</code></a></h4>
+<h4 id="today-s-specials-code-today-special-code-or-code-ts-code"><a class="link" href="#today-s-specials-code-today-special-code-or-code-ts-code">5.4.12. Today&#8217;s specials : <code>today-special</code> or <code>ts</code></a></h4>
 <div class="paragraph">
 <p>Lists the items that have been tagged with <code>DAY_OF_THE_WEEK</code> in the menu.<br>
 Format: <code>today-special</code></p>
@@ -1267,9 +1311,9 @@ List the items that have been tagged with <code>Monday</code> in the menu.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="add-recipe-to-item-code-recipe-item-code-or-code-ri-code"><a class="link" href="#add-recipe-to-item-code-recipe-item-code-or-code-ri-code">5.4.12. Add recipe to item : <code>recipe-item</code> or <code>ri</code></a></h4>
+<h4 id="add-update-recipe-to-item-code-recipe-item-code-or-code-ri-code"><a class="link" href="#add-update-recipe-to-item-code-recipe-item-code-or-code-ri-code">5.4.13. Add/Update recipe to item : <code>recipe-item</code> or <code>ri</code></a></h4>
 <div class="paragraph">
-<p>Adds recipe to the item identified by the index number used in the menu.<br>
+<p>Adds/Updates recipe to the item identified by the index number used in the menu.<br>
 Format: <code>recipe-item INDEX r/RECIPE</code></p>
 </div>
 <div class="sidebarblock">
@@ -1277,7 +1321,7 @@ Format: <code>recipe-item INDEX r/RECIPE</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Adds a recipe to the item at the specified <code>INDEX</code>.</p>
+<p>Adds/Updates a recipe to the item at the specified <code>INDEX</code>.</p>
 </li>
 <li>
 <p>If the item has a recipe already, it will update the recipe.</p>
@@ -1313,9 +1357,9 @@ Add/Update the recipe of the 1st item in the results of the <code>find</code> co
 </div>
 </div>
 <div class="sect3">
-<h4 id="add-required-ingredient"><a class="link" href="#add-required-ingredient">5.4.13. Add required ingredients: <code>add-required-ingredients</code> or <code>ari</code></a></h4>
+<h4 id="add-required-ingredient"><a class="link" href="#add-required-ingredient">5.4.14. Add required ingredients: <code>add-required-ingredients</code> or <code>ari</code></a></h4>
 <div class="paragraph">
-<p>Adds required ingredients to the item identified by the index number used in the menu.<br>
+<p>Adds/Updates required ingredients to the item identified by the index number used in the menu.<br>
 Format: <code>add-required-ingredients INDEX n/INGREDIENT_NAME&#8230;&#8203; nu/NUMBER_OF_INGREDIENTS&#8230;&#8203;</code></p>
 </div>
 <div class="sidebarblock">
@@ -1323,7 +1367,7 @@ Format: <code>add-required-ingredients INDEX n/INGREDIENT_NAME&#8230;&#8203; nu/
 <div class="ulist">
 <ul>
 <li>
-<p>Adds required ingredients to the item at the specified <code>INDEX</code>.</p>
+<p>Adds/Updates required ingredients to the item at the specified <code>INDEX</code>.</p>
 </li>
 <li>
 <p>If the item has required ingredients already, it will update the required ingredients.</p>
@@ -1565,7 +1609,7 @@ list, subjected to the following conditions:<br>
 1) The item exists in the menu.<br>
 Refer to <a href="#add-item">Section 5.4.1, &#8220;Adding an item to the menu: <code>add-item</code> or <code>ai</code>&#8221;</a> for more information.<br>
 2) The required ingredients to make one unit of <code>ITEM_NAME</code> is specified.<br>
-Refer to <a href="#add-required-ingredient">Section 5.4.13, &#8220;Add required ingredients: <code>add-required-ingredients</code> or <code>ari</code>&#8221;</a> for more information.<br>
+Refer to <a href="#add-required-ingredient">Section 5.4.14, &#8220;Add required ingredients: <code>add-required-ingredients</code> or <code>ari</code>&#8221;</a> for more information.<br>
 3) All required ingredients exist in the ingredient list.<br>
 Refer to <a href="#add-ingredient">Section 5.3.1, &#8220;Adding an ingredient: <code>add-ingredient</code> or <code>add-ing</code>&#8221;</a> for more information.<br>
 4) There are sufficient ingredients to make <code>QUANTITY_SOLD</code> units of <code>ITEM_NAME</code>.<br>
@@ -2227,4 +2271,4 @@ rather than using only text via the command line.</p>
 </dl>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-04 07:51:01 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-04 10:11:32 UTC</div></div></div></body></html>
