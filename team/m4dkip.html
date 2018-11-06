@@ -124,18 +124,62 @@ They showcase my ability to write documentation targeting end-users.</em></p></t
 <h4 id="adding-a-reservation-code-add-reservation-code-or-code-ar-code"><a class="link" href="#adding-a-reservation-code-add-reservation-code-or-code-ar-code">Adding a reservation: <code>add-reservation</code> or <code>ar</code></a></h4>
 <div class="paragraph">
 <p>Adds a new reservation to the reservations list.<br>
-Format: <code>add-reservation n/NAME px/PAX dt/DATETIME</code> or <code>ar n/NAME px/PAX dt/DATETIME</code></p>
+Format: <code>add-reservation n/NAME px/PAX d/DATE ti/TIME</code> or <code>ar n/NAME px/PAX d/DATE ti/TIME</code></p>
 </div>
-<div class="sidebarblock">
-<div class="content">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>DateTime is entered in yyyy-mm-dd<strong>T</strong>hh:mm:ss format.</p>
+<p>We use natural language processing to parse the date and time values.</p>
+</li>
+<li>
+<p>For example, phrases like <code>21st Dec</code> or <code>12 p.m.</code> will be accepted. Try it out!</p>
 </li>
 </ul>
 </div>
+</td>
+</tr>
+</table>
 </div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Try to avoid ambiguous language as it might be interpreted incorrectly.</p>
+</li>
+<li>
+<p>For example, <code>3/12</code> is ambiguous as it could mean <code>3rd December</code> or <code>12th March</code>!</p>
+</li>
+<li>
+<p>If you want to be sure, we recommend using these formats:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>DATE</code>: <code>DD-MM-YYYY</code></p>
+</li>
+<li>
+<p><code>TIME</code>: <code>HH:MM</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -143,10 +187,13 @@ Format: <code>add-reservation n/NAME px/PAX dt/DATETIME</code> or <code>ar n/NAM
 <div class="ulist">
 <ul>
 <li>
-<p><code>add-reservation n/TAN px/4 dt/2018-07-21T10:00:00</code></p>
+<p><code>add-reservation n/TAN px/4 d/21-07-2019 ti/10:00</code></p>
 </li>
 <li>
-<p><code>ar n/ONG px/2 dt/2018-08-30T12:00:00</code></p>
+<p><code>ar n/ONG px/2 d/21st July ti/10am</code></p>
+</li>
+<li>
+<p><code>ar n/LEE px/8 d/next tuesday ti/8 p.m.</code></p>
 </li>
 </ul>
 </div>
@@ -162,7 +209,7 @@ Format: <code>list-reservations</code> or <code>lr</code></p>
 <h4 id="editing-a-reservation-code-edit-reservation-code-or-code-er-code"><a class="link" href="#editing-a-reservation-code-edit-reservation-code-or-code-er-code">Editing a reservation: <code>edit-reservation</code> or <code>er</code></a></h4>
 <div class="paragraph">
 <p>Edits an reservation in the reservation list.<br>
-Format: <code>edit-reservation INDEX [n/NAME] [px/PAX] [dt/DATETIME]</code> or <code>er INDEX [n/NAME] [px/PAX] [dt/DATETIME]</code></p>
+Format: <code>edit-reservation INDEX [n/NAME] [px/PAX] [d/DATE] [ti/TIME]</code> or <code>er INDEX [n/NAME] [px/PAX] [d/DATE] [ti/TIME]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -188,8 +235,8 @@ displayed reservations list. The index <strong>must be a positive integer</stron
 <div class="ulist">
 <ul>
 <li>
-<p><code>edit-reservation 2 dt/2018-12-31T18:00:00</code><br>
-Edits the time of the 2nd reservation in the list to <code>31st Dec 2018, 1800</code> hrs.</p>
+<p><code>edit-reservation 2 d/31-12-2019 ti/18:00</code><br>
+Edits the time of the 2nd reservation in the list to <code>31st Dec 2019, 1800</code> hrs.</p>
 </li>
 <li>
 <p><code>er 6 n/ONG px/4</code> <br>
@@ -442,4 +489,4 @@ format.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-06 08:58:02 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-06 11:19:17 UTC</div></div></div></body></html>
