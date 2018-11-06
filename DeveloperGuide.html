@@ -1116,7 +1116,9 @@ This is triggered by raising a <code>Login</code> and <code>Logout</code> event 
 <p>Pros: Easy to implement.</p>
 </li>
 <li>
-<p>Cons: Can only support one user at any time. If another user wants to login, the current logged in user must log out.</p>
+<p>Cons: Can only support one user at any time. If another user wants to login, the current logged in user must log out.
+In addition, since it is a global class object, test cases may be affected when testing both guest and privileged
+commands which requires user to be logged out and logged in respectively.</p>
 </li>
 </ul>
 </div>
@@ -1126,10 +1128,11 @@ This is triggered by raising a <code>Login</code> and <code>Logout</code> event 
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: More user can login and manage the systems concurrently.</p>
+<p>Pros: More user can login and manage the systems concurrently. Potentially able to resolve the global dependency
+of the current solution which might affect the test ability.</p>
 </li>
 <li>
-<p>Cons: More memory usage to track each user session.</p>
+<p>Cons: More memory usage to track each user session as the application scales with more users.</p>
 </li>
 </ul>
 </div>
@@ -4273,4 +4276,4 @@ These instructions only provide a starting point for testers to work on; testers
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-06 12:07:40 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-06 14:53:26 UTC</div></div></div></body></html>

@@ -238,7 +238,7 @@ read whatever is in this block.
 <h4 id="logging-in-code-login-code"><a class="link" href="#logging-in-code-login-code">Logging in: <code>login</code></a></h4>
 <div class="paragraph">
 <p>Logs into an existing account.<br>
-Format: <code>login id/USERNAME pw/PASSWORD</code> or <code>li id/USERNAME pw/PASSWORD</code><br></p>
+Format: <code>login id/USERNAME pw/PASSWORD</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -246,10 +246,7 @@ Format: <code>login id/USERNAME pw/PASSWORD</code> or <code>li id/USERNAME pw/PA
 <div class="ulist">
 <ul>
 <li>
-<p><code>login id/azhikai pw/p@55w0rd</code></p>
-</li>
-<li>
-<p><code>li id/azhikai pw/p@55w0rd</code></p>
+<p><code>login id/root pw/1122qq</code></p>
 </li>
 </ul>
 </div>
@@ -261,8 +258,7 @@ Format: <code>login id/USERNAME pw/PASSWORD</code> or <code>li id/USERNAME pw/PA
 </td>
 <td class="content">
 <div class="paragraph">
-<p>To testers: You may access the application using the default <code>root</code> account: <code>login id/root pw/1122qq</code><br>
-Please ignore person-related commands as it&#8217;s still operational in the application.</p>
+<p>To testers: You may access the application using the default <code>root</code> account: <code>login id/root pw/1122qq</code></p>
 </div>
 </td>
 </tr>
@@ -273,7 +269,7 @@ Please ignore person-related commands as it&#8217;s still operational in the app
 <h4 id="logging-out-code-logout-code"><a class="link" href="#logging-out-code-logout-code">Logging out: <code>logout</code></a></h4>
 <div class="paragraph">
 <p>Logs out of the account.<br>
-Format: <code>logout</code> or <code>lo</code></p>
+Format: <code>logout</code></p>
 </div>
 </div>
 <div class="sect3">
@@ -319,8 +315,25 @@ Format: <code>change-password npw/NEW_PASSWORD</code> or <code>cp npw/NEW_PASSWO
 <div class="sect3">
 <h4 id="deleting-user-account-code-deregister-code-or-code-dereg-code"><a class="link" href="#deleting-user-account-code-deregister-code-or-code-dereg-code">Deleting user account: <code>deregister</code> or <code>dereg</code></a></h4>
 <div class="paragraph">
-<p>Deletes an existing user account.<br>
-Format: <code>deregister id/USERNAME</code> or <code>dereg id/USERNAME</code></p>
+<p>Deletes an existing user account.<br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This command should only be able to be executed by a highly privileged user. See <a href="#User-Role">[User-Role]</a>
+for more information</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Format: <code>deregister id/USERNAME</code> or <code>dereg id/USERNAME</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -350,7 +363,7 @@ Format: <code>list-accounts</code> or <code>la</code></p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Password is masked by default and should never be shown</p>
+<p>Password is masked by default and should never be shown on display</p>
 </div>
 </td>
 </tr>
@@ -692,7 +705,9 @@ This is triggered by raising a <code>Login</code> and <code>Logout</code> event 
 <p>Pros: Easy to implement.</p>
 </li>
 <li>
-<p>Cons: Can only support one user at any time. If another user wants to login, the current logged in user must log out.</p>
+<p>Cons: Can only support one user at any time. If another user wants to login, the current logged in user must log out.
+In addition, since it is a global class object, test cases may be affected when testing both guest and privileged
+commands which requires user to be logged out and logged in respectively.</p>
 </li>
 </ul>
 </div>
@@ -702,10 +717,11 @@ This is triggered by raising a <code>Login</code> and <code>Logout</code> event 
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: More user can login and manage the systems concurrently.</p>
+<p>Pros: More user can login and manage the systems concurrently. Potentially able to resolve the global dependency
+of the current solution which might affect the test ability.</p>
 </li>
 <li>
-<p>Cons: More memory usage to track each user session.</p>
+<p>Cons: More memory usage to track each user session as the application scales with more users.</p>
 </li>
 </ul>
 </div>
@@ -716,4 +732,4 @@ This is triggered by raising a <code>Login</code> and <code>Logout</code> event 
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-06 12:07:40 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-06 14:53:26 UTC</div></div></div></body></html>

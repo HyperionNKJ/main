@@ -106,7 +106,7 @@
 </li>
 <li><a href="#upcoming-features">5.7. Upcoming Features</a>
 <ul class="sectlevel3">
-<li><a href="#creating-user-role-code-coming-in-v2-0-code">5.7.1. Creating user role <code>[coming in v2.0]</code></a></li>
+<li><a href="#User-Role">5.7.1. Creating user role <code>[coming in v2.0]</code></a></li>
 <li><a href="#editing-user-role-code-coming-in-v2-0-code">5.7.2. Editing user role <code>[coming in v2.0]</code></a></li>
 <li><a href="#deleting-user-role-code-coming-in-v2-0-code">5.7.3. Deleting user role <code>[coming in v2.0]</code></a></li>
 <li><a href="#checking-item-sales-history-code-coming-in-v2-0-code">5.7.4. Checking item sales history <code>[coming in v2.0]</code></a></li>
@@ -557,7 +557,7 @@ Format: <code>exit</code> or <code>ex</code></p>
 <h4 id="logging-in-code-login-code"><a class="link" href="#logging-in-code-login-code">5.2.1. Logging in: <code>login</code></a></h4>
 <div class="paragraph">
 <p>Logs into an existing account.<br>
-Format: <code>login id/USERNAME pw/PASSWORD</code> or <code>li id/USERNAME pw/PASSWORD</code><br></p>
+Format: <code>login id/USERNAME pw/PASSWORD</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -565,10 +565,7 @@ Format: <code>login id/USERNAME pw/PASSWORD</code> or <code>li id/USERNAME pw/PA
 <div class="ulist">
 <ul>
 <li>
-<p><code>login id/azhikai pw/p@55w0rd</code></p>
-</li>
-<li>
-<p><code>li id/azhikai pw/p@55w0rd</code></p>
+<p><code>login id/root pw/1122qq</code></p>
 </li>
 </ul>
 </div>
@@ -580,8 +577,7 @@ Format: <code>login id/USERNAME pw/PASSWORD</code> or <code>li id/USERNAME pw/PA
 </td>
 <td class="content">
 <div class="paragraph">
-<p>To testers: You may access the application using the default <code>root</code> account: <code>login id/root pw/1122qq</code><br>
-Please ignore person-related commands as it&#8217;s still operational in the application.</p>
+<p>To testers: You may access the application using the default <code>root</code> account: <code>login id/root pw/1122qq</code></p>
 </div>
 </td>
 </tr>
@@ -592,7 +588,7 @@ Please ignore person-related commands as it&#8217;s still operational in the app
 <h4 id="logging-out-code-logout-code"><a class="link" href="#logging-out-code-logout-code">5.2.2. Logging out: <code>logout</code></a></h4>
 <div class="paragraph">
 <p>Logs out of the account.<br>
-Format: <code>logout</code> or <code>lo</code></p>
+Format: <code>logout</code></p>
 </div>
 </div>
 <div class="sect3">
@@ -638,8 +634,25 @@ Format: <code>change-password npw/NEW_PASSWORD</code> or <code>cp npw/NEW_PASSWO
 <div class="sect3">
 <h4 id="deleting-user-account-code-deregister-code-or-code-dereg-code"><a class="link" href="#deleting-user-account-code-deregister-code-or-code-dereg-code">5.2.5. Deleting user account: <code>deregister</code> or <code>dereg</code></a></h4>
 <div class="paragraph">
-<p>Deletes an existing user account.<br>
-Format: <code>deregister id/USERNAME</code> or <code>dereg id/USERNAME</code></p>
+<p>Deletes an existing user account.<br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This command should only be able to be executed by a highly privileged user. See <a href="#User-Role">Section 5.7.1, &#8220;Creating user role <code>[coming in v2.0]</code>&#8221;</a>
+for more information</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Format: <code>deregister id/USERNAME</code> or <code>dereg id/USERNAME</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -669,7 +682,7 @@ Format: <code>list-accounts</code> or <code>la</code></p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Password is masked by default and should never be shown</p>
+<p>Password is masked by default and should never be shown on display</p>
 </div>
 </td>
 </tr>
@@ -2027,10 +2040,27 @@ Selects the 6th record in the record list.</p>
 <div class="sect2">
 <h3 id="upcoming-features"><a class="link" href="#upcoming-features">5.7. Upcoming Features</a></h3>
 <div class="sect3">
-<h4 id="creating-user-role-code-coming-in-v2-0-code"><a class="link" href="#creating-user-role-code-coming-in-v2-0-code">5.7.1. Creating user role <code>[coming in v2.0]</code></a></h4>
+<h4 id="User-Role"><a class="link" href="#User-Role">5.7.1. Creating user role <code>[coming in v2.0]</code></a></h4>
 <div class="paragraph">
-<p>Creates a user role. User assigned with higher ranking role can execute more commands.<br>
-Format: <code>create-role r/RANK n/ROLE_NAME</code> or <code>cr r/RANK n/ROLE_NAME</code></p>
+<p>Creates a user role. User assigned with higher ranking role can execute more commands.<br></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When the application is in its default state, this command can only be executed by the <code>root</code> account
+which has the default role of <code>Administrator</code></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Format: <code>create-role r/RANK n/ROLE_NAME</code> or <code>cr r/RANK n/ROLE_NAME</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -2265,7 +2295,7 @@ contains the data of your previous <strong>MeNUS</strong> folder.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Login</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>login id/USERNAME pw/PASSWORD</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>login id/azhikai pw/1122qq</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>login id/root pw/1122qq</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Logout</strong></p></td>
@@ -2275,17 +2305,22 @@ contains the data of your previous <strong>MeNUS</strong> folder.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Create account</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>register/reg id/USERNAME pw/PASSWORD</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>register id/azhikai pw/1122qq</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>register/reg id/azhikai pw/p@55w0rd</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Edit account</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit-acc id/USERNAME [nid/NEW_USERNAME] [pw/NEW_PASSWORD]</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit-acc id/azhikai nid/angzhikai</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Change password</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>change-password/cp npw/NEW_PASSWORD</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>change-password/cp npw/newp@55w0rd</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Delete account</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>deregister id/USERNAME</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>deregister id/azhikai</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>List accounts</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list-accounts/la</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list-accounts/la</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Add ingredient</strong></p></td>
@@ -2464,4 +2499,4 @@ rather than using only text via the command line.</p>
 </dl>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-06 12:07:40 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-06 14:53:26 UTC</div></div></div></body></html>
