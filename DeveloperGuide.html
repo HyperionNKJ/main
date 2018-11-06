@@ -1367,6 +1367,19 @@ interface.</p>
 </tr>
 </table>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If no sales record associated with the given <code>Date</code> is found, an empty SalesReport will be
+returned. In such cases, the command will terminate with a message notifying the user about the absence of such record.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>Step 2. The <code>display-sales</code> command then raises the <code>DisplaySalesReportEvent</code> event, which also encapsulates the
 generated <code>SalesReport</code> in step 1.</p>
@@ -2409,6 +2422,12 @@ application</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">restaurant owner</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modify past sales records</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">update any mistakes / refunds / cancelled booking</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">analytical restaurant owner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">see the sales chart of revenue against date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">have an overview of my restaurant financial performance and oversee its growth in the long run</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
@@ -3673,7 +3692,7 @@ The use case for creating account role is the same.
 <div class="ulist">
 <ul>
 <li>
-<p>A new sales record of an item will be appended to the sales list.</p>
+<p>A new sales record of an item will be appended to the record list.</p>
 </li>
 </ul>
 </div>
@@ -3689,7 +3708,7 @@ The use case for creating account role is the same.
 <p>App computes the ingredients used and updates the ingredient list automatically.</p>
 </li>
 <li>
-<p>App appends the record at the end of sales list.</p>
+<p>App appends the record at the end of record list.</p>
 </li>
 <li>
 <p>App returns a success message confirming that the recording is successful.</p>
@@ -3747,7 +3766,7 @@ The use case for creating account role is the same.
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1c. Sales record of the same date and item name already exists in the sales list.</p>
+<p>1c. Sales record of the same date and item name already exists in the record list.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
@@ -3798,7 +3817,7 @@ message.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User requests to edit a sales record in the sales list.</p>
+<p>User requests to edit a sales record in the record list.</p>
 </li>
 <li>
 <p>App updates the sales record to that given by the user.</p>
@@ -3836,11 +3855,11 @@ message.</p>
 </div>
 </li>
 <li>
-<p>1b. Record does not exist in the sales list.</p>
+<p>1b. Record does not exist in the record list.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1b1. App returns a message telling user that no such record exists in the sales list.</p>
+<p>1b1. App returns a message telling user that no such record exists in the record list.</p>
 </li>
 <li>
 <p>1b2. User requests to edit sales record again.</p>
@@ -3905,7 +3924,7 @@ message.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1e. Sales record of the same date and item name as the new record already exists in the sales list.</p>
+<p>1e. Sales record of the same date and item name as the new record already exists in the record list.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
@@ -3932,7 +3951,7 @@ message.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User requests to delete a sales record in the sales list.</p>
+<p>User requests to delete a sales record in the record list.</p>
 </li>
 <li>
 <p>App deletes the sales record.</p>
@@ -3970,11 +3989,11 @@ message.</p>
 </div>
 </li>
 <li>
-<p>1b. Record does not exist in the sales list.</p>
+<p>1b. Record does not exist in the record list.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1b1. App returns a message telling user that no such record exists in the sales list.</p>
+<p>1b1. App returns a message telling user that no such record exists in the record list.</p>
 </li>
 <li>
 <p>1b2. User requests to delete sales record again.</p>
@@ -4053,6 +4072,25 @@ message.</p>
 </ul>
 </div>
 </li>
+<li>
+<p>2a. The generated sales report is empty. No record associated with the given date is found.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. App returns a message telling user no such record is found.</p>
+</li>
+<li>
+<p>2a2. User requests to display sales report again with a new date.</p>
+<div class="paragraph">
+<p>Steps 2a1-2a2 are repeated until a record with the given date is found. (i.e. Sales report generated is not empty.)</p>
+</div>
+<div class="paragraph">
+<p>Use case resumes at step 3.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
 </ul>
 </div>
 <h3 id="use-case-uc505-ranking-items-according-to-total-revenue" class="discrete">Use case: UC505 - Ranking items according to total revenue</h3>
@@ -4063,7 +4101,7 @@ message.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The use case for ranking dates according to total revenue is the same.
+The use cases for 1) ranking dates according to total revenue and 2) displaying sales chart are the same.
 </td>
 </tr>
 </table>
@@ -4093,19 +4131,13 @@ The use case for ranking dates according to total revenue is the same.
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a. Invalid command format entered by the user.</p>
+<p>2a. Record list is empty. No record has ever been added.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a1. App returns a message telling user that the command format is invalid.</p>
-</li>
-<li>
-<p>1a2. User requests to display sales report again.</p>
+<p>2a1. App returns a message telling user that the record list is empty.</p>
 <div class="paragraph">
-<p>Steps 1a1-1a2 are repeated until a valid command format is entered.</p>
-</div>
-<div class="paragraph">
-<p>Use case resumes at step 2.</p>
+<p>Use case ends.</p>
 </div>
 </li>
 </ul>
@@ -4232,4 +4264,4 @@ These instructions only provide a starting point for testers to work on; testers
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-05 08:35:57 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-06 07:20:06 UTC</div></div></div></body></html>
