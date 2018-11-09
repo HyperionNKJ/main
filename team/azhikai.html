@@ -4,6 +4,10 @@
 <h2 id="project-menus"><a class="link" href="#project-menus">PROJECT: MeNUS</a></h2>
 <div class="sectionbody">
 <hr>
+<div class="paragraph">
+<p>This portfolio aims to provide a summary of my contribution as Team Leader for the project,
+<a href="https://github.com/CS2103-AY1819S1-F10-4/main"><strong>MeNUS</strong></a>.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -11,14 +15,17 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>MeNUS</strong> is a restaurant management desktop application targeting restaurant owners in the National University
-of Singapore (NUS). It is built to help them better manage their restaurants, especially if they are using complex,
-expensive and independent systems.<br></p>
+of Singapore (NUS). It is built to help them better manage core aspects of their restaurants &#8201;&#8212;&#8201; employees, menus,
+inventory, sales and reservations&#8201;&#8212;&#8201;all from a single location!</p>
 </div>
 <div class="paragraph">
 <p>Restaurant owners interact with <strong>MeNUS</strong> using a Command Line Interface
 (CLI). <strong>MeNUS</strong> also has a Graphical User Interface(GUI) created with <a href="https://docs.oracle.com/javafx/2/">JavaFX</a> and it
 is written using <a href="https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase9-3934878.html">Java 9</a> with
-approximately 30 KLOC.</p>
+approximately 25 KLoC.</p>
+</div>
+<div class="paragraph">
+<p>It is cross-platform supported and can be used on both Windows-based and Unix-based platforms.</p>
 </div>
 </div>
 </div>
@@ -35,11 +42,12 @@ approximately 30 KLOC.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>What it does</strong>: Allows the restaurant owner to create account for each of his employee to manage the system.</p>
+<p><strong>What it does</strong>: Allows the restaurant owner to create account for each of his employee to manage the system on his
+behalf.</p>
 </li>
 <li>
-<p><strong>Justification</strong>: This feature introduce the security layer to the application by ensuring that only
-authorised personnel are able to execute certain sets of commands depending on their level of privilege.</p>
+<p><strong>Justification</strong>: This feature introduces the security layer by ensuring that only authorised employees are able to
+execute certain sets of commands, depending on their level of privilege.</p>
 </li>
 <li>
 <p><strong>Highlights</strong>: This enhancement affects existing commands such that certain commands require the user to be
@@ -48,13 +56,21 @@ authenticated, otherwise it will not be executed. It required an in-depth analys
 commands.</p>
 </li>
 <li>
-<p><strong>Credits</strong>: Account password is hashed using <a href="https://github.com/patrickfav/bcrypt"><code>bcrypt</code></a>.</p>
+<p><strong>Credits</strong>: Account password is secured using <a href="https://github.com/patrickfav/bcrypt"><code>bcrypt</code></a>.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Minor enhancement</strong>: Added side navigation bar to access the different components of the application.</p>
+<p><strong>Minor enhancement</strong>: Added side navigation bar to allow access to the different components of the application with
+a click of a mouse or trackpad.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Navigation can also be done via CLI if user does not possess a mouse or trackpad.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p><strong>Other contributions</strong>:</p>
@@ -68,26 +84,23 @@ commands.</p>
 <p>Team Lead; responsible for overall project coordination.</p>
 </li>
 <li>
-<p>Set up GitHub repository, Travis, AppVeyor, Codacy and Coveralls.</p>
+<p>Set up GitHub repository, Travis, AppVeyor, Codacy, Coveralls and RepoSense.</p>
 </li>
 <li>
 <p>Maintained issue tracker, milestone, pull request approval and merger.</p>
 </li>
 <li>
-<p>Managed releases <code>v1.1</code>, <code>v1.2</code>, <code>v1.2.1</code>, <code>v1.3</code> and <code>v1.4</code> (5 releases) on GitHub.</p>
+<p>Managed releases <code>v1.1</code>, <code>v1.2</code>, <code>v1.2.1</code>, <code>v1.3</code>, <code>v1.3.1</code>, <code>v1.4</code> (6 releases) on GitHub.</p>
 </li>
 <li>
 <p>Configured deployment of static pages to GitHub Pages and Netlify.</p>
 </li>
-</ul>
-</div>
+<li>
+<p>Morphed the project through refactoring and removing obsolete code:
+<a href="https://github.com/CS2103-AY1819S1-F10-4/main/pull/256">#256</a>.</p>
 </li>
 <li>
-<p>Enhancements to existing features:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>TBU</p>
+<p>Practiced good pull request (PR) hygiene by ensuring positive coverage.</p>
 </li>
 </ul>
 </div>
@@ -97,7 +110,11 @@ commands.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Morphed existing contents (UML and Sequence diagrams) of the User Guide and Developer Guide.</p>
+<p>Morphed the existing contents (UML and Sequence diagrams) of the User Guide and Developer Guide with respect to
+the morphed source code.</p>
+</li>
+<li>
+<p>Added introductions to User Guide and Developer Guide to make them more reader-focused.</p>
 </li>
 </ul>
 </div>
@@ -107,7 +124,10 @@ commands.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Reviewed significant number of pull requests with non-trivial review comments:
+<p><a href="https://github.com/CS2103-AY1819S1-F10-4/main/pulls/AZhiKai">Merged</a> more than 40 PRs.</p>
+</li>
+<li>
+<p>Reviewed more than 70 PRs with non-trivial review comments:
 <a href="https://github.com/CS2103-AY1819S1-F10-4/main/pull/27">#27</a>,
 <a href="https://github.com/CS2103-AY1819S1-F10-4/main/pull/36">#36</a>,
 <a href="https://github.com/CS2103-AY1819S1-F10-4/main/pull/37">#37</a>,
@@ -132,7 +152,13 @@ commands.</p>
 </li>
 <li>
 <p>Reported bugs and suggestions for other teams in the class:
-<a href="https://github.com/nus-cs2103-AY1819S1/forum/issues/74#issuecomment-430956137">#74</a></p>
+<a href="https://github.com/nus-cs2103-AY1819S1/forum/issues/74#issuecomment-430956137">#74</a>,
+<a href="https://github.com/CS2103-AY1819S1-W14-2/main/issues/110">#110</a>,
+<a href="https://github.com/CS2103-AY1819S1-W14-2/main/issues/111">#111</a>,
+<a href="https://github.com/CS2103-AY1819S1-W14-2/main/issues/112">#112</a>,
+<a href="https://github.com/CS2103-AY1819S1-W14-2/main/issues/113">#113</a>,
+<a href="https://github.com/CS2103-AY1819S1-W14-2/main/issues/124">#124</a>,
+<a href="https://github.com/CS2103-AY1819S1-W14-2/main/issues/130">#130</a></p>
 </li>
 </ul>
 </div>
@@ -185,8 +211,7 @@ targeting end-users with little or no technical knowledge.</em></p></td>
 <div class="paragraph">
 <p>Introducing <a href="{repoURL}">MeNUS</a>, a revolutionary restaurant management desktop application that is <strong>optimized for
 users who prefer to work with a Command Line Interface (CLI) while still having the benefits of a Graphical User
-Interface (GUI)</strong>. If you can type fast, <a href="{repoURL}">MeNUS</a> allows you to manage aspects of your restaurants&#8201;&#8212;&#8201;staff accounts,
-menus, ingredient, sales and reservations management&#8201;&#8212;&#8201;all from a single location !</p>
+Interface (GUI)</strong>. If you can type fast, <a href="{repoURL}">MeNUS</a> allows you to manage core aspects of your restaurants&#8201;&#8212;&#8201;employees, menus, inventory, sales and reservations management&#8201;&#8212;&#8201;all from a single location!</p>
 </div>
 <div class="sect2">
 <h3 id="legends"><a class="link" href="#legends">Legends</a></h3>
@@ -231,6 +256,17 @@ read whatever is in this block.
 </tr>
 </table>
 </div>
+</div>
+<div class="sect2">
+<h3 id="a-quick-look-at-menus"><a class="link" href="#a-quick-look-at-menus">A Quick Look at MeNUS</a></h3>
+<div class="paragraph">
+<p><strong>MeNUS</strong>’s user interface is split into a few sections. These sections are highlighted in the image below.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/UserInterfaceHighlight.png" alt="UserInterfaceHighlight" width="790">
+</div>
+</div>
 <div class="paragraph">
 <p>Let&#8217;s get started!</p>
 </div>
@@ -274,6 +310,20 @@ Format: <code>login id/USERNAME pw/PASSWORD</code></p>
 <p>Logs out of the account.<br>
 Format: <code>logout</code></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>History will automatically be cleared upon logging out</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect3">
 <h4 id="creating-user-account-code-register-code-or-code-reg-code"><a class="link" href="#creating-user-account-code-register-code-or-code-reg-code">Creating user account: <code>register</code> or <code>reg</code></a></h4>
@@ -281,16 +331,31 @@ Format: <code>logout</code></p>
 <p>Creates a new user account.<br>
 Format: <code>register id/USERNAME pw/PASSWORD</code> or <code>reg id/USERNAME pw/PASSWORD</code></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This command will be improved in the future to include name and role. See <a href="#Register-Improvement">[Register-Improvement]</a>
+for more information</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>Examples:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>register id/azhikai pw/p@55w0rd</code></p>
+<p><code>register id/azhikai pw/1122qq</code></p>
 </li>
 <li>
-<p><code>reg id/azhikai pw/p@55w0rd</code></p>
+<p><code>reg id/azhikai pw/1122qq</code></p>
 </li>
 </ul>
 </div>
@@ -318,7 +383,8 @@ Format: <code>change-password npw/NEW_PASSWORD</code> or <code>cp npw/NEW_PASSWO
 <div class="sect3">
 <h4 id="deleting-user-account-code-deregister-code-or-code-dereg-code"><a class="link" href="#deleting-user-account-code-deregister-code-or-code-dereg-code">Deleting user account: <code>deregister</code> or <code>dereg</code></a></h4>
 <div class="paragraph">
-<p>Deletes an existing user account.<br></p>
+<p>Deletes an existing user account.<br>
+Format: <code>deregister id/USERNAME</code> or <code>dereg id/USERNAME</code></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -328,15 +394,12 @@ Format: <code>change-password npw/NEW_PASSWORD</code> or <code>cp npw/NEW_PASSWO
 </td>
 <td class="content">
 <div class="paragraph">
-<p>This command should only be able to be executed by a highly privileged user. See <a href="#User-Role">[User-Role]</a>
+<p>This command will only be able to be executed by a highly privileged user in the future. See <a href="#User-Role">[User-Role]</a>
 for more information</p>
 </div>
 </td>
 </tr>
 </table>
-</div>
-<div class="paragraph">
-<p>Format: <code>deregister id/USERNAME</code> or <code>dereg id/USERNAME</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -348,6 +411,97 @@ for more information</p>
 </li>
 <li>
 <p><code>dereg id/azhikai</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="select-user-account-code-select-account-code-or-code-sa-code"><a class="link" href="#select-user-account-code-select-account-code-or-code-sa-code">Select user account: <code>select-account</code> or <code>sa</code></a></h4>
+<div class="paragraph">
+<p>Selects the account identified by the index number.<br>
+Format: <code>select-account INDEX</code> or <code>sa INDEX</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Selecting the account does not render any data on the detailed panel due to the simplicity of the data itself</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The index refers to the index number shown in the displayed item list.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list-accounts</code><br>
+<code>select-account 2</code><br>
+Selects the 2nd account in the list.</p>
+</li>
+<li>
+<p><code>fa azhikai</code><br>
+<code>sa 1</code><br>
+Selects the 1st account in the results of the <code>find-account</code> command.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="locating-account-by-username-code-find-account-code-or-code-fa-code"><a class="link" href="#locating-account-by-username-code-find-account-code-or-code-fa-code">Locating account by username: <code>find-account</code> or <code>fa</code></a></h4>
+<div class="paragraph">
+<p>Finds account whose username contain any of the given keywords.<br>
+Format: <code>find-account KEYWORD</code> or <code>fa KEYWORD</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The search is case insensitive. e.g <code>root</code> will match <code>Root</code></p>
+</li>
+<li>
+<p>Only the username is searched.</p>
+</li>
+<li>
+<p>Only full words will be matched e.g. <code>roo</code> will not match <code>root</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>find-account root</code><br>
+Returns <code>root</code></p>
+</li>
+<li>
+<p><code>fa root azhikai rebstan97</code><br>
+Returns any account having username <code>root</code>, <code>azhikai</code>, or <code>rebstan97</code></p>
 </li>
 </ul>
 </div>
@@ -531,7 +685,9 @@ The <code>deregister</code> command works the same way by checking if the accoun
 <div class="content">
 <img src="../images/RegisterSequenceDiagram.png" alt="RegisterSequenceDiagram" width="800">
 </div>
-<div class="title">Figure 1. Sequence diagram to illustrate component interactions for the <code>register</code> command</div>
+</div>
+<div class="paragraph">
+<p><em>Figure 4.2.1.1: Sequence diagram to illustrate component interactions for the <code>register</code> command</em></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -584,7 +740,9 @@ into the storage by calling <code>Model#addAccount(Account)</code>.</p>
 <div class="content">
 <img src="../images/LoginSequenceDiagram.png" alt="LoginSequenceDiagram" width="800">
 </div>
-<div class="title">Figure 2. Sequence diagram to illustrate component interactions for the <code>login</code> command</div>
+</div>
+<div class="paragraph">
+<p><em>Figure 4.2.1.2: Sequence diagram to illustrate component interactions for the <code>login</code> command</em></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -611,10 +769,53 @@ as arguments.</p>
 <code>LogicManager</code>.</p>
 </div>
 <div class="paragraph">
-<p>Step 4. <code>LogicManager</code> invokes the <code>execute()</code> method of the <code>Command#LoginCommand</code>, <code>lc</code> which is instantiated in Step 3.
+<p>Step 4. <code>LogicManager</code> invokes the <code>execute()</code> method of the <code>Command#LoginCommand</code> which is instantiated in Step 3.
 The <code>Model</code> component will be involved as the <code>Command#LoginCommand</code> invokes a request to retrieve an account based
 on the username. If it exists, the account will be retrieved and the password hash will be compared. If it matches,
 then the credential is valid and the user is authenticated.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-how-account-password-is-salted-and-hashed"><a class="link" href="#aspect-how-account-password-is-salted-and-hashed">Aspect: How account password is salted and hashed</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Use username to generate cryptographic salt.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Rationale: If we allow the <code>bcrypt</code> library to generate the salt, test cases will be limited as the salt is
+generated based on system time. This means that despite testing the same account with the same raw password, its
+equality will never match. Hence, a workaround is to generate the salt based on its username which is unique to each
+account.</p>
+</li>
+<li>
+<p>Pros: Easy to implement; simplified test cases</p>
+</li>
+<li>
+<p>Cons: If an attacker knows how the salt is generated, it could pose a security risk.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Use salt generated by the <code>bcrypt</code> library with high cost factor</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Higher cost factor makes hashing of the password harder. Ideally, the cost factor should as high as the
+system can tolerate, given the other tasks the system must otherwise fulfill.</p>
+</li>
+<li>
+<p>Cons: More processing resources used and will affect testing ability.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -668,6 +869,9 @@ This is triggered by raising a <code>Login</code> and <code>Logout</code> event 
 </div>
 </div>
 <div class="paragraph">
+<p><em>Figure 4.2.1.3: Activity diagram to illustrate the user session</em></p>
+</div>
+<div class="paragraph">
 <p>The following code snippet demonstrates how these static methods are implemented:</p>
 </div>
 <div class="listingblock">
@@ -677,25 +881,36 @@ This is triggered by raising a <code>Login</code> and <code>Logout</code> event 
  *
  * @param account logged in for this session.
  */</span>
-<span class="directive">public</span> <span class="directive">static</span> <span class="type">void</span> login(Account account) {
-    isAuthenticated = <span class="predefined-constant">true</span>;
-    username = account.getUsername();
+<span class="directive">public</span> <span class="directive">static</span> <span class="type">void</span> create(Account acc) {
+    <span class="keyword">if</span> (!isAuthenticated) {
+        isAuthenticated = <span class="predefined-constant">true</span>;
+        account = acc;
+    }
 }
 
 <span class="comment">/**
  * Logs out of this account which releases this session.
  */</span>
-<span class="directive">public</span> <span class="directive">static</span> <span class="type">void</span> logout() {
-    <span class="keyword">if</span> (isAuthenticated) {
+<span class="directive">public</span> <span class="directive">static</span> <span class="type">void</span> destroy() {
         isAuthenticated = <span class="predefined-constant">false</span>;
-        username = <span class="predefined-constant">null</span>;
+        account = <span class="predefined-constant">null</span>;
+}
+
+<span class="comment">/**
+ * Updates the session with the new account info, such as updating of account password.
+ *
+ * @param acc that has been updated.
+ */</span>
+<span class="directive">public</span> <span class="directive">static</span> <span class="type">void</span> update(Account acc) {
+    <span class="keyword">if</span> (isAuthenticated) {
+        account = acc;
     }
 }</code></pre>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-user-session-is-handled"><a class="link" href="#aspect-how-user-session-is-handled">Aspect: How user session is handled</a></h5>
 <div class="ulist">
@@ -735,4 +950,4 @@ of the current solution which might affect the test ability.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-08 13:06:59 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-09 02:03:09 UTC</div></div></div></body></html>

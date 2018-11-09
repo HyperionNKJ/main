@@ -12,6 +12,7 @@
 <li><a href="#welcome-to-menus">1. Welcome to MeNUS</a>
 <ul class="sectlevel2">
 <li><a href="#legends">1.1. Legends</a></li>
+<li><a href="#a-quick-look-at-menus">1.2. A Quick Look at MeNUS</a></li>
 </ul>
 </li>
 <li><a href="#quick-start">2. Quick Start</a></li>
@@ -51,7 +52,9 @@
 <li><a href="#creating-user-account-code-register-code-or-code-reg-code">5.2.3. Creating user account: <code>register</code> or <code>reg</code></a></li>
 <li><a href="#changing-user-password-code-change-password-code-or-code-cp-code">5.2.4. Changing user password: <code>change-password</code> or <code>cp</code></a></li>
 <li><a href="#deleting-user-account-code-deregister-code-or-code-dereg-code">5.2.5. Deleting user account: <code>deregister</code> or <code>dereg</code></a></li>
-<li><a href="#list-user-accounts-code-list-accounts-code-or-code-la-code">5.2.6. List user accounts: <code>list-accounts</code> or <code>la</code></a></li>
+<li><a href="#select-user-account-code-select-account-code-or-code-sa-code">5.2.6. Select user account: <code>select-account</code> or <code>sa</code></a></li>
+<li><a href="#locating-account-by-username-code-find-account-code-or-code-fa-code">5.2.7. Locating account by username: <code>find-account</code> or <code>fa</code></a></li>
+<li><a href="#list-user-accounts-code-list-accounts-code-or-code-la-code">5.2.8. List user accounts: <code>list-accounts</code> or <code>la</code></a></li>
 </ul>
 </li>
 <li><a href="#ingredients-management">5.3. Ingredients Management</a>
@@ -106,17 +109,18 @@
 </li>
 <li><a href="#upcoming-features">5.7. Upcoming Features</a>
 <ul class="sectlevel3">
-<li><a href="#User-Role">5.7.1. Creating user role <code>[coming in v2.0]</code></a></li>
-<li><a href="#editing-user-role-code-coming-in-v2-0-code">5.7.2. Editing user role <code>[coming in v2.0]</code></a></li>
-<li><a href="#deleting-user-role-code-coming-in-v2-0-code">5.7.3. Deleting user role <code>[coming in v2.0]</code></a></li>
-<li><a href="#checking-item-sales-history-code-coming-in-v2-0-code">5.7.4. Checking item sales history <code>[coming in v2.0]</code></a></li>
-<li><a href="#exporting-sales-report-code-coming-in-v2-0-code">5.7.5. Exporting sales report <code>[coming in v2.0]</code></a></li>
-<li><a href="#exporting-sales-chart-code-coming-in-v2-0-code">5.7.6. Exporting sales chart <code>[coming in v2.0]</code></a></li>
-<li><a href="#removing-out-of-stock-dishes-from-daily-menu-code-coming-in-v1-4-code">5.7.7. Removing out-of-stock dishes from daily menu <code>[coming in v1.4]</code></a></li>
-<li><a href="#showing-history-of-past-stock-ups-and-consumption-code-coming-in-v1-4-code">5.7.8. Showing history of past stock ups and consumption <code>[coming in v1.4]</code></a></li>
-<li><a href="#exporting-menu-code-coming-in-v1-4-code">5.7.9. Exporting menu <code>[coming in v1.4]</code></a></li>
-<li><a href="#importing-menu-code-coming-in-v1-4-code">5.7.10. Importing menu <code>[coming in v1.4]</code></a></li>
-<li><a href="#support-for-multiple-menus-code-coming-in-v2-0-code">5.7.11. Support for multiple menus <code>[coming in v2.0]</code></a></li>
+<li><a href="#Register-Improvement">5.7.1. Improving registration <code>[coming in v2.0]</code></a></li>
+<li><a href="#User-Role">5.7.2. Creating user role <code>[coming in v2.0]</code></a></li>
+<li><a href="#editing-user-role-code-coming-in-v2-0-code">5.7.3. Editing user role <code>[coming in v2.0]</code></a></li>
+<li><a href="#deleting-user-role-code-coming-in-v2-0-code">5.7.4. Deleting user role <code>[coming in v2.0]</code></a></li>
+<li><a href="#checking-item-sales-history-code-coming-in-v2-0-code">5.7.5. Checking item sales history <code>[coming in v2.0]</code></a></li>
+<li><a href="#exporting-sales-report-code-coming-in-v2-0-code">5.7.6. Exporting sales report <code>[coming in v2.0]</code></a></li>
+<li><a href="#exporting-sales-chart-code-coming-in-v2-0-code">5.7.7. Exporting sales chart <code>[coming in v2.0]</code></a></li>
+<li><a href="#removing-out-of-stock-dishes-from-daily-menu-code-coming-in-v1-4-code">5.7.8. Removing out-of-stock dishes from daily menu <code>[coming in v1.4]</code></a></li>
+<li><a href="#showing-history-of-past-stock-ups-and-consumption-code-coming-in-v1-4-code">5.7.9. Showing history of past stock ups and consumption <code>[coming in v1.4]</code></a></li>
+<li><a href="#exporting-menu-code-coming-in-v1-4-code">5.7.10. Exporting menu <code>[coming in v1.4]</code></a></li>
+<li><a href="#importing-menu-code-coming-in-v1-4-code">5.7.11. Importing menu <code>[coming in v1.4]</code></a></li>
+<li><a href="#support-for-multiple-menus-code-coming-in-v2-0-code">5.7.12. Support for multiple menus <code>[coming in v2.0]</code></a></li>
 </ul>
 </li>
 </ul>
@@ -140,8 +144,7 @@
 <div class="paragraph">
 <p>Introducing <a href="https://github.com/CS2103-AY1819S1-F10-4/main/tree/master">MeNUS</a>, a revolutionary restaurant management desktop application that is <strong>optimized for
 users who prefer to work with a Command Line Interface (CLI) while still having the benefits of a Graphical User
-Interface (GUI)</strong>. If you can type fast, <a href="https://github.com/CS2103-AY1819S1-F10-4/main/tree/master">MeNUS</a> allows you to manage aspects of your restaurants&#8201;&#8212;&#8201;staff accounts,
-menus, ingredient, sales and reservations management&#8201;&#8212;&#8201;all from a single location !</p>
+Interface (GUI)</strong>. If you can type fast, <a href="https://github.com/CS2103-AY1819S1-F10-4/main/tree/master">MeNUS</a> allows you to manage core aspects of your restaurants&#8201;&#8212;&#8201;employees, menus, inventory, sales and reservations management&#8201;&#8212;&#8201;all from a single location!</p>
 </div>
 <div class="sect2">
 <h3 id="legends"><a class="link" href="#legends">1.1. Legends</a></h3>
@@ -185,6 +188,17 @@ read whatever is in this block.
 </td>
 </tr>
 </table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="a-quick-look-at-menus"><a class="link" href="#a-quick-look-at-menus">1.2. A Quick Look at MeNUS</a></h3>
+<div class="paragraph">
+<p><strong>MeNUS</strong>’s user interface is split into a few sections. These sections are highlighted in the image below.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/UserInterfaceHighlight.png" alt="UserInterfaceHighlight" width="790">
+</div>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s get started!</p>
@@ -422,6 +436,26 @@ provides a step by step walk-through of all the commands <strong>MeNUS</strong> 
 </div>
 </div>
 </div>
+<div class="paragraph">
+<p>As this is a management system, all but the following commands cannot be executed without first being authenticated.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>help</code></p>
+</li>
+<li>
+<p><code>login</code></p>
+</li>
+<li>
+<p><code>exit</code></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
 <div class="sect2">
 <h3 id="general"><a class="link" href="#general">5.1. General</a></h3>
 <div class="paragraph">
@@ -590,6 +624,20 @@ Format: <code>login id/USERNAME pw/PASSWORD</code></p>
 <p>Logs out of the account.<br>
 Format: <code>logout</code></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>History will automatically be cleared upon logging out</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect3">
 <h4 id="creating-user-account-code-register-code-or-code-reg-code"><a class="link" href="#creating-user-account-code-register-code-or-code-reg-code">5.2.3. Creating user account: <code>register</code> or <code>reg</code></a></h4>
@@ -597,16 +645,31 @@ Format: <code>logout</code></p>
 <p>Creates a new user account.<br>
 Format: <code>register id/USERNAME pw/PASSWORD</code> or <code>reg id/USERNAME pw/PASSWORD</code></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This command will be improved in the future to include name and role. See <a href="#Register-Improvement">Section 5.7.1, &#8220;Improving registration <code>[coming in v2.0]</code>&#8221;</a>
+for more information</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>Examples:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>register id/azhikai pw/p@55w0rd</code></p>
+<p><code>register id/azhikai pw/1122qq</code></p>
 </li>
 <li>
-<p><code>reg id/azhikai pw/p@55w0rd</code></p>
+<p><code>reg id/azhikai pw/1122qq</code></p>
 </li>
 </ul>
 </div>
@@ -634,7 +697,8 @@ Format: <code>change-password npw/NEW_PASSWORD</code> or <code>cp npw/NEW_PASSWO
 <div class="sect3">
 <h4 id="deleting-user-account-code-deregister-code-or-code-dereg-code"><a class="link" href="#deleting-user-account-code-deregister-code-or-code-dereg-code">5.2.5. Deleting user account: <code>deregister</code> or <code>dereg</code></a></h4>
 <div class="paragraph">
-<p>Deletes an existing user account.<br></p>
+<p>Deletes an existing user account.<br>
+Format: <code>deregister id/USERNAME</code> or <code>dereg id/USERNAME</code></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -644,15 +708,12 @@ Format: <code>change-password npw/NEW_PASSWORD</code> or <code>cp npw/NEW_PASSWO
 </td>
 <td class="content">
 <div class="paragraph">
-<p>This command should only be able to be executed by a highly privileged user. See <a href="#User-Role">Section 5.7.1, &#8220;Creating user role <code>[coming in v2.0]</code>&#8221;</a>
+<p>This command will only be able to be executed by a highly privileged user in the future. See <a href="#User-Role">Section 5.7.2, &#8220;Creating user role <code>[coming in v2.0]</code>&#8221;</a>
 for more information</p>
 </div>
 </td>
 </tr>
 </table>
-</div>
-<div class="paragraph">
-<p>Format: <code>deregister id/USERNAME</code> or <code>dereg id/USERNAME</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -669,7 +730,98 @@ for more information</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="list-user-accounts-code-list-accounts-code-or-code-la-code"><a class="link" href="#list-user-accounts-code-list-accounts-code-or-code-la-code">5.2.6. List user accounts: <code>list-accounts</code> or <code>la</code></a></h4>
+<h4 id="select-user-account-code-select-account-code-or-code-sa-code"><a class="link" href="#select-user-account-code-select-account-code-or-code-sa-code">5.2.6. Select user account: <code>select-account</code> or <code>sa</code></a></h4>
+<div class="paragraph">
+<p>Selects the account identified by the index number.<br>
+Format: <code>select-account INDEX</code> or <code>sa INDEX</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Selecting the account does not render any data on the detailed panel due to the simplicity of the data itself</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The index refers to the index number shown in the displayed item list.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list-accounts</code><br>
+<code>select-account 2</code><br>
+Selects the 2nd account in the list.</p>
+</li>
+<li>
+<p><code>fa azhikai</code><br>
+<code>sa 1</code><br>
+Selects the 1st account in the results of the <code>find-account</code> command.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="locating-account-by-username-code-find-account-code-or-code-fa-code"><a class="link" href="#locating-account-by-username-code-find-account-code-or-code-fa-code">5.2.7. Locating account by username: <code>find-account</code> or <code>fa</code></a></h4>
+<div class="paragraph">
+<p>Finds account whose username contain any of the given keywords.<br>
+Format: <code>find-account KEYWORD</code> or <code>fa KEYWORD</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The search is case insensitive. e.g <code>root</code> will match <code>Root</code></p>
+</li>
+<li>
+<p>Only the username is searched.</p>
+</li>
+<li>
+<p>Only full words will be matched e.g. <code>roo</code> will not match <code>root</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>find-account root</code><br>
+Returns <code>root</code></p>
+</li>
+<li>
+<p><code>fa root azhikai rebstan97</code><br>
+Returns any account having username <code>root</code>, <code>azhikai</code>, or <code>rebstan97</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="list-user-accounts-code-list-accounts-code-or-code-la-code"><a class="link" href="#list-user-accounts-code-list-accounts-code-or-code-la-code">5.2.8. List user accounts: <code>list-accounts</code> or <code>la</code></a></h4>
 <div class="paragraph">
 <p>List all user accounts.<br>
 Format: <code>list-accounts</code> or <code>la</code></p>
@@ -2040,7 +2192,29 @@ Selects the 6th record in the record list.</p>
 <div class="sect2">
 <h3 id="upcoming-features"><a class="link" href="#upcoming-features">5.7. Upcoming Features</a></h3>
 <div class="sect3">
-<h4 id="User-Role"><a class="link" href="#User-Role">5.7.1. Creating user role <code>[coming in v2.0]</code></a></h4>
+<h4 id="Register-Improvement"><a class="link" href="#Register-Improvement">5.7.1. Improving registration <code>[coming in v2.0]</code></a></h4>
+<div class="paragraph">
+<p>Improves the existing <code>register</code> command by including the full name of the employee and role.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>register id/USERNAME pw/PASSWORD n/FULL_NAME r/ROLE_ID</code> or <code>reg id/USERNAME pw/PASSWORD n/FULL_NAME r/ROLE_ID</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>register id/azhikai pw/1122qq n/Ang Zhi Kai r/999</code></p>
+</li>
+<li>
+<p><code>reg id/azhikai pw/1122qq n/Ang Zhi Kai r/999</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="User-Role"><a class="link" href="#User-Role">5.7.2. Creating user role <code>[coming in v2.0]</code></a></h4>
 <div class="paragraph">
 <p>Creates a user role. User assigned with higher ranking role can execute more commands.<br></p>
 </div>
@@ -2083,7 +2257,7 @@ which has the default role of <code>Administrator</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="editing-user-role-code-coming-in-v2-0-code"><a class="link" href="#editing-user-role-code-coming-in-v2-0-code">5.7.2. Editing user role <code>[coming in v2.0]</code></a></h4>
+<h4 id="editing-user-role-code-coming-in-v2-0-code"><a class="link" href="#editing-user-role-code-coming-in-v2-0-code">5.7.3. Editing user role <code>[coming in v2.0]</code></a></h4>
 <div class="paragraph">
 <p>Edits an existing user role.<br>
 Format: <code>edit-role r/RANK [nr/NEW_RANK] [n/ROLE_NAME]</code> or <code>er r/RANK [nr/NEW_RANK] [n/ROLE_NAME]</code></p>
@@ -2106,7 +2280,7 @@ Format: <code>edit-role r/RANK [nr/NEW_RANK] [n/ROLE_NAME]</code> or <code>er r/
 </div>
 </div>
 <div class="sect3">
-<h4 id="deleting-user-role-code-coming-in-v2-0-code"><a class="link" href="#deleting-user-role-code-coming-in-v2-0-code">5.7.3. Deleting user role <code>[coming in v2.0]</code></a></h4>
+<h4 id="deleting-user-role-code-coming-in-v2-0-code"><a class="link" href="#deleting-user-role-code-coming-in-v2-0-code">5.7.4. Deleting user role <code>[coming in v2.0]</code></a></h4>
 <div class="paragraph">
 <p>Deletes an existing user role.<br>
 Format: <code>delete-role r/RANK</code> or <code>dr r/RANK</code></p>
@@ -2126,7 +2300,7 @@ Format: <code>delete-role r/RANK</code> or <code>dr r/RANK</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="checking-item-sales-history-code-coming-in-v2-0-code"><a class="link" href="#checking-item-sales-history-code-coming-in-v2-0-code">5.7.4. Checking item sales history <code>[coming in v2.0]</code></a></h4>
+<h4 id="checking-item-sales-history-code-coming-in-v2-0-code"><a class="link" href="#checking-item-sales-history-code-coming-in-v2-0-code">5.7.5. Checking item sales history <code>[coming in v2.0]</code></a></h4>
 <div class="paragraph">
 <p>Generates the item sales report that consists of all records associated with that item.<br>
 Format: <code>check-history n/ITEM_NAME</code> or <code>ch n/ITEM_NAME</code></p>
@@ -2146,7 +2320,7 @@ Format: <code>check-history n/ITEM_NAME</code> or <code>ch n/ITEM_NAME</code></p
 </div>
 </div>
 <div class="sect3">
-<h4 id="exporting-sales-report-code-coming-in-v2-0-code"><a class="link" href="#exporting-sales-report-code-coming-in-v2-0-code">5.7.5. Exporting sales report <code>[coming in v2.0]</code></a></h4>
+<h4 id="exporting-sales-report-code-coming-in-v2-0-code"><a class="link" href="#exporting-sales-report-code-coming-in-v2-0-code">5.7.6. Exporting sales report <code>[coming in v2.0]</code></a></h4>
 <div class="paragraph">
 <p>Exports the sales report of a specific date into a pdf file. The generated .pdf sales report will be much more
 detailed than that displayed in app.<br>
@@ -2154,21 +2328,21 @@ Format: <code>export-sales DATE</code> or <code>es DATE</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="exporting-sales-chart-code-coming-in-v2-0-code"><a class="link" href="#exporting-sales-chart-code-coming-in-v2-0-code">5.7.6. Exporting sales chart <code>[coming in v2.0]</code></a></h4>
+<h4 id="exporting-sales-chart-code-coming-in-v2-0-code"><a class="link" href="#exporting-sales-chart-code-coming-in-v2-0-code">5.7.7. Exporting sales chart <code>[coming in v2.0]</code></a></h4>
 <div class="paragraph">
 <p>Exports the sales chart into a pdf file.<br>
 Format: <code>export-chart</code> or <code>ec</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="removing-out-of-stock-dishes-from-daily-menu-code-coming-in-v1-4-code"><a class="link" href="#removing-out-of-stock-dishes-from-daily-menu-code-coming-in-v1-4-code">5.7.7. Removing out-of-stock dishes from daily menu <code>[coming in v1.4]</code></a></h4>
+<h4 id="removing-out-of-stock-dishes-from-daily-menu-code-coming-in-v1-4-code"><a class="link" href="#removing-out-of-stock-dishes-from-daily-menu-code-coming-in-v1-4-code">5.7.8. Removing out-of-stock dishes from daily menu <code>[coming in v1.4]</code></a></h4>
 <div class="paragraph">
 <p>Removes out-of-stock dishes that require ingredients with low stock count from the daily menu.<br>
 Format: <code>remove-oos-dish</code> or <code>rod</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="showing-history-of-past-stock-ups-and-consumption-code-coming-in-v1-4-code"><a class="link" href="#showing-history-of-past-stock-ups-and-consumption-code-coming-in-v1-4-code">5.7.8. Showing history of past stock ups and consumption <code>[coming in v1.4]</code></a></h4>
+<h4 id="showing-history-of-past-stock-ups-and-consumption-code-coming-in-v1-4-code"><a class="link" href="#showing-history-of-past-stock-ups-and-consumption-code-coming-in-v1-4-code">5.7.9. Showing history of past stock ups and consumption <code>[coming in v1.4]</code></a></h4>
 <div class="paragraph">
 <p>Shows the history of past ingredient stock ups or consumption.<br>
 Format: <code>view-history [STOCKUP] [CONSUMPTION]</code>  or <code>vh [STOCKUP] [CONSUMPTION]</code></p>
@@ -2191,7 +2365,7 @@ Format: <code>view-history [STOCKUP] [CONSUMPTION]</code>  or <code>vh [STOCKUP]
 </div>
 </div>
 <div class="sect3">
-<h4 id="exporting-menu-code-coming-in-v1-4-code"><a class="link" href="#exporting-menu-code-coming-in-v1-4-code">5.7.9. Exporting menu <code>[coming in v1.4]</code></a></h4>
+<h4 id="exporting-menu-code-coming-in-v1-4-code"><a class="link" href="#exporting-menu-code-coming-in-v1-4-code">5.7.10. Exporting menu <code>[coming in v1.4]</code></a></h4>
 <div class="paragraph">
 <p>Exports the menu to a particular file path.<br>
 Format: <code>export-menu fp/FILEPATH fn/FILENAME</code></p>
@@ -2209,7 +2383,7 @@ Export the menu to test folder with the file name <code>menu.txt</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="importing-menu-code-coming-in-v1-4-code"><a class="link" href="#importing-menu-code-coming-in-v1-4-code">5.7.10. Importing menu <code>[coming in v1.4]</code></a></h4>
+<h4 id="importing-menu-code-coming-in-v1-4-code"><a class="link" href="#importing-menu-code-coming-in-v1-4-code">5.7.11. Importing menu <code>[coming in v1.4]</code></a></h4>
 <div class="paragraph">
 <p>Imports an existing menu from specified file path to replace current menu.<br>
 Format: <code>import-menu fp/FILEPATH fn/FILENAME</code></p>
@@ -2227,7 +2401,7 @@ Import the menu.txt from test folder to replace current menu.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="support-for-multiple-menus-code-coming-in-v2-0-code"><a class="link" href="#support-for-multiple-menus-code-coming-in-v2-0-code">5.7.11. Support for multiple menus <code>[coming in v2.0]</code></a></h4>
+<h4 id="support-for-multiple-menus-code-coming-in-v2-0-code"><a class="link" href="#support-for-multiple-menus-code-coming-in-v2-0-code">5.7.12. Support for multiple menus <code>[coming in v2.0]</code></a></h4>
 <div class="paragraph">
 <p>User will be able to manage multiple menus without the need of exporting and importing for different version of the
 current menu.</p>
@@ -2499,4 +2673,4 @@ rather than using only text via the command line.</p>
 </dl>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-08 13:06:59 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-09 02:03:09 UTC</div></div></div></body></html>
