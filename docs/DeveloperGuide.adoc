@@ -598,6 +598,7 @@ The following activity diagram (Figure 4.4.1.1) summarizes what happens when a u
 
 image::RecordSalesActivityDiagram.png[width="1000"]
 _Figure 4.4.1.1: Activity Diagram for `record-sales` command_
+
 // end::salesmanagement[]
 
 ==== Design Considerations
@@ -648,6 +649,7 @@ and 3 oranges to make at the time of edit-sales (present). If the user edits the
 **Verdict**: **This option is irrational**.
 
 // tag::salesmanagement1[]
+
 === Display sales report feature
 ==== Current Implementation
 
