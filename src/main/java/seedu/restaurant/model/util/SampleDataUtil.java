@@ -70,33 +70,33 @@ public class SampleDataUtil {
 
     //@@author hyperionnkJ
     private static SalesRecord[] getSampleSalesRecords() {
-        return new SalesRecord[] {
-            new SalesRecord(new seedu.restaurant.model.sales.Date("14-11-2018"), new ItemName("Apple Juice"),
-                new QuantitySold("31"), new seedu.restaurant.model.sales.Price("2"))
-                    .setIngredientsUsed(getRequiredIngredients(Map.of("Apple", "93"))),
-            new SalesRecord(new seedu.restaurant.model.sales.Date("14-11-2018"), new ItemName("Beef Burger"),
-                new QuantitySold("23"), new seedu.restaurant.model.sales.Price("3"))
-                    .setIngredientsUsed(getRequiredIngredients(Map.of("Beef", "23", "Bread", "46"))),
-            new SalesRecord(new seedu.restaurant.model.sales.Date("14-11-2018"), new ItemName("Cheese Cake"),
-                new QuantitySold("33"), new seedu.restaurant.model.sales.Price("2.50"))
-                    .setIngredientsUsed(getRequiredIngredients(Map.of("Cheese", "99"))),
-            new SalesRecord(new seedu.restaurant.model.sales.Date("15-11-2018"), new ItemName("Apple Juice"),
-                new QuantitySold("16"), new seedu.restaurant.model.sales.Price("2"))
-                    .setIngredientsUsed(getRequiredIngredients(Map.of("Apple", "48"))),
-            new SalesRecord(new seedu.restaurant.model.sales.Date("15-11-2018"), new ItemName("Beef Burger"),
-                new QuantitySold("20"), new seedu.restaurant.model.sales.Price("3"))
-                    .setIngredientsUsed(getRequiredIngredients(Map.of("Beef", "20", "Bread", "40"))),
-            new SalesRecord(new seedu.restaurant.model.sales.Date("15-11-2018"), new ItemName("Fruit Cake"),
-                new QuantitySold("12"), new seedu.restaurant.model.sales.Price("2.50")),
-            new SalesRecord(new seedu.restaurant.model.sales.Date("16-11-2018"), new ItemName("Apple Juice"),
-                new QuantitySold("45"), new seedu.restaurant.model.sales.Price("2"))
-                    .setIngredientsUsed(getRequiredIngredients(Map.of("Apple", "135"))),
-            new SalesRecord(new seedu.restaurant.model.sales.Date("16-11-2018"), new ItemName("Beef Burger"),
-                new QuantitySold("33"), new seedu.restaurant.model.sales.Price("3"))
-                    .setIngredientsUsed(getRequiredIngredients(Map.of("Beef", "33", "Bread", "66"))),
-            new SalesRecord(new seedu.restaurant.model.sales.Date("16-11-2018"), new ItemName("Cheese Cake"),
-                new QuantitySold("39"), new seedu.restaurant.model.sales.Price("2.50"))
-                    .setIngredientsUsed(getRequiredIngredients(Map.of("Cheese", "117")))
+        return new SalesRecord[]{
+                new SalesRecord(new seedu.restaurant.model.sales.Date("14-11-2018"), new ItemName("Apple Juice"),
+                        new QuantitySold("31"), new seedu.restaurant.model.sales.Price("2"))
+                        .setIngredientsUsed(getRequiredIngredients(Map.of("Apple", "93"))),
+                new SalesRecord(new seedu.restaurant.model.sales.Date("14-11-2018"), new ItemName("Beef Burger"),
+                        new QuantitySold("23"), new seedu.restaurant.model.sales.Price("3"))
+                        .setIngredientsUsed(getRequiredIngredients(Map.of("Beef", "23", "Bread", "46"))),
+                new SalesRecord(new seedu.restaurant.model.sales.Date("14-11-2018"), new ItemName("Cheese Cake"),
+                        new QuantitySold("33"), new seedu.restaurant.model.sales.Price("2.50"))
+                        .setIngredientsUsed(getRequiredIngredients(Map.of("Cheese", "99"))),
+                new SalesRecord(new seedu.restaurant.model.sales.Date("15-11-2018"), new ItemName("Apple Juice"),
+                        new QuantitySold("16"), new seedu.restaurant.model.sales.Price("2"))
+                        .setIngredientsUsed(getRequiredIngredients(Map.of("Apple", "48"))),
+                new SalesRecord(new seedu.restaurant.model.sales.Date("15-11-2018"), new ItemName("Beef Burger"),
+                        new QuantitySold("20"), new seedu.restaurant.model.sales.Price("3"))
+                        .setIngredientsUsed(getRequiredIngredients(Map.of("Beef", "20", "Bread", "40"))),
+                new SalesRecord(new seedu.restaurant.model.sales.Date("15-11-2018"), new ItemName("Fruit Cake"),
+                        new QuantitySold("12"), new seedu.restaurant.model.sales.Price("2.50")),
+                new SalesRecord(new seedu.restaurant.model.sales.Date("16-11-2018"), new ItemName("Apple Juice"),
+                        new QuantitySold("45"), new seedu.restaurant.model.sales.Price("2"))
+                        .setIngredientsUsed(getRequiredIngredients(Map.of("Apple", "135"))),
+                new SalesRecord(new seedu.restaurant.model.sales.Date("16-11-2018"), new ItemName("Beef Burger"),
+                        new QuantitySold("33"), new seedu.restaurant.model.sales.Price("3"))
+                        .setIngredientsUsed(getRequiredIngredients(Map.of("Beef", "33", "Bread", "66"))),
+                new SalesRecord(new seedu.restaurant.model.sales.Date("16-11-2018"), new ItemName("Cheese Cake"),
+                        new QuantitySold("39"), new seedu.restaurant.model.sales.Price("2.50"))
+                        .setIngredientsUsed(getRequiredIngredients(Map.of("Cheese", "117")))
         };
     }
 
@@ -184,6 +184,7 @@ public class SampleDataUtil {
     }
 
     //@@author
+
     /**
      * Returns a tag set containing the list of strings given.
      */

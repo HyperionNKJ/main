@@ -25,11 +25,7 @@ with approximately 25 kLOC.
 |===
 |Given below are contributions I made for the project. They showcase my capability to +
  1) identify and specify functional and non-functional requirements for the product; +
- 2) conduct product and implementation design to meet end-users' requirements; +
- 3) write high quality code that is error-free, comprehensible, and reusable; +
- 4) write effective and efficient test codes to ensure high quality assurance; +
- 5) use various modelling and version control tools; +
- 6) collaborate with other developers.
+ 2) write high quality functional and test codes that are error-free, comprehensible, and reusable. +
 |===
 
 * *Code contributed*: https://nus-cs2103-ay1819s1.github.io/cs2103-dashboard/#=undefined&search=hyperionnkj[RepoSense]
@@ -111,9 +107,10 @@ https://github.com/CS2103-AY1819S1-W17-1/main/issues/243[#243]
 == Contributions to the User Guide
 
 |===
-|The following sections are my contributions to the User Guide. They reflect my ability to write clear and concise
-documentation targeting non-technical readers. Please refer to https://cs2103-ay1819s1-f10-4-menus.netlify.com/userguide[User Guide] for more of my contributions.
-The full version of my contribution can be found under section 5.6 and 5.7.5 - 5.7.8 of the User Guide.
+|The following sections are portions of my contributions to the User Guide. They reflect my ability to write clear and
+concise documentation targeting non-technical readers. Since this is not the full version, some of the hyperlinks as
+seen under this section may not redirect as intended. Please refer to section 5.6 and 5.7.5 - 5.7.8 of the
+https://cs2103-ay1819s1-f10-4-menus.netlify.com/userguide[User Guide] for the full version of my contribution.
 |===
 
 include::../UserGuide.adoc[tag=salesmanagement]
@@ -124,10 +121,11 @@ include::../UserGuide.adoc[tag=rankdates]
 == Contributions to the Developer Guide
 
 |===
-|The following sections are my contributions to the Developer Guide. They reflect my ability to convey technical
-information in a comprehensible manner. It also showcases the technical depth of my contributions.
-Please refer to https://cs2103-ay1819s1-f10-4-menus.netlify.com/developerguide[Developer Guide] for more of my
-contributions. The full version of my contribution can be found under section 4.4, 4.5, and UC5XX of appendix A.
+|The following sections are portions of my contributions to the Developer Guide. They reflect my ability to convey
+technical information in a comprehensible manner. It also showcases the technical depth of my contributions.
+Since this is not the full version, some of the hyperlinks as seen under this section may not redirect as intended.
+Please refer to section 4.4, 4.5, and UC50X of appendix C in the https://cs2103-ay1819s1-f10-4-menus.netlify.com/developerguide[Developer Guide]
+for the full version of my contribution.
 |===
 
 include::../DeveloperGuide.adoc[tag=salesmanagement]
